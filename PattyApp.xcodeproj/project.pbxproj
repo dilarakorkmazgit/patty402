@@ -248,7 +248,7 @@
 				TargetAttributes = {
 					3C832F411F94C96400EC8390 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = H94D3VLC2R;
+						DevelopmentTeam = DCUNJ956CG;
 						ProvisioningStyle = Automatic;
 					};
 					3C832F581F94C96500EC8390 = {
@@ -611,10 +611,10 @@
 			baseConfigurationReference = C458BF90183EE5C6DF74B305 /* Pods-PattyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H94D3VLC2R;
+				DEVELOPMENT_TEAM = DCUNJ956CG;
 				INFOPLIST_FILE = PattyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dkorkmaz.PattyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = buraknurcicek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -625,10 +625,10 @@
 			baseConfigurationReference = 28B4B1C740B46D3B26C2F60F /* Pods-PattyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H94D3VLC2R;
+				DEVELOPMENT_TEAM = DCUNJ956CG;
 				INFOPLIST_FILE = PattyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.dkorkmaz.PattyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = buraknurcicek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
