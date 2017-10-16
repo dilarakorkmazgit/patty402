@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         //fire
+        //neden gelmiyooooo
         return true
     }
 
