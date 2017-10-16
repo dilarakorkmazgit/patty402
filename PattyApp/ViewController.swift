@@ -8,6 +8,9 @@
 
 import UIKit
 import AVFoundation
+import MapKit
+
+
 class ViewController: UIViewController {
     
     var Player: AVPlayer!
@@ -16,7 +19,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
+       
+        
+        
+        
         let URL = Bundle.main.url(forResource: "dog1", withExtension: "mp4")
         Player = AVPlayer.init(url: URL!)
         
