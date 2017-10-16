@@ -49,9 +49,13 @@
                                 <rect key="frame" x="84" y="592" width="235" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screenshot_2" translatesAutoresizingMaskIntoConstraints="NO" id="PW0-yo-g9D">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -299,6 +303,9 @@
             <point key="canvasLocation" x="1630" y="631"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Screenshot_2" width="433" height="217"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Cib-ql-lFu"/>
     </inferredMetricsTieBreakers>
