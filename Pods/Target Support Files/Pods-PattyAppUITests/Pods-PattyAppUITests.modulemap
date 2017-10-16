@@ -1,0 +1,6 @@
+framework module Pods_PattyAppUITests {
+  umbrella header "Pods-PattyAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
