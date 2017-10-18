@@ -21,6 +21,7 @@
 		48F466356828E7E3936F2426 /* Pods_PattyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21B3C9C6911D6FAF763564C /* Pods_PattyApp.framework */; };
 		59BE0E101F96A971008DD52B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BE0E0F1F96A971008DD52B /* LoginVC.swift */; };
 		59C98F931F9548A40000F65D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C98F921F9548A40000F65D /* AVFoundation.framework */; };
+		59F67E6B1F9758FB003610D0 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F67E6A1F9758FB003610D0 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		59BE0E0F1F96A971008DD52B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		59C98F8E1F95428C0000F65D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		59C98F921F9548A40000F65D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		59F67E6A1F9758FB003610D0 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		82AF6362E7D5EA0EFD43663C /* Pods-PattyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppUITests/Pods-PattyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B3B6A59C428E0ED63437E3 /* Pods-PattyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppTests/Pods-PattyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C458BF90183EE5C6DF74B305 /* Pods-PattyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PattyApp/Pods-PattyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				3C832F761F94D49A00EC8390 /* GoogleService-Info.plist */,
 				3C832F4C1F94C96400EC8390 /* PattyApp.xcdatamodeld */,
 				59BE0E0F1F96A971008DD52B /* LoginVC.swift */,
+				59F67E6A1F9758FB003610D0 /* RoundedButton.swift */,
 			);
 			path = PattyApp;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C832F4E1F94C96400EC8390 /* PattyApp.xcdatamodeld in Sources */,
+				59F67E6B1F9758FB003610D0 /* RoundedButton.swift in Sources */,
 				3C832F481F94C96400EC8390 /* ViewController.swift in Sources */,
 				59BE0E101F96A971008DD52B /* LoginVC.swift in Sources */,
 				3C832F461F94C96400EC8390 /* AppDelegate.swift in Sources */,
