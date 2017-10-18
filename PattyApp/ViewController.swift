@@ -15,7 +15,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     var colorRange :[UIColor] = [UIColor.red,UIColor.yellow,UIColor.blue,UIColor.purple]
-
+    
     var frame = CGRect(x:0,y:0,width:0,height:0)
     
     
@@ -34,7 +34,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         
         pageControl.numberOfPages = colorRange.count
         for index in 0..<colorRange.count {
-         
+            
             frame.origin.x = ScrollView.frame.size.width * CGFloat(index)
             frame.size = ScrollView.frame.size
             
@@ -48,15 +48,15 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         ScrollView.delegate = self
         
         
-       // let URL:NSURL = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/pattyapp-34c16.appspot.com/o/dog1.mp4?alt=media&token=4352141b-6c34-4942-b5c8-278be3a5fcfc")!
-       
-       // Player = AVPlayer.init(url: URL as URL)
-       // PlayerLayer = AVPlayerLayer(player: Player)
-       // PlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-       // PlayerLayer.frame.size = frameVideo.size
-      //  Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
-       // Player.isMuted = true
-       // Player.play()
+        // let URL:NSURL = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/pattyapp-34c16.appspot.com/o/dog1.mp4?alt=media&token=4352141b-6c34-4942-b5c8-278be3a5fcfc")!
+        
+        // Player = AVPlayer.init(url: URL as URL)
+        // PlayerLayer = AVPlayerLayer(player: Player)
+        // PlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        // PlayerLayer.frame.size = frameVideo.size
+        //  Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
+        // Player.isMuted = true
+        // Player.play()
         
         //view.layer.insertSublayer(PlayerLayer, at: 0)
         //NotificationCenter.default.addObserver(self, selector: #selector(playerItemReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: Player.currentItem)
@@ -85,12 +85,12 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBAction func pageChanger(_ sender: UIPageControl) {
     
+    @IBAction func pageChanger(_ sender: UIPageControl) {
+        
         let x = CGFloat(sender.currentPage) * ScrollView.frame.size.width
         ScrollView.contentOffset = CGPoint(x:x,y:0)
     }
-
+    
 }
 
