@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		272926C0ADAABDC88FE44877 /* Pods_PattyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08841108E2B19C64A20469D8 /* Pods_PattyAppUITests.framework */; };
 		3B45CE98B24B163B2567D721 /* Pods_PattyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036190BF56667C874DCB8773 /* Pods_PattyAppTests.framework */; };
-		3C5217071F979FF200F52725 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5217061F979FF200F52725 /* CreateAccountViewController.swift */; };
+		3C5217071F979FF200F52725 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5217061F979FF200F52725 /* CreateAccountVC.swift */; };
 		3C832F461F94C96400EC8390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C832F451F94C96400EC8390 /* AppDelegate.swift */; };
 		3C832F481F94C96400EC8390 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C832F471F94C96400EC8390 /* ViewController.swift */; };
 		3C832F4B1F94C96400EC8390 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C832F491F94C96400EC8390 /* Main.storyboard */; };
@@ -46,7 +46,7 @@
 		08841108E2B19C64A20469D8 /* Pods_PattyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PattyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B4B1C740B46D3B26C2F60F /* Pods-PattyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyApp/Pods-PattyApp.release.xcconfig"; sourceTree = "<group>"; };
 		38E564C490E80FCD1144FF30 /* Pods-PattyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppTests/Pods-PattyAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		3C5217061F979FF200F52725 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		3C5217061F979FF200F52725 /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		3C832F421F94C96400EC8390 /* PattyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PattyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C832F451F94C96400EC8390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C832F471F94C96400EC8390 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 				3C832F451F94C96400EC8390 /* AppDelegate.swift */,
 				3C832F471F94C96400EC8390 /* ViewController.swift */,
 				3C832F491F94C96400EC8390 /* Main.storyboard */,
-				3C5217061F979FF200F52725 /* CreateAccountViewController.swift */,
+				3C5217061F979FF200F52725 /* CreateAccountVC.swift */,
 				3C832F4F1F94C96400EC8390 /* Assets.xcassets */,
 				3C832F511F94C96400EC8390 /* LaunchScreen.storyboard */,
 				3C832F541F94C96400EC8390 /* Info.plist */,
@@ -500,7 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C5217071F979FF200F52725 /* CreateAccountViewController.swift in Sources */,
+				3C5217071F979FF200F52725 /* CreateAccountVC.swift in Sources */,
 				3C832F4E1F94C96400EC8390 /* PattyApp.xcdatamodeld in Sources */,
 				3C832F481F94C96400EC8390 /* ViewController.swift in Sources */,
 				59BE0E101F96A971008DD52B /* LoginVC.swift in Sources */,

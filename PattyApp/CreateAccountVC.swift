@@ -10,8 +10,12 @@ import Foundation
 import Firebase
 import UIKit
 
-class CreateAccountViewController: UIViewController {
+class CreateAccountVC: UIViewController {
 
+    
+    
+    
+    
     
 
     
