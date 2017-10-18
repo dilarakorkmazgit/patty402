@@ -23,7 +23,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     var PlayerLayer: AVPlayerLayer!
     
     //Düzenleeee
-    var frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
+    var frameVideo = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,6 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         ScrollView.contentSize = CGSize(width:(ScrollView.frame.size.width * CGFloat(colorRange.count)),height :ScrollView.frame.size.height)
         
         ScrollView.delegate = self
-        
         
         
         let URL:NSURL = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/pattyapp-34c16.appspot.com/o/dog1.mp4?alt=media&token=98ab3c41-c645-4535-a70b-41511b5df602")!
