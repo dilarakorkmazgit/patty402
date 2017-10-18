@@ -47,6 +47,9 @@
                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="qax-DO-OQu" kind="show" id="F0q-Y6-emL"/>
+                                </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-AM-veu">
                                 <rect key="frame" x="93" y="459" width="188" height="37"/>
@@ -141,6 +144,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-186.40000000000001" y="196.55172413793105"/>
+        </scene>
+        <!--Create Account View Controller-->
+        <scene sceneID="0yh-9d-B3n">
+            <objects>
+                <viewController id="qax-DO-OQu" customClass="CreateAccountViewController" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bZ4-th-hbg"/>
+                        <viewControllerLayoutGuide type="bottom" id="178-og-n3a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uWe-vJ-Lsh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3l0-Ej-duj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="230"/>
         </scene>
     </scenes>
 </document>
