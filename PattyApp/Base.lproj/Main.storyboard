@@ -67,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+            <point key="canvasLocation" x="-186" y="197"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1DL-oa-Gs7">
@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfP-Ls-OVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="781.60000000000002" y="-40.029985007496258"/>
+            <point key="canvasLocation" x="639" y="-669"/>
         </scene>
         <!--Item-->
         <scene sceneID="qLb-Rj-PZS">
@@ -274,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQt-aV-sKX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792.79999999999995" y="655.32233883058473"/>
+            <point key="canvasLocation" x="569" y="665"/>
         </scene>
         <!--Item-->
         <scene sceneID="c1L-Ze-o5D">
@@ -317,6 +317,6 @@
         <image name="Screenshot_2" width="433" height="217"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cFH-Hk-6IO"/>
+        <segue reference="Cib-ql-lFu"/>
     </inferredMetricsTieBreakers>
 </document>
