@@ -31,10 +31,7 @@ class ViewController: UIViewController {
         PlayerLayer = AVPlayerLayer(player: Player)
         PlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         PlayerLayer.frame = view.layer.frame
-        
         Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
-       
-        //view.sizeToFit()
         Player.isMuted = true
 
         Player.play()
