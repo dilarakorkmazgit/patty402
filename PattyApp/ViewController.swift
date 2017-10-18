@@ -11,6 +11,8 @@ import AVFoundation
 import MapKit
 
 
+
+
 class ViewController: UIViewController {
     
     var Player: AVPlayer!
@@ -32,7 +34,8 @@ class ViewController: UIViewController {
         PlayerLayer.frame = view.layer.frame
         
         Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
-    //    view.sizeToFit()
+       
+        //view.sizeToFit()
         Player.isMuted = true
 
         Player.play()

@@ -21,6 +21,8 @@ target 'PattyApp' do
   target 'PattyAppUITests' do
     inherit! :search_paths
     # Pods for testing
+
+    pod 'Kingfisher', '~> 3.2.3'
   end
 
 end
