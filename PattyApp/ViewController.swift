@@ -25,10 +25,10 @@ class ViewController: UIViewController {
         
         
         
-        let URL = Bundle.main.url(forResource: "dog1", withExtension: "mp4")
-        Player = AVPlayer.init(url: URL!)
+        let URL:NSURL = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/pattyapp-34c16.appspot.com/o/dog1.mp4?alt=media&token=98ab3c41-c645-4535-a70b-41511b5df602")!
+        Player = AVPlayer.init(url: URL as URL)
         
-        
+
         PlayerLayer = AVPlayerLayer(player: Player)
         PlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         PlayerLayer.frame = view.layer.frame
