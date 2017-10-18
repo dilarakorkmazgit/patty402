@@ -12,8 +12,10 @@ import FirebaseAuth
 
 class LoginVC: UIViewController {
     
+   
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -27,29 +29,25 @@ class LoginVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func LoginPressed(_ sender: Any) {
+    @IBAction func loginPressed(_ sender: Any) {
         
-        if let email = emailField.text, let pwd = passwordField.text {
+        if let email = emailField.text, let password = passwordField.text {
             
-            Auth.auth().signIn(withEmail: email, password: pwd) { (user, error) in
-                if error == nil {
-                    print("correct")
-                    
-                }else {
-                    Auth.auth().signIn(withEmail: email, password: pwd) { (user, error) in
-                        if error == nil {
-                            print("invalid")
-                        }else {
-                            print("success")
-                        }
-                    }
+            Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+                
+                if let firebaseError = error {
+                    let dialog = UIAlertController(title: "Oturum açılamadı", message: "Oturum açılamıyor, kullanıcı adı ya da parola yanlış. Patty hesabı için kaydoldun mu?", preferredStyle: UIAlertControllerStyle.alert)
+                    dialog.addAction(UIAlertAction(title: "TAMAM", style: UIAlertActionStyle.default, handler: nil))
+                    DispatchQueue.main.async(execute: {
+                        self.present(dialog, animated: true, completion: nil)
+                    })
+                    print(firebaseError.localizedDescription)
+                    return
                 }
-                
-                
-                
+                self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
+
             }
-            
         }
-        
     }
+    
 }

@@ -48,11 +48,11 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         ScrollView.delegate = self
         
         
-        let URL:NSURL = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/pattyapp-34c16.appspot.com/o/dog.mp4?alt=media&token=d8329d6c-6958-4ff9-81ad-9530437dfe13")!
+        let URL:NSURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")!
         
         Player = AVPlayer.init(url: URL as URL)
         PlayerLayer = AVPlayerLayer(player: Player)
-        PlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        PlayerLayer.videoGravity = AVLayerVideoGravityResize
         PlayerLayer.frame.size = frameVideo.size
         Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
         Player.isMuted = true
