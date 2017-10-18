@@ -21,8 +21,6 @@
 		48F466356828E7E3936F2426 /* Pods_PattyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21B3C9C6911D6FAF763564C /* Pods_PattyApp.framework */; };
 		59BE0E101F96A971008DD52B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BE0E0F1F96A971008DD52B /* LoginVC.swift */; };
 		59C98F931F9548A40000F65D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C98F921F9548A40000F65D /* AVFoundation.framework */; };
-		59C98F951F9549270000F65D /* dog.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 59C98F941F9549270000F65D /* dog.mp4 */; };
-		59C98F971F9557FE0000F65D /* dog1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 59C98F961F9557FE0000F65D /* dog1.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +64,6 @@
 		59BE0E0F1F96A971008DD52B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		59C98F8E1F95428C0000F65D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		59C98F921F9548A40000F65D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		59C98F941F9549270000F65D /* dog.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dog.mp4; path = ../../../../Downloads/dog.mp4; sourceTree = "<group>"; };
-		59C98F961F9557FE0000F65D /* dog1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = dog1.mp4; path = ../../../../Downloads/dog1.mp4; sourceTree = "<group>"; };
 		82AF6362E7D5EA0EFD43663C /* Pods-PattyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppUITests/Pods-PattyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B3B6A59C428E0ED63437E3 /* Pods-PattyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppTests/Pods-PattyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C458BF90183EE5C6DF74B305 /* Pods-PattyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PattyApp/Pods-PattyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,9 +128,7 @@
 				59BE0E0C1F96A32C008DD52B /* PattyApp.entitlements */,
 				3C832F451F94C96400EC8390 /* AppDelegate.swift */,
 				3C832F471F94C96400EC8390 /* ViewController.swift */,
-				59C98F941F9549270000F65D /* dog.mp4 */,
 				3C832F491F94C96400EC8390 /* Main.storyboard */,
-				59C98F961F9557FE0000F65D /* dog1.mp4 */,
 				3C832F4F1F94C96400EC8390 /* Assets.xcassets */,
 				3C832F511F94C96400EC8390 /* LaunchScreen.storyboard */,
 				3C832F541F94C96400EC8390 /* Info.plist */,
@@ -310,8 +304,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59C98F951F9549270000F65D /* dog.mp4 in Resources */,
-				59C98F971F9557FE0000F65D /* dog1.mp4 in Resources */,
 				3C832F531F94C96400EC8390 /* LaunchScreen.storyboard in Resources */,
 				3C832F501F94C96400EC8390 /* Assets.xcassets in Resources */,
 				3C832F771F94D49A00EC8390 /* GoogleService-Info.plist in Resources */,
