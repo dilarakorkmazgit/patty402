@@ -26,7 +26,7 @@ class ViewController: UIViewController {
        
         Player = AVPlayer.init(url: URL as URL)
         PlayerLayer = AVPlayerLayer(player: Player)
-        PlayerLayer.videoGravity = AVLayerVideoGravityResizeAspect
+        PlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         PlayerLayer.frame.size = frameVideo.size
         Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
         Player.isMuted = true
