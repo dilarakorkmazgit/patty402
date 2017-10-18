@@ -11,6 +11,8 @@ import AVFoundation
 import MapKit
 
 
+
+
 class ViewController: UIViewController {
     
     var Player: AVPlayer!
@@ -21,8 +23,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
        
         
-        
-        
+        //Get video from the Firebase Strogae URL
         let URL:NSURL = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/pattyapp-34c16.appspot.com/o/dog1.mp4?alt=media&token=98ab3c41-c645-4535-a70b-41511b5df602")!
         Player = AVPlayer.init(url: URL as URL)
         
@@ -32,7 +33,8 @@ class ViewController: UIViewController {
         PlayerLayer.frame = view.layer.frame
         
         Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
-        view.sizeToFit()
+       
+        //view.sizeToFit()
         Player.isMuted = true
 
         Player.play()
