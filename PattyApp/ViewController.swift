@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var PlayerLayer: AVPlayerLayer!
     
     
-    var frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+    var frameVideo = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         Player = AVPlayer.init(url: URL as URL)
         PlayerLayer = AVPlayerLayer(player: Player)
         PlayerLayer.videoGravity = AVLayerVideoGravityResizeAspect
-        PlayerLayer.frame.size = frame.size
+        PlayerLayer.frame.size = frameVideo.size
         Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
         Player.isMuted = true
     
