@@ -396,10 +396,10 @@
             </objects>
             <point key="canvasLocation" x="765.60000000000002" y="920.68965517241384"/>
         </scene>
-        <!--View Controller-->
+        <!--Reset PasswordVC-->
         <scene sceneID="jMG-tD-ukz">
             <objects>
-                <viewController id="feS-Ra-oZR" sceneMemberID="viewController">
+                <viewController id="feS-Ra-oZR" customClass="resetPasswordVC" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HYZ-bh-hUY"/>
                         <viewControllerLayoutGuide type="bottom" id="mMW-5j-4HE"/>
@@ -463,11 +463,16 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginPressed:" destination="3RD-L3-NZZ" eventType="touchUpInside" id="Dnc-YR-Uru"/>
+                                    <action selector="resetPressed:" destination="feS-Ra-oZR" eventType="touchUpInside" id="ouG-xw-p7N"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="usC-Ft-tkD" id="IkU-Uu-NHv"/>
+                        <outlet property="resetButton" destination="chw-qz-bw8" id="E48-UU-Quu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQv-pv-1ao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class resetPasswordVC: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var resetButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,14 +28,28 @@ class resetPasswordVC: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    @IBAction func resetPressed(_ sender: Any) {
+        
+        if let email = emailField.text {
+            
+            Auth.auth().sendPasswordReset(withEmail: email) { error in
+               
+                    let dialog = UIAlertController(title: "E-posta Gönderildi", message: "\(email) hesabına yeniden girebilmeni sağlayacak bir bağlantı içeren e-posta gönderdik", preferredStyle: UIAlertControllerStyle.alert)
+                    dialog.addAction(UIAlertAction(title: "TAMAM", style: UIAlertActionStyle.default, handler: nil))
+                    DispatchQueue.main.async(execute: {
+                        self.present(dialog, animated: true, completion: nil)
+                    })
+                
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+                
+            }
+            
+            
+        }
+        
+        
+        
     }
-    */
+
 
 }
