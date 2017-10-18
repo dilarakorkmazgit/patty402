@@ -12,6 +12,9 @@ import UIKit
 
 class CreateAccountViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
     
 
     
@@ -37,6 +40,9 @@ class CreateAccountViewController: UIViewController {
     }
     
 
+    @IBAction func signUpPressed(_ sender: Any) {
+        self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
+    }
 
 
 

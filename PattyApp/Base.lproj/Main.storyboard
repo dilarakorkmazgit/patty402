@@ -227,6 +227,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginPressed:" destination="3RD-L3-NZZ" eventType="touchUpInside" id="sTb-4z-xAf"/>
+                                    <action selector="signUpPressed:" destination="qax-DO-OQu" eventType="touchUpInside" id="qNd-pR-LK2"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-posta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8aV-Rd-Llw">
@@ -255,6 +256,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.098039215686274508" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="8aV-Rd-Llw" id="UL1-33-14g"/>
+                        <outlet property="passwordField" destination="eaZ-d3-RFC" id="43J-hO-lHd"/>
+                        <outlet property="signUpButton" destination="KRK-CD-7Bx" id="FRX-l0-Qds"/>
+                        <segue destination="Ido-7X-vUM" kind="show" identifier="LoggedInVC" id="43e-JW-eIN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3l0-Ej-duj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -402,6 +409,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuj-3R-SUe">
+                                <rect key="frame" x="9" y="11" width="48" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Bqi-ht-UBr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -416,6 +434,7 @@
         <image name="pets-2" width="518" height="472"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VTx-NJ-OV1"/>
+        <segue reference="Bqi-ht-UBr"/>
+        <segue reference="Bzz-Nb-hIG"/>
     </inferredMetricsTieBreakers>
 </document>
