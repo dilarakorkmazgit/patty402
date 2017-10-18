@@ -22,7 +22,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     var Player: AVPlayer!
     var PlayerLayer: AVPlayerLayer!
     
-    
+    //Düzenleeee
     var frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
     
     override func viewDidLoad() {
