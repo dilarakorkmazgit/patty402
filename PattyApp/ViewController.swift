@@ -48,18 +48,18 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         ScrollView.delegate = self
         
         
-        let URL:NSURL = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/pattyapp-34c16.appspot.com/o/dog1.mp4?alt=media&token=98ab3c41-c645-4535-a70b-41511b5df602")!
+       // let URL:NSURL = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/pattyapp-34c16.appspot.com/o/dog1.mp4?alt=media&token=4352141b-6c34-4942-b5c8-278be3a5fcfc")!
        
-        Player = AVPlayer.init(url: URL as URL)
-        PlayerLayer = AVPlayerLayer(player: Player)
-        PlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-        PlayerLayer.frame.size = frameVideo.size
-        Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
-        Player.isMuted = true
-        Player.play()
+       // Player = AVPlayer.init(url: URL as URL)
+       // PlayerLayer = AVPlayerLayer(player: Player)
+       // PlayerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+       // PlayerLayer.frame.size = frameVideo.size
+      //  Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
+       // Player.isMuted = true
+       // Player.play()
         
-        view.layer.insertSublayer(PlayerLayer, at: 0)
-        NotificationCenter.default.addObserver(self, selector: #selector(playerItemReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: Player.currentItem)
+        //view.layer.insertSublayer(PlayerLayer, at: 0)
+        //NotificationCenter.default.addObserver(self, selector: #selector(playerItemReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: Player.currentItem)
         
         
         
