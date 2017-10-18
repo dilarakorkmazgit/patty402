@@ -11,17 +11,17 @@ import FirebaseDatabase
 import FirebaseAuth
 
 class LoginVC: UIViewController {
-
+    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,17 +40,16 @@ class LoginVC: UIViewController {
                         if error == nil {
                             print("invalid")
                         }else {
-                             print("success")
+                            print("success")
                         }
+                    }
                 }
+                
+                
+                
+            }
             
-       }
-
-
-    
-    }
-
-}
-
+        }
+        
     }
 }
