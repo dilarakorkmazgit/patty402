@@ -54,7 +54,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         Player = AVPlayer.init(url: URL as URL)
         PlayerLayer = AVPlayerLayer(player: Player)
         PlayerLayer.videoGravity = AVLayerVideoGravityResizeAspect
-        PlayerLayer.frame.size = frame.size
+        PlayerLayer.frame.size = frameVideo.size
         Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
         Player.isMuted = true
         Player.play()
