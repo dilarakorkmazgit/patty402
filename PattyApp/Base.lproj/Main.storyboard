@@ -76,7 +76,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pets-2" translatesAutoresizingMaskIntoConstraints="NO" id="Ioz-PA-6Aa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pets-3" translatesAutoresizingMaskIntoConstraints="NO" id="Ioz-PA-6Aa">
                                 <rect key="frame" x="34" y="7" width="105" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -516,11 +516,11 @@
     </scenes>
     <resources>
         <image name="cooltext262724112059581" width="256" height="72"/>
-        <image name="pets-2" width="518" height="472"/>
+        <image name="pets-3" width="518" height="472"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bzz-Nb-hIG"/>
-        <segue reference="bCy-rq-1ey"/>
         <segue reference="5go-9b-tsr"/>
+        <segue reference="b3Q-wU-OBD"/>
+        <segue reference="Bzz-Nb-hIG"/>
     </inferredMetricsTieBreakers>
 </document>
