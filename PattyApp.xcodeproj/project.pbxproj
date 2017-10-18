@@ -61,6 +61,8 @@
 		3C832F6A1F94C96500EC8390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C832F761F94D49A00EC8390 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3CB153431F9758CA00A21CD7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = "Pods/../build/Debug-iphoneos/Kingfisher/Kingfisher.framework"; sourceTree = "<group>"; };
+		590BE5051F97818A0053E1C2 /* VideoSplashKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoSplashKit.framework; path = "Pods/../build/Debug-iphoneos/VideoSplashKit/VideoSplashKit.framework"; sourceTree = "<group>"; };
+		590BE5071F9789F40053E1C2 /* VideoSplashKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoSplashKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/PattyApp-ecrebtgadkwnhcginvbrewfcztcz/Build/Products/Debug-iphonesimulator/VideoSplashKit/VideoSplashKit.framework"; sourceTree = "<group>"; };
 		59BE0E0C1F96A32C008DD52B /* PattyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PattyApp.entitlements; sourceTree = "<group>"; };
 		59BE0E0F1F96A971008DD52B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		59C98F8E1F95428C0000F65D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -161,6 +163,8 @@
 		9A45B902B73FF98D8D52313B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				590BE5071F9789F40053E1C2 /* VideoSplashKit.framework */,
+				590BE5051F97818A0053E1C2 /* VideoSplashKit.framework */,
 				3CB153431F9758CA00A21CD7 /* Kingfisher.framework */,
 				59C98F921F9548A40000F65D /* AVFoundation.framework */,
 				59C98F8E1F95428C0000F65D /* MediaPlayer.framework */,
@@ -658,6 +662,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Kingfisher",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/VideoSplashKit",
 				);
 				INFOPLIST_FILE = PattyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
@@ -681,6 +686,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Kingfisher",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/VideoSplashKit",
 				);
 				INFOPLIST_FILE = PattyApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;

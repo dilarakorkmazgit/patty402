@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,93 +22,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot_2" translatesAutoresizingMaskIntoConstraints="NO" id="PW0-yo-g9D">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="217"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgf-EJ-sbk" customClass="RoundedButton" customModule="PattyApp" customModuleProvider="target">
+                                <rect key="frame" x="34" y="538" width="306" height="37"/>
+                                <color key="backgroundColor" red="0.76470588235294112" green="0.48627450980392156" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="PW0-yo-g9D" secondAttribute="height" multiplier="375:217" id="N7d-Kz-0sE"/>
-                                    <constraint firstAttribute="width" constant="375" id="jnK-93-hwj"/>
+                                    <constraint firstAttribute="height" constant="37" id="Ehy-IS-B1g"/>
+                                    <constraint firstAttribute="width" constant="306" id="HzB-4I-22A"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="HESAP OLUŞTUR">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlG-9r-6J5">
+                                <rect key="frame" x="34" y="610" width="306" height="37"/>
+                                <color key="backgroundColor" red="0.93186165646461627" green="0.59326981975993864" blue="0.3312501451959175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="JVk-rM-mxT"/>
+                                    <constraint firstAttribute="width" constant="306" id="UDm-dV-Ylg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="OTURUM AÇ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaten kullanıcı mısın ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yep-zR-NmG">
+                                <rect key="frame" x="34" y="583" width="306" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="306" id="J2R-hP-vVs"/>
+                                    <constraint firstAttribute="height" constant="19" id="ttc-ml-TW7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PATTY" translatesAutoresizingMaskIntoConstraints="NO" id="PxN-eE-yR2">
+                                <rect key="frame" x="167" y="20" width="173" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="cvc-bf-qeA">
-                                <rect key="frame" x="115" y="548" width="144.5" height="111"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgf-EJ-sbk" customClass="RoundedButton" customModule="PattyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="144.5" height="37"/>
-                                        <color key="backgroundColor" red="0.76282115636138137" green="0.48520992195026968" blue="0.26652023521934987" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
-                                        <state key="normal" title="HESAP OLUŞTUR">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaten kullanıcı mısın ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yep-zR-NmG">
-                                        <rect key="frame" x="0.0" y="46" width="144.5" height="19"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Yep-zR-NmG" secondAttribute="height" multiplier="144:19" id="Zmj-IA-b7m"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="16"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BlG-9r-6J5">
-                                        <rect key="frame" x="0.0" y="74" width="144.5" height="37"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="BlG-9r-6J5" secondAttribute="height" multiplier="144:37" id="vat-LR-qgs"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
-                                        <state key="normal" title="OTURUM AÇ">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Zgf-EJ-sbk" firstAttribute="leading" secondItem="cvc-bf-qeA" secondAttribute="leading" id="LJ5-Wj-NgQ"/>
-                                    <constraint firstItem="BlG-9r-6J5" firstAttribute="top" secondItem="Yep-zR-NmG" secondAttribute="bottom" constant="9" id="ONf-dS-csl"/>
-                                    <constraint firstAttribute="width" secondItem="Zgf-EJ-sbk" secondAttribute="height" multiplier="144:37" id="f7A-zq-SEe"/>
-                                    <constraint firstAttribute="trailing" secondItem="Zgf-EJ-sbk" secondAttribute="trailing" id="geX-AX-Egp"/>
-                                    <constraint firstItem="Yep-zR-NmG" firstAttribute="top" secondItem="Zgf-EJ-sbk" secondAttribute="bottom" constant="9" id="uj0-oD-3i2"/>
-                                </constraints>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="02bac95a04a65600a095ae5948d87756-dog-cartoon-by-vexels" translatesAutoresizingMaskIntoConstraints="NO" id="M7p-Xi-rE8">
+                                <rect key="frame" x="-8" y="11" width="206" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PW0-yo-g9D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5yQ-Yt-4Sk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zgf-EJ-sbk" secondAttribute="trailing" constant="99.5" id="FiD-MR-eIT"/>
-                            <constraint firstItem="PW0-yo-g9D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Lti-xP-8vo"/>
-                            <constraint firstItem="PW0-yo-g9D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="S0K-Xy-s8x"/>
-                            <constraint firstItem="Zgf-EJ-sbk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="99" id="Tci-cO-niN"/>
-                            <constraint firstItem="cvc-bf-qeA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UVS-pf-Unx"/>
-                            <constraint firstItem="PW0-yo-g9D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hQv-yS-emH"/>
-                            <constraint firstItem="cvc-bf-qeA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jED-bu-KvR"/>
-                            <constraint firstAttribute="trailing" secondItem="PW0-yo-g9D" secondAttribute="trailing" id="lDa-ja-swf"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PW0-yo-g9D" secondAttribute="trailing" constant="-16" id="mhl-Hg-Hir"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BlG-9r-6J5" secondAttribute="bottom" constant="8" id="nLh-ce-69e"/>
-                            <constraint firstItem="Zgf-EJ-sbk" firstAttribute="top" secondItem="PW0-yo-g9D" secondAttribute="bottom" constant="331" id="zwI-fO-gZb"/>
+                            <constraint firstItem="BlG-9r-6J5" firstAttribute="top" secondItem="Yep-zR-NmG" secondAttribute="bottom" constant="8" id="Aot-xy-8fz"/>
+                            <constraint firstItem="BlG-9r-6J5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="CD1-6M-cUu"/>
+                            <constraint firstItem="Yep-zR-NmG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="LKv-9w-ztV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BlG-9r-6J5" secondAttribute="trailing" constant="19" id="NZo-ph-R4O"/>
+                            <constraint firstItem="Yep-zR-NmG" firstAttribute="top" secondItem="Zgf-EJ-sbk" secondAttribute="bottom" constant="8" id="XBg-QZ-Lna"/>
+                            <constraint firstItem="BlG-9r-6J5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZTI-3j-xis"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yep-zR-NmG" secondAttribute="trailing" constant="19" id="eYe-gN-X43"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zgf-EJ-sbk" secondAttribute="trailing" constant="19" id="hl7-Hy-tWy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BlG-9r-6J5" secondAttribute="bottom" constant="20" id="koS-8i-fzp"/>
+                            <constraint firstItem="Zgf-EJ-sbk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nA6-MF-sCV"/>
+                            <constraint firstItem="Zgf-EJ-sbk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="vAS-4a-lJt"/>
+                            <constraint firstItem="Yep-zR-NmG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xxn-wZ-199"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186" y="197"/>
+            <point key="canvasLocation" x="-266.39999999999998" y="186.65667166416793"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Screenshot_2" width="433" height="217"/>
+        <image name="02bac95a04a65600a095ae5948d87756-dog-cartoon-by-vexels" width="512" height="512"/>
+        <image name="PATTY" width="347" height="109"/>
     </resources>
 </document>
