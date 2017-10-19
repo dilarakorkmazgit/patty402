@@ -10,28 +10,13 @@ import Foundation
 import Firebase
 import UIKit
 
-class CreateAccountVC: UIViewController {
+class SignUpVC: UIViewController {
 
+    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,7 +30,9 @@ class CreateAccountVC: UIViewController {
     
 
     @IBAction func signUpPressed(_ sender: Any) {
+        
         self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
+        
     }
 
 

@@ -20,6 +20,8 @@
 		3C832F691F94C96500EC8390 /* PattyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C832F681F94C96500EC8390 /* PattyAppUITests.swift */; };
 		3C832F771F94D49A00EC8390 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C832F761F94D49A00EC8390 /* GoogleService-Info.plist */; };
 		48F466356828E7E3936F2426 /* Pods_PattyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21B3C9C6911D6FAF763564C /* Pods_PattyApp.framework */; };
+		590845F71F97ED9D009A2D6A /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590845F61F97ED9D009A2D6A /* LoggedInVC.swift */; };
+		590845FB1F980238009A2D6A /* resetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590845FA1F980238009A2D6A /* resetPasswordVC.swift */; };
 		59BE0E101F96A971008DD52B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BE0E0F1F96A971008DD52B /* LoginVC.swift */; };
 		59C98F931F9548A40000F65D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C98F921F9548A40000F65D /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
@@ -62,9 +64,8 @@
 		3C832F681F94C96500EC8390 /* PattyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PattyAppUITests.swift; sourceTree = "<group>"; };
 		3C832F6A1F94C96500EC8390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C832F761F94D49A00EC8390 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3CB153431F9758CA00A21CD7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = "Pods/../build/Debug-iphoneos/Kingfisher/Kingfisher.framework"; sourceTree = "<group>"; };
-		590BE5051F97818A0053E1C2 /* VideoSplashKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoSplashKit.framework; path = "Pods/../build/Debug-iphoneos/VideoSplashKit/VideoSplashKit.framework"; sourceTree = "<group>"; };
-		590BE5071F9789F40053E1C2 /* VideoSplashKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoSplashKit.framework; path = "../../../Library/Developer/Xcode/DerivedData/PattyApp-ecrebtgadkwnhcginvbrewfcztcz/Build/Products/Debug-iphonesimulator/VideoSplashKit/VideoSplashKit.framework"; sourceTree = "<group>"; };
+		590845F61F97ED9D009A2D6A /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
+		590845FA1F980238009A2D6A /* resetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resetPasswordVC.swift; sourceTree = "<group>"; };
 		59BE0E0C1F96A32C008DD52B /* PattyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PattyApp.entitlements; sourceTree = "<group>"; };
 		59BE0E0F1F96A971008DD52B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		59C98F8E1F95428C0000F65D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -141,6 +142,8 @@
 				3C832F761F94D49A00EC8390 /* GoogleService-Info.plist */,
 				3C832F4C1F94C96400EC8390 /* PattyApp.xcdatamodeld */,
 				59BE0E0F1F96A971008DD52B /* LoginVC.swift */,
+				590845F61F97ED9D009A2D6A /* LoggedInVC.swift */,
+				590845FA1F980238009A2D6A /* resetPasswordVC.swift */,
 			);
 			path = PattyApp;
 			sourceTree = "<group>";
@@ -166,9 +169,6 @@
 		9A45B902B73FF98D8D52313B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				590BE5071F9789F40053E1C2 /* VideoSplashKit.framework */,
-				590BE5051F97818A0053E1C2 /* VideoSplashKit.framework */,
-				3CB153431F9758CA00A21CD7 /* Kingfisher.framework */,
 				59C98F921F9548A40000F65D /* AVFoundation.framework */,
 				59C98F8E1F95428C0000F65D /* MediaPlayer.framework */,
 				E21B3C9C6911D6FAF763564C /* Pods_PattyApp.framework */,
@@ -503,7 +503,9 @@
 				3C5217071F979FF200F52725 /* CreateAccountVC.swift in Sources */,
 				3C832F4E1F94C96400EC8390 /* PattyApp.xcdatamodeld in Sources */,
 				3C832F481F94C96400EC8390 /* ViewController.swift in Sources */,
+				590845F71F97ED9D009A2D6A /* LoggedInVC.swift in Sources */,
 				59BE0E101F96A971008DD52B /* LoginVC.swift in Sources */,
+				590845FB1F980238009A2D6A /* resetPasswordVC.swift in Sources */,
 				3C832F461F94C96400EC8390 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
