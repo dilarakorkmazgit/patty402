@@ -14,6 +14,14 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    
+    var logoImage: [UIImage] = [
+        UIImage(named: "hosgeldiniz.png")!,
+        UIImage(named: "bildirimler.png")!,
+        UIImage(named: "kesfet.png")!
+    ]
+
     var colorRange :[UIColor] = [UIColor.red,UIColor.yellow,UIColor.blue,UIColor.purple]
     
     var frame = CGRect(x:0,y:0,width:0,height:0)
@@ -22,44 +30,56 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     var Player: AVPlayer!
     var PlayerLayer: AVPlayerLayer!
     
-    //Düzenleeee
-    var frameVideo = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
+  //  var frameVideo = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Do any additional setup after loading the view, typically from a nib.
+        
+        //fit the background image -MÜKEMMEL KOD CUK OTURUYİİİİİİİİ
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "BACKGROUND-1")
+        backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        
         
         //Adding different scrolview Page
         
-        pageControl.numberOfPages = colorRange.count
-        for index in 0..<colorRange.count {
+        //pageControl.numberOfPages = colorRange.count
+        pageControl.numberOfPages = logoImage.count
+        
+       // for index in 0..<logoImage.count {
             
-            frame.origin.x = ScrollView.frame.size.width * CGFloat(index)
-            frame.size = ScrollView.frame.size
+        //    frame.origin.x = ScrollView.frame.size.width * CGFloat(index)
+          //  frame.size = ScrollView.frame.size
             
-            let view = UIView(frame:frame)
-            view.backgroundColor = colorRange[index]
-            self.ScrollView.addSubview(view)
-        }
+           // let view = UIView(frame:frame)
+           // view.backgroundColor = logoImage[index]
+           // self.ScrollView.addSubview(view)
+       // }
+        
+        
+        
+        
         
         ScrollView.contentSize = CGSize(width:(ScrollView.frame.size.width * CGFloat(colorRange.count)),height :ScrollView.frame.size.height)
         
         ScrollView.delegate = self
         
+        //ŞİMDİLİK VİDEOYU COMMENTE ALDIM SONRA BAKARINK
         
-        let URL:NSURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")!
+        //let URL:NSURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")!
         
-        Player = AVPlayer.init(url: URL as URL)
-        PlayerLayer = AVPlayerLayer(player: Player)
-        PlayerLayer.videoGravity = AVLayerVideoGravityResize
-        PlayerLayer.frame.size = frameVideo.size
-        Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
-        Player.isMuted = true
-        Player.play()
+       // Player = AVPlayer.init(url: URL as URL)
+        //PlayerLayer = AVPlayerLayer(player: Player)
+        //PlayerLayer.videoGravity = AVLayerVideoGravityResize
+        //PlayerLayer.frame.size = frameVideo.size
+        //Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
+        //Player.isMuted = true
+        //Player.play()
         
-        view.layer.insertSublayer(PlayerLayer, at: 0)
-        NotificationCenter.default.addObserver(self, selector: #selector(playerItemReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: Player.currentItem)
+        //view.layer.insertSublayer(PlayerLayer, at: 0)
+        //NotificationCenter.default.addObserver(self, selector: #selector(playerItemReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: Player.currentItem)
         
         
         

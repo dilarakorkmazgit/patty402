@@ -52,7 +52,7 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-AM-veu">
-                                <rect key="frame" x="67" y="488.5" width="240" height="37"/>
+                                <rect key="frame" x="67" y="444.5" width="240" height="37"/>
                                 <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -60,7 +60,7 @@
                                 </connections>
                             </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FAy-tS-6v5">
-                                <rect key="frame" x="70" y="274.5" width="240" height="206"/>
+                                <rect key="frame" x="70" y="230.5" width="240" height="206"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FAy-tS-6v5" secondAttribute="height" multiplier="120:103" id="DPs-Je-gss"/>
                                 </constraints>
@@ -76,14 +76,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pets-3" translatesAutoresizingMaskIntoConstraints="NO" id="Ioz-PA-6Aa">
-                                <rect key="frame" x="34" y="7" width="105" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cooltext262724112059581" translatesAutoresizingMaskIntoConstraints="NO" id="9Ep-tg-nXF">
-                                <rect key="frame" x="158" y="13" width="172" height="97"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSZ-E8-IrD">
                                 <rect key="frame" x="34" y="599" width="306" height="37"/>
                                 <color key="backgroundColor" red="1" green="0.70196078431372544" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -111,6 +103,10 @@
                                     <segue destination="3RD-L3-NZZ" kind="show" id="b3Q-wU-OBD"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PATTY-LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="7II-Tt-KDd">
+                                <rect key="frame" x="67" y="28" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -184,9 +180,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="emailField" destination="8aV-Rd-Llw" id="UL1-33-14g"/>
-                        <outlet property="passwordField" destination="eaZ-d3-RFC" id="43J-hO-lHd"/>
-                        <outlet property="signUpButton" destination="KRK-CD-7Bx" id="FRX-l0-Qds"/>
                         <segue destination="Ido-7X-vUM" kind="show" identifier="LoggedInVC" id="43e-JW-eIN"/>
                     </connections>
                 </viewController>
@@ -197,7 +190,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ftb-KK-7Iz">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jvO-DJ-xeN" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="jvO-DJ-xeN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yy1-f7-nqW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -460,11 +453,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cooltext262724112059581" width="256" height="72"/>
-        <image name="pets-3" width="518" height="472"/>
+        <image name="PATTY-LOGO" width="1082" height="492"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5go-9b-tsr"/>
+        <segue reference="gbD-EB-IgI"/>
         <segue reference="b3Q-wU-OBD"/>
         <segue reference="Bzz-Nb-hIG"/>
     </inferredMetricsTieBreakers>
