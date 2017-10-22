@@ -12,7 +12,8 @@ target 'PattyApp' do
    pod ‘Firebase/Database’
    pod ‘Firebase/Auth’
    pod 'KeychainSwift'
-   
+   pod ‘FBSDKLoginKit’
+    
   target 'PattyAppTests' do
     inherit! :search_paths
     # Pods for testing
