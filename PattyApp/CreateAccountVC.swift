@@ -10,11 +10,15 @@ import Foundation
 import Firebase
 import UIKit
 
-class CreateAccountViewController: UIViewController {
+class CreateAccountVC: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
+    
+    
+    
+    
     
 
     
