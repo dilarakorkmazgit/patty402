@@ -62,7 +62,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="OTURUM AÇ" backgroundImage="BUTON-BEYAZ">
-                                    <color key="titleColor" red="1" green="0.36082160108884664" blue="0.14940686341912235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.36078431372549019" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="3RD-L3-NZZ" kind="show" id="b3Q-wU-OBD"/>
@@ -232,7 +232,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtF-oT-W8f">
                                 <rect key="frame" x="100" y="323" width="174" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.70196078431372544" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.36078431372549019" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="OTURUM AÇ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -361,7 +361,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chw-qz-bw8">
                                 <rect key="frame" x="100" y="187" width="174" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.70196078429999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.36078431372549019" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="PAROLAMI SIFIRLA">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -436,8 +436,8 @@
         <image name="PATTY-LOGO" width="1082" height="492"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gbD-EB-IgI"/>
-        <segue reference="b3Q-wU-OBD"/>
         <segue reference="Bzz-Nb-hIG"/>
+        <segue reference="bCy-rq-1ey"/>
+        <segue reference="5go-9b-tsr"/>
     </inferredMetricsTieBreakers>
 </document>

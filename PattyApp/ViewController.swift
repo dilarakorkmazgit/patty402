@@ -66,7 +66,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         
         ScrollView.delegate = self
         
-        //ŞİMDİLİK VİDEOYU COMMENTE ALDIM SONRA BAKARINK
+        //ŞİMDİLİK VİDEOYU COMMENTE ALDIM SONRA BAKARIz
         
         //let URL:NSURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")!
         
