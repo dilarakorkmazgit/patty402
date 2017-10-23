@@ -40,19 +40,13 @@
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-AM-veu">
-                                <rect key="frame" x="67" y="444.5" width="240" height="37"/>
+                                <rect key="frame" x="160" y="478" width="55" height="37"/>
                                 <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="pageChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="NLy-pT-7Ra"/>
                                 </connections>
                             </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FAy-tS-6v5">
-                                <rect key="frame" x="70" y="230.5" width="240" height="206"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="FAy-tS-6v5" secondAttribute="height" multiplier="120:103" id="DPs-Je-gss"/>
-                                </constraints>
-                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSZ-E8-IrD">
                                 <rect key="frame" x="34" y="599" width="306" height="37"/>
                                 <constraints>
@@ -83,34 +77,37 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FAy-tS-6v5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="530"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Zgf-EJ-sbk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Ob-iv-OxJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZZQ-xW-AeS" secondAttribute="trailing" constant="19" id="1eq-7A-jPE"/>
                             <constraint firstItem="ZZQ-xW-AeS" firstAttribute="top" secondItem="Zgf-EJ-sbk" secondAttribute="bottom" constant="8" id="3hW-Lf-UxW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FAy-tS-6v5" secondAttribute="trailing" constant="49" id="4uy-El-UKN"/>
                             <constraint firstItem="ofE-AM-veu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4z9-AD-CqY"/>
                             <constraint firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5yQ-Yt-4Sk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pSZ-E8-IrD" secondAttribute="trailing" constant="19" id="ApG-m1-yh7"/>
                             <constraint firstItem="pSZ-E8-IrD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="Bw8-Na-yea"/>
-                            <constraint firstItem="FAy-tS-6v5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="210.5" id="Jcm-cz-qRT"/>
                             <constraint firstItem="ZZQ-xW-AeS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="KHb-31-wbv"/>
                             <constraint firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Lti-xP-8vo"/>
+                            <constraint firstItem="ofE-AM-veu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="458" id="QyO-Ib-kmu"/>
                             <constraint firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="S0K-Xy-s8x"/>
-                            <constraint firstItem="ofE-AM-veu" firstAttribute="top" secondItem="FAy-tS-6v5" secondAttribute="bottom" constant="8" id="Slq-kg-5VD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ofE-AM-veu" secondAttribute="trailing" constant="144" id="XFR-D9-3FQ"/>
                             <constraint firstItem="Zgf-EJ-sbk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="18" id="XIc-nc-mFM"/>
                             <constraint firstItem="ZZQ-xW-AeS" firstAttribute="leading" secondItem="Zgf-EJ-sbk" secondAttribute="leading" id="eJl-gH-TRx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zgf-EJ-sbk" secondAttribute="trailing" constant="19" id="fWI-SW-yg0"/>
                             <constraint firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hQv-yS-emH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZZQ-xW-AeS" secondAttribute="bottom" constant="63" id="iIR-OR-Kvm"/>
-                            <constraint firstItem="ofE-AM-veu" firstAttribute="width" secondItem="FAy-tS-6v5" secondAttribute="width" id="kCH-sj-Z1f"/>
                             <constraint firstItem="pSZ-E8-IrD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nsE-ap-d13"/>
-                            <constraint firstItem="FAy-tS-6v5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="54" id="sep-hw-wYW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pSZ-E8-IrD" secondAttribute="bottom" constant="28" id="uVz-mI-Ktl"/>
                             <constraint firstItem="ZZQ-xW-AeS" firstAttribute="top" secondItem="Zgf-EJ-sbk" secondAttribute="bottom" constant="8" id="xcX-aU-LMA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ofE-AM-veu" secondAttribute="bottom" constant="152" id="xdP-SJ-CVC"/>
                             <constraint firstItem="ZZQ-xW-AeS" firstAttribute="leading" secondItem="pSZ-E8-IrD" secondAttribute="leading" id="z9u-zO-cma"/>
                             <constraint firstItem="ZZQ-xW-AeS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zU1-oq-cVw"/>
+                            <constraint firstItem="ofE-AM-veu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="144" id="zlC-NQ-fx5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GJ6-Hf-R7t"/>
@@ -436,8 +433,8 @@
         <image name="PATTY-LOGO" width="1082" height="492"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bzz-Nb-hIG"/>
-        <segue reference="bCy-rq-1ey"/>
         <segue reference="5go-9b-tsr"/>
+        <segue reference="b3Q-wU-OBD"/>
+        <segue reference="Bzz-Nb-hIG"/>
     </inferredMetricsTieBreakers>
 </document>
