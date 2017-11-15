@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1E1CFE4DAAD6ECEE2C25ECB38D2E4473"
+               BlueprintIdentifier = "6131F817EB285AE4350C5E6FD675F851"
                BuildableName = "Pods_PattyApp.framework"
                BlueprintName = "Pods-PattyApp"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "1E1CFE4DAAD6ECEE2C25ECB38D2E4473"
+            BlueprintIdentifier = "6131F817EB285AE4350C5E6FD675F851"
             BuildableName = "Pods_PattyApp.framework"
             BlueprintName = "Pods-PattyApp"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -12,7 +12,7 @@ target 'PattyApp' do
    pod ‘Firebase/Database’
    pod ‘Firebase/Auth’
    pod 'KeychainSwift'
-   pod ‘Firebase/Storage’
+   pod ‘FirebaseStorage’
     
   target 'PattyAppTests' do
     inherit! :search_paths

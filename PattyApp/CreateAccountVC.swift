@@ -49,7 +49,6 @@ class CreateAccountVC: UIViewController {
     }
   
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,25 +60,10 @@ class CreateAccountVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   
-    
+
     @IBAction func kaydolPressed(_ sender: Any) {
         
-        if let email = mailLabel.text, let password = poasswordLabel.text,let firstname = firstnameLabel.text,let lastname = lastnameLabel.text, let username = usernameLabel.text {
-            
-    
-          
-            
-            
-            
-            }
         
-        
-        
-        
- 
-    
-    
     }
 
 }

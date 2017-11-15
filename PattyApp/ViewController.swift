@@ -19,7 +19,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         UIImage(named: "hosgeldiniz.png")!,
         UIImage(named: "bildirimler.png")!,
         UIImage(named: "kesfet.png")!
-        //kjfhkshkhf
+       
     ]
 
     var colorRange :[UIColor] = [UIColor.white,UIColor.white,UIColor.white,UIColor.white]
@@ -30,13 +30,13 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     var PlayerLayer: AVPlayerLayer!
     
   //  var frameVideo = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
-    //test1
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        //fit the background image -MÜKEMMEL KOD CUK OTURUYİİİİİİİİ
+        //fit the background image
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "BACKGROUND-1")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
@@ -58,22 +58,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         
         ScrollView.contentSize = CGSize(width:(ScrollView.frame.size.width * CGFloat(logoImage.count)),height :ScrollView.frame.size.height)
         ScrollView.delegate = self
-        
-        //ŞİMDİLİK VİDEOYU COMMENTE ALDIM SONRA BAKARIz
-        
-        //let URL:NSURL = NSURL(string: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")!
-        
-       // Player = AVPlayer.init(url: URL as URL)
-        //PlayerLayer = AVPlayerLayer(player: Player)
-        //PlayerLayer.videoGravity = AVLayerVideoGravityResize
-        //PlayerLayer.frame.size = frameVideo.size
-        //Player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
-        //Player.isMuted = true
-        //Player.play()
-        
-        //view.layer.insertSublayer(PlayerLayer, at: 0)
-        //NotificationCenter.default.addObserver(self, selector: #selector(playerItemReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: Player.currentItem)
-        
+      
         
     }
     
