@@ -8,8 +8,7 @@
 import UIKit
 import AVFoundation
 import MapKit
-//hfghsgshgfgajhgajhgjhff
-//COMMİT OLUYOR MUU
+
 class ViewController: UIViewController,UIScrollViewDelegate {
     
     @IBOutlet weak var ScrollView: UIScrollView!
@@ -29,7 +28,6 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     var Player: AVPlayer!
     var PlayerLayer: AVPlayerLayer!
     
-  //  var frameVideo = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
    
     
     override func viewDidLoad() {
