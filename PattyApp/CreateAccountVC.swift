@@ -48,7 +48,7 @@ class CreateAccountVC: UIViewController {
                 return
             }
             
-            
+            //
             let userID: String = user!.uid
             let firstname: String = self.firstnameLabel.text!
             let lastname: String = self.lastnameLabel.text!
@@ -57,7 +57,7 @@ class CreateAccountVC: UIViewController {
             let password: String = self.poasswordLabel.text!
             
             self.ref.child(userID).setValue(["firstname": firstname, "lastname": lastname, "email": email, "password":password, "username": username])
-            print("user registered" + user!.uid)
+            print("user registered " + user!.uid)
             
         })
         self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
