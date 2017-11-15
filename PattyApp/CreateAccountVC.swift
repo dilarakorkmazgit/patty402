@@ -13,11 +13,11 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
 
-//create databse reference
-let databaseRef = Database().reference();
 
 
 class CreateAccountVC: UIViewController {
+    
+    var ref: DatabaseReference!
     
     @IBOutlet weak var firstnameLabel: UITextField!
     @IBOutlet weak var lastnameLabel: UITextField!
@@ -25,34 +25,12 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var mailLabel: UITextField!
     @IBOutlet weak var poasswordLabel: UITextField!
     @IBOutlet weak var kaydolButton: UIButton!
-
-    static let ds = CreateAccountVC()
    
-    //create private variable for tuples
-    private var _databaseRef = databaseRef
-    private var ref_User = databaseRef.child("user")
-    
-    var Refbase :DatabaseReference{
-        
-        
-        return _databaseRef
-    }
-    
-    var Refuser :DatabaseReference{
-        
-        
-        return ref_User
-    }
-    func createnewFirebaseuser(uid: String,userData:Dictionary<String,String>){
-        ref_User.child(uid).updateChildValues(userData)
-        
-    }
-  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+
+         ref = Database.database().reference().child("user")
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,11 +38,33 @@ class CreateAccountVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     @IBAction func kaydolPressed(_ sender: Any) {
         
-        
+        Auth.auth().createUser(withEmail: mailLabel.text!, password: poasswordLabel.text!, completion: {(user,error) in
+            
+            
+            if error != nil {
+                print(error)
+                return
+            }
+            
+            
+            let userID: String = user!.uid
+            let firstname: String = self.firstnameLabel.text!
+            let lastname: String = self.lastnameLabel.text!
+            let email: String = self.mailLabel.text!
+            let username: String = self.usernameLabel.text!
+            let password: String = self.poasswordLabel.text!
+            
+            self.ref.child(userID).setValue(["firstname": firstname, "lastname": lastname, "email": email, "password":password, "username": username])
+            print("user registered" + user!.uid)
+            
+        })
+        self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
+
+
     }
+    
 
 }
 

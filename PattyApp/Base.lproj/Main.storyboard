@@ -161,7 +161,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xvo-Hp-0Zu">
                                 <rect key="frame" x="16" y="20" width="30" height="30"/>
@@ -208,7 +208,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="kaydolPressed:" destination="qax-DO-OQu" eventType="touchUpInside" id="Rpz-cS-I3G"/>
+                                    <action selector="kaydolPressed:" destination="qax-DO-OQu" eventType="touchUpInside" id="t3n-S2-Waf"/>
                                 </connections>
                             </button>
                         </subviews>
