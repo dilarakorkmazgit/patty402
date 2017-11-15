@@ -9,12 +9,10 @@ import UIKit
 import AVFoundation
 import MapKit
 
-
 class ViewController: UIViewController,UIScrollViewDelegate {
     
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
-    
     
     var logoImage: [UIImage] = [
         UIImage(named: "hosgeldiniz.png")!,
@@ -25,7 +23,6 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     var colorRange :[UIColor] = [UIColor.white,UIColor.white,UIColor.white,UIColor.white]
     
     var frame = CGRect(x:0,y:0,width:0,height:0)
-    
     
     var Player: AVPlayer!
     var PlayerLayer: AVPlayerLayer!
@@ -43,7 +40,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         self.view.insertSubview(backgroundImage, at: 0)
         
         
-        //Adding different scrolview Page
+        //Adding different scrollview Page
         
         for index in 0..<3 {
             
@@ -73,8 +70,6 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         
         //view.layer.insertSublayer(PlayerLayer, at: 0)
         //NotificationCenter.default.addObserver(self, selector: #selector(playerItemReachEnd(notification:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: Player.currentItem)
-        
-        
         
         
     }

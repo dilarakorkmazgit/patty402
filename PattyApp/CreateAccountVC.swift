@@ -12,11 +12,15 @@ import UIKit
 
 class CreateAccountVC: UIViewController {
 
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var signUpButton: UIButton!
-    
 
+    @IBOutlet weak var mailLabel: UITextField!
+
+    @IBOutlet weak var poasswordLabel: UITextField!
+    
+    
+    @IBOutlet weak var kaydolButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,14 +32,17 @@ class CreateAccountVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     @IBAction func signUpPressed(_ sender: Any) {
         self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
     }
-
-
-
-
-
+    
+    @IBAction func kaydolPressed(_ sender: Any) {
+        
+        
+        
+        
+    }
+    
+    
 
 }

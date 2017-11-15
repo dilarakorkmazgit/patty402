@@ -44,7 +44,10 @@ class LoginVC: UIViewController {
                     print(firebaseError.localizedDescription)
                     return
                 }
-                self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
+                else{
+                    self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
+
+                }
 
             }
         }
