@@ -9,6 +9,7 @@ import UIKit
 import AVFoundation
 import MapKit
 //hfghsgshgfgajhgajhgjhff
+//COMMİT OLUYOR MUU
 class ViewController: UIViewController,UIScrollViewDelegate {
     
     @IBOutlet weak var ScrollView: UIScrollView!
