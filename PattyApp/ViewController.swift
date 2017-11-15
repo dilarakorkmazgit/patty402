@@ -9,6 +9,7 @@ import UIKit
 import AVFoundation
 import MapKit
 //hfghsgshgfgajhgajhgjhff
+//COMMİT OLUYOR MUU
 class ViewController: UIViewController,UIScrollViewDelegate {
     
     @IBOutlet weak var ScrollView: UIScrollView!
@@ -18,6 +19,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         UIImage(named: "hosgeldiniz.png")!,
         UIImage(named: "bildirimler.png")!,
         UIImage(named: "kesfet.png")!
+        //kjfhkshkhf
     ]
 
     var colorRange :[UIColor] = [UIColor.white,UIColor.white,UIColor.white,UIColor.white]
