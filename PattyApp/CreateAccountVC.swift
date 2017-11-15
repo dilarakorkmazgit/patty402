@@ -9,15 +9,49 @@
 import Foundation
 import Firebase
 import UIKit
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
+
+//create databse reference
+let databaseRef = Database().reference();
+
 
 class CreateAccountVC: UIViewController {
 
 
-    @IBOutlet weak var mailLabel: UITextField!
+    static let ds = CreateAccountVC()
+   
+    //create private variable for tuples
+    private var _databaseRef = databaseRef
+    private var ref_User = databaseRef.child("user")
+    
+    var Refbase :DatabaseReference{
+        
+        
+        return _databaseRef
+        
+    }
+    
+    var Refuser :DatabaseReference{
+        
+        
+        return ref_User
+        
+    }
+    func newFirebaseuser(){
+        
+    }
+    
+    
+    
+    
 
+    @IBOutlet weak var firstnameLabel: UITextField!
+    @IBOutlet weak var lastnameLabel: UITextField!
+    @IBOutlet weak var usernameLabel: UITextField!
+    @IBOutlet weak var mailLabel: UITextField!
     @IBOutlet weak var poasswordLabel: UITextField!
-    
-    
     @IBOutlet weak var kaydolButton: UIButton!
     
     
