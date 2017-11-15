@@ -68,10 +68,11 @@ class CreateAccountVC: UIViewController {
         if let email = mailLabel.text, let password = poasswordLabel.text,let firstname = firstnameLabel.text,let lastname = lastnameLabel.text, let username = usernameLabel.text {
             
     
+          
             
             
             
-       }
+            }
         
         
         
