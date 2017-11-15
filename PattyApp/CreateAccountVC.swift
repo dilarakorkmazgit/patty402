@@ -48,7 +48,7 @@ class CreateAccountVC: UIViewController {
                 return
             }
             
-            //
+            
             let userID: String = user!.uid
             let firstname: String = self.firstnameLabel.text!
             let lastname: String = self.lastnameLabel.text!
