@@ -18,7 +18,13 @@ let databaseRef = Database().reference();
 
 
 class CreateAccountVC: UIViewController {
-
+    
+    @IBOutlet weak var firstnameLabel: UITextField!
+    @IBOutlet weak var lastnameLabel: UITextField!
+    @IBOutlet weak var usernameLabel: UITextField!
+    @IBOutlet weak var mailLabel: UITextField!
+    @IBOutlet weak var poasswordLabel: UITextField!
+    @IBOutlet weak var kaydolButton: UIButton!
 
     static let ds = CreateAccountVC()
    
@@ -30,29 +36,18 @@ class CreateAccountVC: UIViewController {
         
         
         return _databaseRef
-        
     }
     
     var Refuser :DatabaseReference{
         
         
         return ref_User
+    }
+    func createnewFirebaseuser(uid: String,userData:Dictionary<String,String>){
+        ref_User.child(uid).updateChildValues(userData)
         
     }
-    func newFirebaseuser(){
-        
-    }
-    
-    
-    
-    
-
-    @IBOutlet weak var firstnameLabel: UITextField!
-    @IBOutlet weak var lastnameLabel: UITextField!
-    @IBOutlet weak var usernameLabel: UITextField!
-    @IBOutlet weak var mailLabel: UITextField!
-    @IBOutlet weak var poasswordLabel: UITextField!
-    @IBOutlet weak var kaydolButton: UIButton!
+  
     
     
     override func viewDidLoad() {
