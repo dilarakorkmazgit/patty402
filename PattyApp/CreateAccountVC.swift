@@ -61,17 +61,28 @@ class CreateAccountVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func signUpPressed(_ sender: Any) {
-        self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
-    }
+   
     
     @IBAction func kaydolPressed(_ sender: Any) {
         
+        if let email = mailLabel.text, let password = poasswordLabel.text,let firstname = firstnameLabel.text,let lastname = lastnameLabel.text, let username = usernameLabel.text {
+            
+    
+            
+            
+            
+       }
         
         
         
+        
+ 
+    
+    
     }
-    
-    
 
 }
+
+
+
+
