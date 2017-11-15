@@ -27,7 +27,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     var Player: AVPlayer!
     var PlayerLayer: AVPlayerLayer!
     
-  //  var frameVideo sdf= CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
+  //  var frameVideo sdfdsdsd= CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
     
     override func viewDidLoad() {
         super.viewDidLoad()
