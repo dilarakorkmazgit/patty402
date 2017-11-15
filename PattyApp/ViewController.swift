@@ -29,6 +29,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     var PlayerLayer: AVPlayerLayer!
     
   //  var frameVideo = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height)
+    //test
     
     override func viewDidLoad() {
         super.viewDidLoad()
