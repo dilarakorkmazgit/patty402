@@ -19,6 +19,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         UIImage(named: "hosgeldiniz.png")!,
         UIImage(named: "bildirimler.png")!,
         UIImage(named: "kesfet.png")!
+        //kjfhkshkhf
     ]
 
     var colorRange :[UIColor] = [UIColor.white,UIColor.white,UIColor.white,UIColor.white]
