@@ -41,24 +41,24 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         
-        let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: "Bir Profil Fotoğrafı Seçin", message: "", preferredStyle: .actionSheet)
         
-        actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action:UIAlertAction) in
+        actionSheet.addAction(UIAlertAction(title: "Kamera", style: .default, handler: { (action:UIAlertAction) in
             
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 imagePickerController.sourceType = .camera
                 self.present(imagePickerController, animated: true, completion: nil)
             }else {
-                print ("Camera not available")
+                print ("Kamera aktif değil")
             }
             
             
         }))
-        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action:UIAlertAction) in
+        actionSheet.addAction(UIAlertAction(title: "Fotoğraf Albümünden Seç", style: .default, handler: { (action:UIAlertAction) in
             imagePickerController.sourceType = .photoLibrary
             self.present(imagePickerController, animated: true, completion: nil)
         }))
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        actionSheet.addAction(UIAlertAction(title: "İptal", style: .cancel, handler: nil))
         
         self.present(actionSheet, animated: true, completion: nil)
         

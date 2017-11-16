@@ -237,7 +237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3l0-Ej-duj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="229.83508245877064"/>
+            <point key="canvasLocation" x="1636" y="-76"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ftb-KK-7Iz">
@@ -255,7 +255,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LwJ-Y8-Y10" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186.40000000000001" y="196.55172413793105"/>
+            <point key="canvasLocation" x="-218" y="794"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="Vp4-hS-Ngc">
@@ -356,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLL-e4-FU2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1636" y="899"/>
+            <point key="canvasLocation" x="1636" y="794"/>
         </scene>
         <!--Reset PasswordVC-->
         <scene sceneID="jMG-tD-ukz">
@@ -538,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uww-pl-igt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2503" y="626"/>
+            <point key="canvasLocation" x="2553" y="794"/>
         </scene>
         <!--Home-->
         <scene sceneID="U4c-UT-FnC">
@@ -553,9 +553,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lv0-TX-dBa">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="71" width="375" height="596"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ARAMA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFa-Ix-BmM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.19328997470000001" green="0.19328997470000001" blue="0.19328997470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMp-Kt-cE7">
+                                <rect key="frame" x="16" y="19" width="48" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" red="0.88235294119999996" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Kqg-Py-BMg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -565,7 +584,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFf-DT-Xuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3310" y="626"/>
+            <point key="canvasLocation" x="3489" y="794"/>
         </scene>
     </scenes>
     <resources>
@@ -574,10 +593,10 @@
         <image name="PATTY-LOGO" width="1082" height="492"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="YFf-Q5-tSo"/>
-        <segue reference="F0q-Y6-emL"/>
-        <segue reference="43e-JW-eIN"/>
-        <segue reference="s5s-8g-wD4"/>
+        <segue reference="gbD-EB-IgI"/>
         <segue reference="b3Q-wU-OBD"/>
+        <segue reference="Bzz-Nb-hIG"/>
+        <segue reference="kYo-Op-ASQ"/>
+        <segue reference="s5s-8g-wD4"/>
     </inferredMetricsTieBreakers>
 </document>

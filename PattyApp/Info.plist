@@ -62,8 +62,10 @@
 		<string>fbshareextension</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string>test</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string></string>
+	<string>test</string>
+	<key>NSCameraUsageDescription</key>
+	<string>test</string>
 </dict>
 </plist>
