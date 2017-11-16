@@ -18,9 +18,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var imageView: UIImageView!
     
     
-    
-    
-       let cinsiyet = ["Erkek","Dişi"]
+     let cinsiyet = ["Erkek","Dişi"]
     
     
     override func viewDidLoad() {
@@ -28,12 +26,10 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         super.viewDidLoad()
         cinsiyetPicker.dataSource = self
         cinsiyetPicker.delegate = self
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func cinsiyetPressed(_ sender: Any) {
