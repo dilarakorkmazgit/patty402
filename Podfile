@@ -7,13 +7,14 @@ target 'PattyApp' do
 
   # Pods for PattyApp
 
+
    pod ‘Firebase’
    pod ‘Firebase/Core’
    pod ‘Firebase/Database’
    pod ‘Firebase/Auth’
    pod 'KeychainSwift'
    pod ‘FirebaseStorage’
-    
+
   target 'PattyAppTests' do
     inherit! :search_paths
     # Pods for testing
@@ -22,7 +23,6 @@ target 'PattyApp' do
   target 'PattyAppUITests' do
     inherit! :search_paths
     # Pods for testing
-
   end
 
 end

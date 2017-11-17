@@ -17,8 +17,8 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     var logoImage: [UIImage] = [
         UIImage(named: "hosgeldiniz.png")!,
         UIImage(named: "bildirimler.png")!,
+        UIImage(named: "kesfet.png")!,
         UIImage(named: "kesfet.png")!
-       
     ]
 
     var colorRange :[UIColor] = [UIColor.white,UIColor.white,UIColor.white,UIColor.white]
@@ -43,14 +43,17 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         
         //Adding different scrollview Page
         
-        for index in 0..<3 {
+        for index in 0..<4 {
             
             frame.origin.x = self.ScrollView.frame.size.width * CGFloat(index)
             frame.size = self.ScrollView.frame.size
             self.ScrollView.isPagingEnabled = true
             let subview = UIImageView(frame: frame)
             subview.image = logoImage[index]
+            print("geldim1")
             self.ScrollView.addSubview(subview)
+            print("geldim2")
+
         }
 
         
