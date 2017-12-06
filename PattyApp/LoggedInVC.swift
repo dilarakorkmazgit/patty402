@@ -56,7 +56,15 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         super.viewDidLoad()
         
        
+        self.loggedInUser = Auth.auth().currentUser
+        self.ref.child("user").child(self.loggedInUser!.uid).observeSingleEvent(of: .value) { (snapshot:DataSnapshot) in
+            
+            
+
         
+            
+            
+ }
 
         cinsiyetPicker.dataSource = self
         cinsiyetPicker.delegate = self
@@ -73,6 +81,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         healthPicker.dataSource = self
         healthPicker.delegate = self
         
+            
    
     }
 
@@ -257,6 +266,66 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     updateUserProfile()
      
     }
+    internal func setProfilePicture(_ imageView:UIImageView,imageToSet:UIImage)
+    {
+        imageView.layer.cornerRadius = 10.0
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.masksToBounds = true
+        imageView.image = imageToSet
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        setProfilePicture(self.imageView,imageToSet: image)
+        
+        if let imageData: Data = UIImagePNGRepresentation(self.imageView.image!)!
+        {
+            
+            let profilePicStorageRef = storageRef.child("user_profiles/\(self.loggedInUser!.uid)/profile_pic")
+            
+            let uploadTask = profilePicStorageRef.putData(imageData, metadata: nil)
+            {metadata,error in
+                
+                if(error == nil)
+                {
+                    let downloadUrl = metadata!.downloadURL()
+                    
+                    self.ref.child("user").child(self.loggedInUser!.uid).child("profile_pic").setValue(downloadUrl!.absoluteString)
+                }
+                else
+                {
+                    print(error?.localizedDescription)
+                }
+                
+            }
+        }
+        
+        if let imageData: Data = UIImagePNGRepresentation(self.imageView.image!)!
+        {
+            
+            let profilePicStorageRef = storageRef.child("user_profiles/\(self.loggedInUser!.uid)/profile_pic")
+            
+            let uploadTask = profilePicStorageRef.putData(imageData, metadata: nil)
+            {metadata,error in
+                
+                if(error == nil)
+                {
+                    let downloadUrl = metadata!.downloadURL()
+                    
+                    self.ref.child("user_profiles").child(self.loggedInUser!.uid).child("profile_pic").setValue(downloadUrl!.absoluteString)
+                }
+                else
+                {
+                    print(error?.localizedDescription)
+                }
+                
+            }
+        }
+        
+    }
+
+    
+    
+    
         func updateUserProfile(){
         
         if let userid = Auth.auth().currentUser?.uid{
