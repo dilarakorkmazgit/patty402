@@ -56,7 +56,7 @@ class CreateAccountVC: UIViewController {
             let username: String = self.usernameLabel.text!
             let password: String = self.poasswordLabel.text!
             
-            self.ref.child(userID).setValue(["firstname": firstname, "lastname": lastname, "email": email, "password":password, "username": username])
+            self.ref.child(userID).child("personalInfo").setValue(["firstname": firstname, "lastname": lastname, "email": email, "password":password, "username": username])
             print("user registered " + user!.uid)
             
         })
