@@ -657,10 +657,15 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="Kqg-Py-BMg"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f59-gc-lXP">
+                                <rect key="frame" x="45" y="100" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="imageViewer" destination="f59-gc-lXP" id="ErB-ay-Gnn"/>
                         <outlet property="mapView" destination="Lv0-TX-dBa" id="N3l-b3-2ar"/>
                     </connections>
                 </viewController>
