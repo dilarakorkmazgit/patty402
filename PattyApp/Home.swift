@@ -18,7 +18,8 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var imageViewer: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
     var dog = MKPointAnnotation()
-    
+    let database = Database.database().reference()
+    let storage = Storage.storage().reference()
     
     
     // KONUM SERVİSLERİ ETKİNLEŞTİRME
@@ -39,15 +40,8 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let database = Database.database().reference()
-        let storage = Storage.storage().reference()
-        let mango = storage.child("profileImage/mango.png")
+ 
         
-        mango.getData(maxSize: 1*1000*2000) { (data, error) in
-            if error == nil {
-                self.imageViewer.image = UIImage(data: data!)
-            }
-        }
     
         /* manager.delegate = self
          manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -79,8 +73,12 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }else {
             annotationView!.annotation = annotation
         }
+        let mango = storage.child("profileImage/mango.png")
         
-        annotationView!.image = UIImage(named: "dog2.png")
+        mango.getData(maxSize: 1*1000*2000) { (data, error) in
+            annotationView!.image = UIImage(data: data!)
+           
+        }
         return annotationView
         
         
