@@ -14,22 +14,19 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-   
+    
     var loggedInUser:AnyObject?
     var ref = Database.database().reference()
     var storageRef = Storage.storage().reference()
-
+    
+    
     @IBOutlet weak var petNameLabel: UITextField!
     
     //butonlar
     @IBOutlet weak var cinsiyetButton: UIButton!
-    
     @IBOutlet weak var türButton: UIButton!
-    
     @IBOutlet weak var ageButton: UIButton!
-    
     @IBOutlet weak var colorBotton: UIButton!
-    
     @IBOutlet weak var healthButton: UIButton!
     
     //pickerlar
@@ -42,30 +39,17 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     //pet resmi
     @IBOutlet weak var imageView: UIImageView!
     
-    
-     let cinsiyet = ["Erkek","Dişi"]
+    let cinsiyet = ["Erkek","Dişi"]
     let tur = ["pug","terrier","dogo","doberman"]
-     let color = ["siyah","beyaz","kahverangi","karışık"]
+    let color = ["siyah","beyaz","kahverangi","karışık"]
     let age = ["1","2","3","4","5"]
     let health = ["kısır","Kısır Değil"]
-
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
         self.loggedInUser = Auth.auth().currentUser
-        self.ref.child("user").child(self.loggedInUser!.uid).observeSingleEvent(of: .value) { (snapshot:DataSnapshot) in
-            
-            
-
         
-            
-            
- }
-
+        
         cinsiyetPicker.dataSource = self
         cinsiyetPicker.delegate = self
         
@@ -81,10 +65,8 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         healthPicker.dataSource = self
         healthPicker.delegate = self
         
-            
-   
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -95,37 +77,28 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
     }
     
-    
     @IBAction func turPressed(_ sender: Any) {
         turPicher.isHidden = false
-
+        
     }
     
     @IBAction func agePressed(_ sender: Any) {
-    
+        
         agePicker.isHidden = false
-
+        
     }
-    
-    
     
     @IBAction func colorPressed(_ sender: Any) {
         
         colorPicker.isHidden = false
-
+        
     }
     
     @IBAction func healthPressed(_ sender: Any) {
         healthPicker.isHidden = false
-
+        
     }
     
-    
-    
-    
-    
-    
-
     @IBAction func chooseImage(_ sender: Any) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
@@ -140,8 +113,6 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             }else {
                 print ("Kamera aktif değil")
             }
-            
-            
         }))
         actionSheet.addAction(UIAlertAction(title: "Fotoğraf Albümünden Seç", style: .default, handler: { (action:UIAlertAction) in
             imagePickerController.sourceType = .photoLibrary
@@ -172,7 +143,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView.tag==1{
             return cinsiyet.count
-
+            
         }
         else if pickerView.tag==2{
             return tur.count
@@ -187,9 +158,8 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             return health.count
         }
         return health.count
-}
+    }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
         
         if pickerView.tag==1{
             return cinsiyet[row]
@@ -208,16 +178,13 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             return health[row]
         }
         return health[row]
-
-        }
-    
-    
+    }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if pickerView.tag==1{
-        cinsiyetButton.setTitle(cinsiyet[row], for: UIControlState())
-        cinsiyetPicker.isHidden = true
-    }
+            cinsiyetButton.setTitle(cinsiyet[row], for: UIControlState())
+            cinsiyetPicker.isHidden = true
+        }
         if pickerView.tag==2{
             türButton.setTitle(tur[row], for: UIControlState())
             turPicher.isHidden = true
@@ -235,98 +202,8 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             healthPicker.isHidden = true
         }
     }
-    
-    
-    
+    //saving data to firebase about pet info
     @IBAction func kaydetPressed(_ sender: Any) {
-    
-      
-        
-     let userid = Auth.auth().currentUser?.uid
-        
-        let petName :String = self.petNameLabel.text!
-         let gender :String = self.cinsiyetButton.currentTitle!
-        let age :String = self.ageButton.currentTitle!
-        let tur :String = self.türButton.currentTitle!
-        let health:String = self.healthButton.currentTitle!
-        let color :String = self.colorBotton.currentTitle!
-        //let petImagegy :UIImage = self.imageView.image!
-        
-       
-        
-        
-        //create pet tuple into user
-        self.ref.child("user").child(userid!).child("pet").setValue(["petname": petName, "gender": gender, "age": age, "tür":tur, "color": color,"health": health])
-
-        
-      
-        
-        
-        
-    updateUserProfile()
-     
-    }
-    internal func setProfilePicture(_ imageView:UIImageView,imageToSet:UIImage)
-    {
-        imageView.layer.cornerRadius = 10.0
-        imageView.layer.borderColor = UIColor.white.cgColor
-        imageView.layer.masksToBounds = true
-        imageView.image = imageToSet
-    }
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        
-        setProfilePicture(self.imageView,imageToSet: image)
-        
-        if let imageData: Data = UIImagePNGRepresentation(self.imageView.image!)!
-        {
-            
-            let profilePicStorageRef = storageRef.child("user_profiles/\(self.loggedInUser!.uid)/profile_pic")
-            
-            let uploadTask = profilePicStorageRef.putData(imageData, metadata: nil)
-            {metadata,error in
-                
-                if(error == nil)
-                {
-                    let downloadUrl = metadata!.downloadURL()
-                    
-                    self.ref.child("user").child(self.loggedInUser!.uid).child("profile_pic").setValue(downloadUrl!.absoluteString)
-                }
-                else
-                {
-                    print(error?.localizedDescription)
-                }
-                
-            }
-        }
-        
-        if let imageData: Data = UIImagePNGRepresentation(self.imageView.image!)!
-        {
-            
-            let profilePicStorageRef = storageRef.child("user_profiles/\(self.loggedInUser!.uid)/profile_pic")
-            
-            let uploadTask = profilePicStorageRef.putData(imageData, metadata: nil)
-            {metadata,error in
-                
-                if(error == nil)
-                {
-                    let downloadUrl = metadata!.downloadURL()
-                    
-                    self.ref.child("user_profiles").child(self.loggedInUser!.uid).child("profile_pic").setValue(downloadUrl!.absoluteString)
-                }
-                else
-                {
-                    print(error?.localizedDescription)
-                }
-                
-            }
-        }
-        
-    }
-
-    
-    
-    
-        func updateUserProfile(){
         
         if let userid = Auth.auth().currentUser?.uid{
             
@@ -334,49 +211,43 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             guard let image = imageView.image
                 else {
                     return
-            
-        }
+            }
             if let newimage = UIImagePNGRepresentation(image){
                 item.putData(newimage, metadata: nil , completion:{(metadata, error ) in
                     if error != nil{
                         print(error!)
                         return
-                        
                     }
                     item.downloadURL(completion: {(url,error)in
-                        
                         if error != nil{
                             print(error!)
                             return
                         }
                         if let profilePhotoURL = url?.absoluteString {
-                         guard let petName = self.petNameLabel.text else {return}
-                         guard let gender = self.cinsiyetButton.currentTitle else {return}
-                         guard let age = self.ageButton.currentTitle else {return}
-                         guard let tur = self.türButton.currentTitle else {return}
-                         guard let health = self.healthButton.currentTitle else {return}
-                         guard let color = self.colorBotton.currentTitle else {return}
+                            guard let petName = self.petNameLabel.text else {return}
+                            guard let gender = self.cinsiyetButton.currentTitle else {return}
+                            guard let age = self.ageButton.currentTitle else {return}
+                            guard let tur = self.türButton.currentTitle else {return}
+                            guard let health = self.healthButton.currentTitle else {return}
+                            guard let color = self.colorBotton.currentTitle else {return}
                             let newValuesforProfile=["photo": profilePhotoURL,
-                                                    "petName":petName ,
-                                                    "gender": gender,
-                                                    "age" : age,
-                                                    "tur": tur,
-                                                    "health": health,
-                                                    "color" :color]
-                            self.ref.child("profile").child(userid).updateChildValues(newValuesforProfile,withCompletionBlock:{(error,ref) in
-                                
+                                                     "petName":petName ,
+                                                     "gender": gender,
+                                                     "age" : age,
+                                                     "tur": tur,
+                                                     "health": health,
+                                                     "color" :color]
+                            self.ref.child("user").child(userid).child("pet").setValue(newValuesforProfile,withCompletionBlock:{(error,ref) in
                                 if error != nil{
                                     print(error!)
                                     return
                                 }
-                                print("succesfull updated profile")
+                                print("saving to firebase successfully")
                             })
                         }
                     })
-                    
                 })
+            }
+        }
     }
-      
 }
-        
-        } }
