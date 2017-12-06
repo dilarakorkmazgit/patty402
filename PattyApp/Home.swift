@@ -15,7 +15,6 @@ import FirebaseDatabase
 
 class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    @IBOutlet weak var imageViewer: UIImageView!
     @IBOutlet weak var mapView: MKMapView!
     var dog = MKPointAnnotation()
     let database = Database.database().reference()
