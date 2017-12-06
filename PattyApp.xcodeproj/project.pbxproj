@@ -24,7 +24,6 @@
 		590845FB1F980238009A2D6A /* resetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590845FA1F980238009A2D6A /* resetPasswordVC.swift */; };
 		59972FCE1FBE1EA400CD6C57 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59972FCD1FBE1EA400CD6C57 /* Home.swift */; };
 		59BE0E101F96A971008DD52B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BE0E0F1F96A971008DD52B /* LoginVC.swift */; };
-		59C98F931F9548A40000F65D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C98F921F9548A40000F65D /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,7 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59C98F931F9548A40000F65D /* AVFoundation.framework in Frameworks */,
 				48F466356828E7E3936F2426 /* Pods_PattyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

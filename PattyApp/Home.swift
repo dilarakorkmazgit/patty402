@@ -42,7 +42,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         
  
         
-    
+        // KONUM SERVİSLERİ ETKİNLEŞTİRME
         /* manager.delegate = self
          manager.desiredAccuracy = kCLLocationAccuracyBest
          manager.requestWhenInUseAuthorization()
@@ -73,7 +73,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }else {
             annotationView!.annotation = annotation
         }
-       // let storageRef = Storage.storage().reference().child("ProfilImage/\(UUID().uuidString)")
+       // let storageRef = Storage.storage().reference().child("ProfilImage/\(UUID().uuidString)") HATA????
 
         let mango = storage.child("profileImage/mango.png")
         
