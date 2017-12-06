@@ -14,8 +14,10 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    var ref: DatabaseReference!
+   
+    var loggedInUser:AnyObject?
+    var ref = Database.database().reference()
+    var storageRef = Storage.storage().reference()
 
     @IBOutlet weak var petNameLabel: UITextField!
     
@@ -52,7 +54,18 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        super.viewDidLoad()
+        
+       
+        self.loggedInUser = Auth.auth().currentUser
+        self.ref.child("user").child(self.loggedInUser!.uid).observeSingleEvent(of: .value) { (snapshot:DataSnapshot) in
+            
+            
+
+        
+            
+            
+ }
+
         cinsiyetPicker.dataSource = self
         cinsiyetPicker.delegate = self
         
@@ -67,6 +80,9 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
         healthPicker.dataSource = self
         healthPicker.delegate = self
+        
+            
+   
     }
 
     override func didReceiveMemoryWarning() {
@@ -220,28 +236,147 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         }
     }
     
+    
+    
     @IBAction func kaydetPressed(_ sender: Any) {
     
-        let uid = Auth.auth().currentUser?.uid
+      
         
-
-            let petName: String = self.petNameLabel.text!
-            let gender: String = self.cinsiyetButton.currentTitle!
-            let age: String = self.ageButton.currentTitle!
-            let tur: String = self.türButton.currentTitle!
-            let health: String = self.healthButton.currentTitle!
-            let color: String = self.colorBotton.currentTitle!
-            
-        Database.database().reference().child(uid!).child("pet").setValue(["petname": petName, "gender": gender, "age": age, "tür":tur, "color": color,"health": health])
-
-            //self.ref.child(userID).childByAutoId().setValue(["petname": petName, "gender": gender, "age": age, "tür":tur, "color": color,"health": health])
-
-    
-         //   print("user registered66 " + user)
+     let userid = Auth.auth().currentUser?.uid
+        
+        let petName :String = self.petNameLabel.text!
+         let gender :String = self.cinsiyetButton.currentTitle!
+        let age :String = self.ageButton.currentTitle!
+        let tur :String = self.türButton.currentTitle!
+        let health:String = self.healthButton.currentTitle!
+        let color :String = self.colorBotton.currentTitle!
+        //let petImagegy :UIImage = self.imageView.image!
+        
+       
         
         
-     //   self.performSegue(withIdentifier: "Home", sender: nil)
+        //create pet tuple into user
+        self.ref.child("user").child(userid!).child("pet").setValue(["petname": petName, "gender": gender, "age": age, "tür":tur, "color": color,"health": health])
+
+        
+      
+        
+        
+        
+    updateUserProfile()
      
     }
+    internal func setProfilePicture(_ imageView:UIImageView,imageToSet:UIImage)
+    {
+        imageView.layer.cornerRadius = 10.0
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.layer.masksToBounds = true
+        imageView.image = imageToSet
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        setProfilePicture(self.imageView,imageToSet: image)
+        
+        if let imageData: Data = UIImagePNGRepresentation(self.imageView.image!)!
+        {
+            
+            let profilePicStorageRef = storageRef.child("user_profiles/\(self.loggedInUser!.uid)/profile_pic")
+            
+            let uploadTask = profilePicStorageRef.putData(imageData, metadata: nil)
+            {metadata,error in
+                
+                if(error == nil)
+                {
+                    let downloadUrl = metadata!.downloadURL()
+                    
+                    self.ref.child("user").child(self.loggedInUser!.uid).child("profile_pic").setValue(downloadUrl!.absoluteString)
+                }
+                else
+                {
+                    print(error?.localizedDescription)
+                }
+                
+            }
+        }
+        
+        if let imageData: Data = UIImagePNGRepresentation(self.imageView.image!)!
+        {
+            
+            let profilePicStorageRef = storageRef.child("user_profiles/\(self.loggedInUser!.uid)/profile_pic")
+            
+            let uploadTask = profilePicStorageRef.putData(imageData, metadata: nil)
+            {metadata,error in
+                
+                if(error == nil)
+                {
+                    let downloadUrl = metadata!.downloadURL()
+                    
+                    self.ref.child("user_profiles").child(self.loggedInUser!.uid).child("profile_pic").setValue(downloadUrl!.absoluteString)
+                }
+                else
+                {
+                    print(error?.localizedDescription)
+                }
+                
+            }
+        }
+        
+    }
 
+    
+    
+    
+        func updateUserProfile(){
+        
+        if let userid = Auth.auth().currentUser?.uid{
+            
+            let item = storageRef.child("profileImage").child(userid)
+            guard let image = imageView.image
+                else {
+                    return
+            
+        }
+            if let newimage = UIImagePNGRepresentation(image){
+                item.putData(newimage, metadata: nil , completion:{(metadata, error ) in
+                    if error != nil{
+                        print(error!)
+                        return
+                        
+                    }
+                    item.downloadURL(completion: {(url,error)in
+                        
+                        if error != nil{
+                            print(error!)
+                            return
+                        }
+                        if let profilePhotoURL = url?.absoluteString {
+                         guard let petName = self.petNameLabel.text else {return}
+                         guard let gender = self.cinsiyetButton.currentTitle else {return}
+                         guard let age = self.ageButton.currentTitle else {return}
+                         guard let tur = self.türButton.currentTitle else {return}
+                         guard let health = self.healthButton.currentTitle else {return}
+                         guard let color = self.colorBotton.currentTitle else {return}
+                            let newValuesforProfile=["photo": profilePhotoURL,
+                                                    "petName":petName ,
+                                                    "gender": gender,
+                                                    "age" : age,
+                                                    "tur": tur,
+                                                    "health": health,
+                                                    "color" :color]
+                            self.ref.child("profile").child(userid).updateChildValues(newValuesforProfile,withCompletionBlock:{(error,ref) in
+                                
+                                if error != nil{
+                                    print(error!)
+                                    return
+                                }
+                                print("succesfull updated profile")
+                            })
+                        }
+                    })
+                    
+                })
+    }
+      
 }
+        
+        } }
