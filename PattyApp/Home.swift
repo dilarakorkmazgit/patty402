@@ -51,7 +51,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         self.mapView.delegate = self
         mapView.showsUserLocation = true
         
-        let dogCordinates = CLLocationCoordinate2DMake(41.01384, 28.94966)
+        let dogCordinates = CLLocationCoordinate2DMake(41.005, 39.72694)
         dog.coordinate = dogCordinates
         dog.title = "dog test"
         mapView.addAnnotation(dog)
@@ -73,6 +73,8 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }else {
             annotationView!.annotation = annotation
         }
+       // let storageRef = Storage.storage().reference().child("ProfilImage/\(UUID().uuidString)")
+
         let mango = storage.child("profileImage/mango.png")
         
         mango.getData(maxSize: 1*1000*2000) { (data, error) in
