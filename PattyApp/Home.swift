@@ -10,41 +10,63 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class Home: UIViewController, CLLocationManagerDelegate {
+class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
-    @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var mapView: MKMapView!
+    var dog = MKPointAnnotation()
     
-    let manager = CLLocationManager()
+   // let manager = CLLocationManager()
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations [0]
+    //func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+      //  let location = locations [0]
         
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
-        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+       // let span:MKCoordinateSpan = MKCoordinateSpanMake()
+        //let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation,span)
-        map.setRegion(region, animated: true)
+      //  let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation,span)
+     //   map.setRegion(region, animated: true)
         
-        self.map.showsUserLocation = true
-    }
-    
+       // self.map.showsUserLocation = true
+    //}
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
+        //manager.delegate = self
+        //manager.desiredAccuracy = kCLLocationAccuracyBest
+        //manager.requestWhenInUseAuthorization()
+        //manager.startUpdatingLocation()
         
-
+        self.mapView.delegate = self
+        mapView.showsUserLocation = true
+        
+        let dogCordinates = CLLocationCoordinate2DMake(41.01384, 28.94966)
+        dog.coordinate = dogCordinates
+        dog.title = "dog test"
+        mapView.addAnnotation(dog)
+        
+        print("dog set to \(String(describing: dog.coordinate))")
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if !(annotation is MKPointAnnotation) {
+            print("Not registered")
+            return nil
+        }
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "petIdentifier")
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "petIdentifier")
+            annotationView!.canShowCallout = true
+        }else {
+            annotationView!.annotation = annotation
+        }
+        
+        annotationView!.image = UIImage(named: "dog2.png")
+        return annotationView
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    
-    
 }

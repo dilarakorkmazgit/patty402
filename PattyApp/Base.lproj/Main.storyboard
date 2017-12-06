@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1036" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Unknown constraint types" minToolsVersion="5.1"/>
@@ -255,6 +255,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="jvO-DJ-xeN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yy1-f7-nqW">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -660,7 +661,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="map" destination="Lv0-TX-dBa" id="B4V-iE-Wg2"/>
+                        <outlet property="mapView" destination="Lv0-TX-dBa" id="N3l-b3-2ar"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFf-DT-Xuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -675,10 +676,10 @@
         <image name="usericon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nce-Hn-ksq"/>
-        <segue reference="Bi0-Z9-c8b"/>
-        <segue reference="b3Q-wU-OBD"/>
         <segue reference="kYo-Op-ASQ"/>
-        <segue reference="YFf-Q5-tSo"/>
+        <segue reference="Bi0-Z9-c8b"/>
+        <segue reference="Kqg-Py-BMg"/>
+        <segue reference="nce-Hn-ksq"/>
+        <segue reference="b3Q-wU-OBD"/>
     </inferredMetricsTieBreakers>
 </document>
