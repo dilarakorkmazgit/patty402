@@ -13,10 +13,11 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
 
-class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate {
-    
-    var ref: DatabaseReference!
-    var storageRef : StorageReference!
+class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+   
+    var loggedInUser:AnyObject?
+    var ref = Database.database().reference()
+    var storageRef = Storage.storage().reference()
 
     @IBOutlet weak var petNameLabel: UITextField!
     
@@ -54,8 +55,8 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ref = Database.database().reference()
-        storageRef = Storage.storage().reference()
+       
+        
 
         cinsiyetPicker.dataSource = self
         cinsiyetPicker.delegate = self
@@ -249,30 +250,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         self.ref.child("user").child(userid!).child("pet").setValue(["petname": petName, "gender": gender, "age": age, "tür":tur, "color": color,"health": health])
 
         
-        func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo image: UIImage,editingInfo: [String : AnyObject]?) {
-            
-            self.imageLoader.startAnimating()
-            setProfilePicture(self.profilePicture,imageToSet: image)
-            if let imageData: NSData = UIImagePNGRepresentation(self.profilePicture.image!)!{
-                let profilePicStorageRef = storageRef.child("user_profiles/\ self.loggedInUser!.uid)/profile_pic")
-                let uploadTask = profilePicStorageRef.putData(imageData,metadata:nil){
-                    metadata,error in
-                    if (error == nil){
-                        
-                        let downloadUrl = metadata!.downloadURL()
-                        self.ref.child("user_profiles").child(self.loggedInUser!.uid).child("profile_pic").setValue(downloadUrl!.absoluteString)
-                        
-                        
-                    }
-                    else {
-                        print(error?.localizedDescription)
-                    }
-                    self.imageLoader.stopAnimating()
-                }
-                
-            }
-            self.dismisViewControllerAnimated(true,completion:nil)
-        }
+      
         
         
         

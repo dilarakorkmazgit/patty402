@@ -598,9 +598,6 @@
                                 <rect key="frame" x="121" y="105" width="144" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="oWP-4a-gUU" appends="YES" id="e62-aD-Bvw"/>
-                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -621,7 +618,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uww-pl-igt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="oWP-4a-gUU"/>
             </objects>
             <point key="canvasLocation" x="2552.8000000000002" y="793.8530734632684"/>
         </scene>
@@ -679,7 +675,7 @@
         <image name="usericon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p58-cq-gZi"/>
+        <segue reference="nce-Hn-ksq"/>
         <segue reference="Bi0-Z9-c8b"/>
         <segue reference="b3Q-wU-OBD"/>
         <segue reference="kYo-Op-ASQ"/>
