@@ -94,6 +94,14 @@
                                             <segue destination="Ido-7X-vUM" kind="show" id="Bi0-Z9-c8b"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCo-FI-BWY">
+                                        <rect key="frame" x="8" y="492" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Geç"/>
+                                        <connections>
+                                            <segue destination="GJU-su-2qu" kind="show" id="MYB-kt-n95"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -449,6 +457,42 @@
             </objects>
             <point key="canvasLocation" x="1636" y="1631"/>
         </scene>
+        <!--Pinned Location-->
+        <scene sceneID="Z4Q-Sl-npb">
+            <objects>
+                <viewController id="GJU-su-2qu" customClass="pinnedLocation" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6NW-PN-u8v"/>
+                        <viewControllerLayoutGuide type="bottom" id="fAZ-hR-Ivz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pQg-HY-pLK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XF6-PE-jwU">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4mG-WU-NTQ" appends="YES" id="fJb-jJ-6B6"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="XF6-PE-jwU" id="1Ac-A9-gbW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fpJ-kk-3hL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="4mG-WU-NTQ">
+                    <connections>
+                        <action selector="addPin:" destination="GJU-su-2qu" id="25e-xa-oqH"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2589.5999999999999" y="1643.0284857571216"/>
+        </scene>
         <!--Logged InVC-->
         <scene sceneID="RH0-Jp-2EQ">
             <objects>
@@ -600,6 +644,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSS-07-4fP">
+                                <rect key="frame" x="313" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="GJU-su-2qu" kind="show" id="YzB-y8-3Ck"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -676,10 +728,11 @@
         <image name="usericon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kYo-Op-ASQ"/>
         <segue reference="Bi0-Z9-c8b"/>
         <segue reference="Kqg-Py-BMg"/>
         <segue reference="nce-Hn-ksq"/>
         <segue reference="b3Q-wU-OBD"/>
+        <segue reference="MYB-kt-n95"/>
+        <segue reference="F0q-Y6-emL"/>
     </inferredMetricsTieBreakers>
 </document>
