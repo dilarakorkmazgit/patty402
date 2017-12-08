@@ -58,6 +58,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
+
         
         cinsiyetPicker.dataSource = self
         cinsiyetPicker.delegate = self
@@ -215,11 +216,40 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         let location = locations [0]
         
         let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.20,0.20)
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.020,0.020)
         
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation,span)
-        mapView.setRegion(region, animated: true)
+        self.mapView.setRegion(region, animated: true)
+        self.mapView.isZoomEnabled = true
+        self.mapView.isScrollEnabled = true
         self.mapView.showsUserLocation = true
+    }
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        // Don't want to show a custom image if the annotation is the user's location.
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        
+        // Better to make this class property
+        let annotationIdentifier = "AnnotationIdentifier"
+        
+        var annotationView: MKAnnotationView?
+        if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
+            annotationView = dequeuedAnnotationView
+            annotationView?.annotation = annotation
+        }
+        else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        
+        if let annotationView = annotationView {
+            // Configure your annotation view here
+            annotationView.canShowCallout = true
+            annotationView.image = UIImage(named: "pin")
+        }
+        
+        return annotationView
     }
     
     
