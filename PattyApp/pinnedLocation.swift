@@ -64,7 +64,7 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
             
             let annotation = MKPointAnnotation()
             annotation.coordinate = locCord
-            annotation.title = "Pet Konumu"
+             annotation.title = "Pet Konumu"
             
             
             
