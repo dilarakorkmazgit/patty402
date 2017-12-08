@@ -58,22 +58,21 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         
         
         let userid = Auth.auth().currentUser?.uid
-            
-            let location = sender.location(in: self.mapView)
-            let locCord = self.mapView.convert(location, toCoordinateFrom: self.mapView)
-            
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = locCord
-             annotation.title = "Pet Konumu"
-            
-            
-            
-            self.mapView.removeAnnotations(mapView.annotations)
-            self.mapView.addAnnotation(annotation)
-            print("\(annotation.coordinate.latitude), \(annotation.coordinate.longitude)")
-            
-            self.ref.child(userid!).child("pet").setValue(["location": annotation.coordinate.latitude, "longitude": annotation.coordinate.longitude])
-
         
+        let location = sender.location(in: self.mapView)
+        let locCord = self.mapView.convert(location, toCoordinateFrom: self.mapView)
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = locCord
+        annotation.title = "Pet Konumu"
+        
+        
+        
+        self.mapView.removeAnnotations(mapView.annotations)
+        self.mapView.addAnnotation(annotation)
+        print("\(annotation.coordinate.latitude), \(annotation.coordinate.longitude)")
+        
+        self.ref.child(userid!).child("pet").setValue(["location": annotation.coordinate.latitude, "longitude": annotation.coordinate.longitude])
+
+        }
     }
-}
