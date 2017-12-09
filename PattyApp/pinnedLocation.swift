@@ -112,9 +112,9 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         
         self.mapView.removeAnnotations(mapView.annotations)
         self.mapView.addAnnotation(annotation)
-        print("\(annotation.coordinate.latitude), \(annotation.coordinate.longitude)")
+        print("\(annotation.coordinate.longitude), \(annotation.coordinate.latitude)")
         
-        self.ref.child("user").child(userid!).child("pet").updateChildValues(["latitude": annotation.coordinate.latitude, "longitude": annotation.coordinate.longitude])
+        self.ref.child("user").child(userid!).child("pet").updateChildValues(["longitude": annotation.coordinate.longitude, "latitude": annotation.coordinate.latitude])
         
     }
     

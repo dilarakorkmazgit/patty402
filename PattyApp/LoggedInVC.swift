@@ -54,9 +54,6 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
         self.loggedInUser = Auth.auth().currentUser
         
-        
-
-        
         cinsiyetPicker.dataSource = self
         cinsiyetPicker.delegate = self
         
