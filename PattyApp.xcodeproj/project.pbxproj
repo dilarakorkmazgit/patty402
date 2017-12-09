@@ -27,7 +27,6 @@
 		59E383881FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
 		59E383891FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
 		59E3838A1FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
-		59F3E07E1FDC2A0700A3D6D3 /* search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F3E07D1FDC2A0700A3D6D3 /* search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +75,6 @@
 		59C98F8E1F95428C0000F65D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		59C98F921F9548A40000F65D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pinnedLocation.swift; sourceTree = "<group>"; };
-		59F3E07D1FDC2A0700A3D6D3 /* search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = search.swift; sourceTree = "<group>"; };
 		82AF6362E7D5EA0EFD43663C /* Pods-PattyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppUITests/Pods-PattyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B3B6A59C428E0ED63437E3 /* Pods-PattyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppTests/Pods-PattyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C458BF90183EE5C6DF74B305 /* Pods-PattyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PattyApp/Pods-PattyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 				3C832F451F94C96400EC8390 /* AppDelegate.swift */,
 				3C832F471F94C96400EC8390 /* ViewController.swift */,
 				3C832F491F94C96400EC8390 /* Main.storyboard */,
-				59F3E07D1FDC2A0700A3D6D3 /* search.swift */,
 				3C5217061F979FF200F52725 /* CreateAccountVC.swift */,
 				3C832F4F1F94C96400EC8390 /* Assets.xcassets */,
 				3C832F511F94C96400EC8390 /* LaunchScreen.storyboard */,
@@ -516,7 +513,6 @@
 				59BE0E101F96A971008DD52B /* LoginVC.swift in Sources */,
 				590845FB1F980238009A2D6A /* resetPasswordVC.swift in Sources */,
 				59972FCE1FBE1EA400CD6C57 /* Home.swift in Sources */,
-				59F3E07E1FDC2A0700A3D6D3 /* search.swift in Sources */,
 				59E383881FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */,
 				3C832F461F94C96400EC8390 /* AppDelegate.swift in Sources */,
 			);
