@@ -29,7 +29,8 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
          ref = Database.database().reference().child("user")
     }
     
@@ -63,6 +64,9 @@ class CreateAccountVC: UIViewController {
         self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
 
 
+    }
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 

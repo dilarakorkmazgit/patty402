@@ -32,7 +32,8 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
+
         
         //fit the background image
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)

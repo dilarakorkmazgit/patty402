@@ -21,14 +21,18 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+                // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
     @IBAction func loginPressed(_ sender: Any) {
         
         if let email = emailField.text, let password = passwordField.text {
@@ -52,5 +56,6 @@ class LoginVC: UIViewController {
             }
         }
     }
+    
     
 }

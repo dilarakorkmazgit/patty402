@@ -24,6 +24,10 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
         self.loggedInUser = Auth.auth().currentUser
         
         self.mapView.delegate = self
@@ -42,18 +46,50 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         
     }
     
+  
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations [0]
         
         let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.20,0.20)
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.020,0.020)
         
         let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation,span)
-        mapView.setRegion(region, animated: true)
+        self.mapView.setRegion(region, animated: true)
+        self.mapView.isZoomEnabled = true
+        self.mapView.isScrollEnabled = true
         self.mapView.showsUserLocation = true
     }
     
-    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        // Don't want to show a custom image if the annotation is the user's location.
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        
+        // Better to make this class property
+        let annotationIdentifier = "AnnotationIdentifier"
+        
+        var annotationView: MKAnnotationView?
+        if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
+            annotationView = dequeuedAnnotationView
+            annotationView?.annotation = annotation
+        }
+        else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        
+        if let annotationView = annotationView {
+            // Configure your annotation view here
+            annotationView.canShowCallout = true
+            annotationView.image = UIImage(named: "pin")
+        }
+        
+        return annotationView
+    }
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
     @IBAction func addPin(_ sender: UILongPressGestureRecognizer) {
         
         
@@ -72,7 +108,7 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         self.mapView.addAnnotation(annotation)
         print("\(annotation.coordinate.latitude), \(annotation.coordinate.longitude)")
         
-        self.ref.child(userid!).child("pet").setValue(["location": annotation.coordinate.latitude, "longitude": annotation.coordinate.longitude])
+        self.ref.child(userid!).child("pet").setValue(["latitude": annotation.coordinate.latitude, "longitude": annotation.coordinate.longitude])
 
         }
     }
