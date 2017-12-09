@@ -484,6 +484,9 @@
                                 <state key="normal" title="KAYDET" backgroundImage="BUTON-TURUNCU">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Ido-7X-vUM" kind="show" id="KsQ-3V-vM7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgS-0s-kVF">
                                 <rect key="frame" x="16" y="19" width="48" height="36"/>
