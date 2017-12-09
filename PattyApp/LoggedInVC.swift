@@ -206,7 +206,6 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             healthPicker.isHidden = true
         }
     }
-   
         
     func dismissKeyboard() {
         view.endEditing(true)
