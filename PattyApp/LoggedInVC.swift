@@ -250,9 +250,8 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                                                      "age" : age,
                                                      "tur": tur,
                                                      "health": health,
-                                                     "color" :color,
-                                                     "longitude" :"",
-                                                     "langitude" :""]
+                                                     "color" :color]
+                                                     
                             self.ref.child("user").child(userid).child("pet").setValue(newValuesforProfile,withCompletionBlock:{(error,ref) in
                                 if error != nil{
                                     print(error!)

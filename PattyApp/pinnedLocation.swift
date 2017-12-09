@@ -36,6 +36,12 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
+        let dialog = UIAlertController(title: "Pet Konumu", message: "Petinizin konumunu haritada uzun basarak belirleyebilirsiniz", preferredStyle: UIAlertControllerStyle.alert)
+        dialog.addAction(UIAlertAction(title: "TAMAM", style: UIAlertActionStyle.default, handler: nil))
+        DispatchQueue.main.async(execute: {
+            self.present(dialog, animated: true, completion: nil)
+        })
+
         
     }
     
@@ -46,7 +52,7 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         
     }
     
-  
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations [0]
         
@@ -108,7 +114,9 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         self.mapView.addAnnotation(annotation)
         print("\(annotation.coordinate.latitude), \(annotation.coordinate.longitude)")
         
-        self.ref.child(userid!).child("pet").setValue(["latitude": annotation.coordinate.latitude, "longitude": annotation.coordinate.longitude])
-
-        }
+        self.ref.child("user").child(userid!).child("pet").updateChildValues(["latitude": annotation.coordinate.latitude, "longitude": annotation.coordinate.longitude])
+        
     }
+    
+    
+}

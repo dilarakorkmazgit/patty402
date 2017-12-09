@@ -485,6 +485,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="savePin:" destination="GJU-su-2qu" eventType="touchUpInside" id="1fN-8a-lI8"/>
                                     <segue destination="Ido-7X-vUM" kind="show" id="KsQ-3V-vM7"/>
                                 </connections>
                             </button>
@@ -527,15 +528,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05T-3B-Gp8">
-                                <rect key="frame" x="245" y="169" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <action selector="chooseImage:" destination="Ido-7X-vUM" eventType="touchUpInside" id="yUz-I4-3hX"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vox-Zk-cEr">
                                 <rect key="frame" x="82" y="213" width="222" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -690,6 +682,15 @@
                                 </state>
                                 <connections>
                                     <action selector="healthPressed:" destination="Ido-7X-vUM" eventType="touchUpInside" id="ZHK-qe-K20"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05T-3B-Gp8">
+                                <rect key="frame" x="258" y="175" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="chooseImage:" destination="Ido-7X-vUM" eventType="touchUpInside" id="yUz-I4-3hX"/>
                                 </connections>
                             </button>
                         </subviews>
