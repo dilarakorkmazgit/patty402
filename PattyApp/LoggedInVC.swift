@@ -218,7 +218,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
         if let userid = Auth.auth().currentUser?.uid{
             
-            let item = storageRef.child("profileImage").child(userid)
+            let item = storageRef.child("profileImage").child("\(userid).png")
             guard let image = imageView.image
                 else {
                     return
