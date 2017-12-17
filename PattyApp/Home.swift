@@ -88,20 +88,23 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         if let URLimage = imageURL{
             
             
-            annotationView?.image = UIImage(URLimage.sd_setImage(with: URLimage as URL))
-          //  petImageOntoMap.sd_setImage(with: URLimage as URL)
+            //annotationView?.image = UIImage(URLimage.sd_setImage(with: URLimage as URL))
+          petImageOntoMap.sd_setImage(with: URLimage as URL)
             
             
             
             
         }
     
+        let mango = storage.child("profileImage/mango.png")
         
-    
-      
+        mango.getData(maxSize: 1*1000*2000) { (data, error) in
+            annotationView!.image = UIImage(data: data!)
+            
+        }
         return annotationView
-        
-        
+    
+    
     }
     
     override func didReceiveMemoryWarning() {
