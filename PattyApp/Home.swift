@@ -12,13 +12,19 @@ import CoreLocation
 import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
+import SDWebImage
+
 
 class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+    
+    
+    var imageURL = [String]()
     
     @IBOutlet weak var mapView: MKMapView!
     var dog = MKPointAnnotation()
     let database = Database.database().reference()
     let storage = Storage.storage().reference()
+    @IBOutlet weak var petImageOntoMap: UIImageView!
     
     
     // KONUM SERVİSLERİ ETKİNLEŞTİRME
@@ -39,7 +45,6 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
- 
         
         // KONUM SERVİSLERİ ETKİNLEŞTİRME
         /* manager.delegate = self
@@ -74,12 +79,26 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }
        // let storageRef = Storage.storage().reference().child("ProfilImage/\(UUID().uuidString)") HATA????
 
-        let mango = storage.child("profileImage/mango.png")
         
-        mango.getData(maxSize: 1*1000*2000) { (data, error) in
-            annotationView!.image = UIImage(data: data!)
-           
+        
+      //  imageView.sd_setImage(with: URL(string: "http://www.domain.com/path/to/image.jpg")
+        
+        let imageURL : NSURL? = NSURL(string:"https://firebasestorage.googleapis.com/v0/b/pattyapp-34c16.appspot.com/o/profileImage%2Fmango.png?alt=media&token=ba613ed4-51a0-4d32-8a31-136948606138")
+        
+        if let URLimage = imageURL{
+            
+            
+            annotationView?.image = UIImage(URLimage.sd_setImage(with: URLimage as URL))
+          //  petImageOntoMap.sd_setImage(with: URLimage as URL)
+            
+            
+            
+            
         }
+    
+        
+    
+      
         return annotationView
         
         
