@@ -17,6 +17,10 @@ import SDWebImage
 
 class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
+    @IBOutlet weak var burgerMenuView: UIView!
+    @IBOutlet weak var leadingConst: NSLayoutConstraint!
+    
+    var showMenu = false
     
     var imageURL = [String]()
     
@@ -45,6 +49,8 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        burgerMenuView.layer.shadowOpacity = 1
+        burgerMenuView.layer.shadowRadius = 6
         
         // KONUM SERVİSLERİ ETKİNLEŞTİRME
         /* manager.delegate = self
@@ -110,5 +116,28 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func openBurgerMenu(_ sender: Any) {
+        
+        if(showMenu){
+            
+            leadingConst.constant = -140
+            
+            
+            UIView.animate(withDuration: 0.2, animations: {
+                self.view.layoutIfNeeded()
+            })
+        
+            
+    }
+    else{
+            
+            leadingConst.constant = 0
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+        }
+        showMenu = !showMenu
     }
 }
