@@ -21,7 +21,7 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         UIImage(named: "kesfet.png")!
     ]
 
-    var colorRange :[UIColor] = [UIColor.white,UIColor.white,UIColor.white,UIColor.white]
+    var colorRange :[UIColor] = [UIColor.clear,UIColor.clear,UIColor.clear,UIColor.clear]
     
     var frame = CGRect(x:0,y:0,width:0,height:0)
     

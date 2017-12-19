@@ -59,10 +59,9 @@
                                     <segue destination="qax-DO-OQu" kind="show" id="F0q-Y6-emL"/>
                                 </connections>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-AM-veu">
+                            <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="ofE-AM-veu">
                                 <rect key="frame" x="160" y="478" width="55" height="37"/>
-                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="currentPageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="pageChanger:" destination="BYZ-38-t0r" eventType="valueChanged" id="NLy-pT-7Ra"/>
                                 </connections>
@@ -85,17 +84,15 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAy-tS-6v5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="530"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idk-BJ-GYx">
-                                        <rect key="frame" x="306" y="492" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Geç"/>
-                                        <connections>
-                                            <segue destination="Ido-7X-vUM" kind="show" id="Bi0-Z9-c8b"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idk-BJ-GYx">
+                                <rect key="frame" x="313" y="573" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Geç"/>
+                                <connections>
+                                    <segue destination="Ido-7X-vUM" kind="show" id="Bi0-Z9-c8b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -745,10 +742,6 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="Kqg-Py-BMg"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6uk-np-heK">
-                                <rect key="frame" x="67" y="182" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6W-Am-xcG">
                                 <rect key="frame" x="0.0" y="0.0" width="140" height="667"/>
                                 <subviews>
@@ -762,6 +755,16 @@
                                             <segue destination="vZA-7L-Edu" kind="show" id="lI0-XZ-NYO"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6o8-Tn-ybC">
+                                        <rect key="frame" x="26" y="222" width="89" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="BİLDİRİMLER"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eh-oo-dEI">
+                                        <rect key="frame" x="39" y="278" width="62" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="LOGOUT"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -771,6 +774,10 @@
                                     <constraint firstItem="JHk-Nq-fyK" firstAttribute="top" secondItem="b6W-Am-xcG" secondAttribute="top" constant="126" id="izy-fT-07r"/>
                                 </constraints>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6uk-np-heK">
+                                <rect key="frame" x="242" y="84" width="109" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -852,9 +859,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="p58-cq-gZi"/>
-        <segue reference="1Mf-qM-oO4"/>
+        <segue reference="Bi0-Z9-c8b"/>
         <segue reference="b3Q-wU-OBD"/>
-        <segue reference="kYo-Op-ASQ"/>
+        <segue reference="F0q-Y6-emL"/>
         <segue reference="Kqg-Py-BMg"/>
     </inferredMetricsTieBreakers>
 </document>
