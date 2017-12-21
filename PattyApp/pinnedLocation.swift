@@ -116,6 +116,8 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         
         self.ref.child("user").child(userid!).child("pet").updateChildValues(["longitude": annotation.coordinate.longitude, "latitude": annotation.coordinate.latitude])
         
+        self.ref.child("locations").child(userid!).updateChildValues(["longitude": annotation.coordinate.longitude, "latitude": annotation.coordinate.latitude , "userId" : userid!])
+        
     }
     
     

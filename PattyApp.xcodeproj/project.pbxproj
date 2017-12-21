@@ -27,6 +27,7 @@
 		59E383881FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
 		59E383891FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
 		59E3838A1FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
+		FC41A1431FEBE62000CE2E6C /* PPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41A1421FEBE62000CE2E6C /* PPointAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		C458BF90183EE5C6DF74B305 /* Pods-PattyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PattyApp/Pods-PattyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E21B3C9C6911D6FAF763564C /* Pods_PattyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PattyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F0C3B553D6AEE532806A47 /* Pods-PattyAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppUITests/Pods-PattyAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC41A1421FEBE62000CE2E6C /* PPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPointAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				590845FA1F980238009A2D6A /* resetPasswordVC.swift */,
 				59972FCD1FBE1EA400CD6C57 /* Home.swift */,
 				59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */,
+				FC41A1421FEBE62000CE2E6C /* PPointAnnotation.swift */,
 			);
 			path = PattyApp;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				590845FB1F980238009A2D6A /* resetPasswordVC.swift in Sources */,
 				59972FCE1FBE1EA400CD6C57 /* Home.swift in Sources */,
 				59E383881FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */,
+				FC41A1431FEBE62000CE2E6C /* PPointAnnotation.swift in Sources */,
 				3C832F461F94C96400EC8390 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

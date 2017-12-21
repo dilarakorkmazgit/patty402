@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jvO-DJ-xeN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -347,7 +347,7 @@
                                     <color key="titleColor" red="0.88235294117647056" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="5go-9b-tsr"/>
+                                    <action selector="goBack:" destination="3RD-L3-NZZ" eventType="touchUpInside" id="wWn-Vt-tug"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -727,9 +727,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lv0-TX-dBa">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lv0-TX-dBa">
                                 <rect key="frame" x="0.0" y="63" width="375" height="604"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMp-Kt-cE7">
                                 <rect key="frame" x="16" y="19" width="48" height="36"/>
@@ -774,7 +773,7 @@
                                     <constraint firstItem="JHk-Nq-fyK" firstAttribute="top" secondItem="b6W-Am-xcG" secondAttribute="top" constant="126" id="izy-fT-07r"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6uk-np-heK">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6uk-np-heK">
                                 <rect key="frame" x="242" y="84" width="109" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -782,8 +781,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="b6W-Am-xcG" firstAttribute="top" secondItem="aJ1-Po-db2" secondAttribute="top" id="4am-Bt-Sl1"/>
+                            <constraint firstItem="Lv0-TX-dBa" firstAttribute="height" secondItem="aJ1-Po-db2" secondAttribute="height" id="8EX-zE-Z0G"/>
                             <constraint firstItem="UmI-uE-ziu" firstAttribute="top" secondItem="b6W-Am-xcG" secondAttribute="bottom" id="hDY-ZO-TTd"/>
+                            <constraint firstItem="Lv0-TX-dBa" firstAttribute="width" secondItem="aJ1-Po-db2" secondAttribute="width" id="hK4-kY-gbU"/>
                             <constraint firstItem="b6W-Am-xcG" firstAttribute="leading" secondItem="aJ1-Po-db2" secondAttribute="leading" constant="-140" id="i8y-jc-5nf"/>
+                            <constraint firstItem="Lv0-TX-dBa" firstAttribute="centerY" secondItem="aJ1-Po-db2" secondAttribute="centerY" id="wfJ-Xh-65B"/>
+                            <constraint firstItem="Lv0-TX-dBa" firstAttribute="centerX" secondItem="aJ1-Po-db2" secondAttribute="centerX" id="yaQ-bp-J6E"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ARAMA" id="Gy9-5U-pwp">
@@ -859,9 +862,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="p58-cq-gZi"/>
-        <segue reference="Bi0-Z9-c8b"/>
+        <segue reference="y47-tc-Afq"/>
         <segue reference="b3Q-wU-OBD"/>
-        <segue reference="F0q-Y6-emL"/>
+        <segue reference="kYo-Op-ASQ"/>
         <segue reference="Kqg-Py-BMg"/>
     </inferredMetricsTieBreakers>
 </document>
