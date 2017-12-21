@@ -33,6 +33,10 @@ class LoginVC: UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
+    
+    @IBAction func goBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func loginPressed(_ sender: Any) {
         
         if let email = emailField.text, let password = passwordField.text {
