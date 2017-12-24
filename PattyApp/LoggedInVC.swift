@@ -20,7 +20,8 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     var ref = Database.database().reference()
     var storageRef = Storage.storage().reference()
 
-
+    @IBOutlet weak var petProfileImage: UIImageView!
+    
     @IBOutlet weak var petNameLabel: UITextField!
 
     //butonlar
@@ -48,6 +49,10 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        petProfileImage.layer.cornerRadius = petProfileImage.frame.size.width / 2
+        petProfileImage.clipsToBounds = true
+        petProfileImage.layer.borderColor = UIColor.white.cgColor
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -251,7 +256,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                                     print(error!)
                                     return
                                 }
-                                print("saving to firebase successfully")
+                                print("saving pet info to firebase successfully")
                             })
                         }
                     })
