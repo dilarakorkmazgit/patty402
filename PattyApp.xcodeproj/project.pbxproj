@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		272926C0ADAABDC88FE44877 /* Pods_PattyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08841108E2B19C64A20469D8 /* Pods_PattyAppUITests.framework */; };
 		3B45CE98B24B163B2567D721 /* Pods_PattyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036190BF56667C874DCB8773 /* Pods_PattyAppTests.framework */; };
+		3C2BF6A11FEFCF64001EE084 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2BF6A01FEFCF64001EE084 /* Profile.swift */; };
 		3C5217071F979FF200F52725 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5217061F979FF200F52725 /* CreateAccountVC.swift */; };
 		3C832F461F94C96400EC8390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C832F451F94C96400EC8390 /* AppDelegate.swift */; };
 		3C832F481F94C96400EC8390 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C832F471F94C96400EC8390 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		08841108E2B19C64A20469D8 /* Pods_PattyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PattyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B4B1C740B46D3B26C2F60F /* Pods-PattyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyApp/Pods-PattyApp.release.xcconfig"; sourceTree = "<group>"; };
 		38E564C490E80FCD1144FF30 /* Pods-PattyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppTests/Pods-PattyAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C2BF6A01FEFCF64001EE084 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		3C5217061F979FF200F52725 /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		3C832F421F94C96400EC8390 /* PattyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PattyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C832F451F94C96400EC8390 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				59972FCD1FBE1EA400CD6C57 /* Home.swift */,
 				59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */,
 				FC41A1421FEBE62000CE2E6C /* PPointAnnotation.swift */,
+				3C2BF6A01FEFCF64001EE084 /* Profile.swift */,
 			);
 			path = PattyApp;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				590845FB1F980238009A2D6A /* resetPasswordVC.swift in Sources */,
 				59972FCE1FBE1EA400CD6C57 /* Home.swift in Sources */,
 				59E383881FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */,
+				3C2BF6A11FEFCF64001EE084 /* Profile.swift in Sources */,
 				FC41A1431FEBE62000CE2E6C /* PPointAnnotation.swift in Sources */,
 				3C832F461F94C96400EC8390 /* AppDelegate.swift in Sources */,
 			);

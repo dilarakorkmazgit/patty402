@@ -101,8 +101,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBAction func healthPressed(_ sender: Any) {
         healthPicker.isHidden = false
         
-    }
-    
+    } 
     @IBAction func chooseImage(_ sender: Any) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
@@ -129,9 +128,9 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let image_Camera = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        imageView.image = image
+        imageView.image = image_Camera
         picker.dismiss(animated: true, completion: nil)
         
         
@@ -210,7 +209,6 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     func dismissKeyboard() {
         view.endEditing(true)
     }
-    
     
     //saving data to firebase about pet info
     @IBAction func kaydetPressed(_ sender: Any) {
