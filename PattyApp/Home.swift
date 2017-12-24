@@ -159,7 +159,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
         let pannotation : PPointAnnotation = annotation as! PPointAnnotation
         let petImage : UIImageView = UIImageView()
-        petImage.frame = CGRect(x: -16, y: -4, width: 32, height: 32)
+        petImage.frame = CGRect(x: -16, y: -4, width: 50, height: 50)
         petImage.layer.cornerRadius = 16
         petImage.layer.masksToBounds = true
         petImage.clipsToBounds = true
