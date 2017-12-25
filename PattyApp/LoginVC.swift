@@ -21,8 +21,8 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
+   //    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
+     //   view.addGestureRecognizer(tap)
                 // Do any additional setup after loading the view.
     }
     
@@ -34,9 +34,9 @@ class LoginVC: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func goBack(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
+  //  @IBAction func goBack(_ sender: Any) {
+  //      self.navigationController?.popViewController(animated: true)
+ //   }
     @IBAction func loginPressed(_ sender: Any) {
         
         if let email = emailField.text, let password = passwordField.text {

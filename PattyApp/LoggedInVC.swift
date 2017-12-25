@@ -20,7 +20,8 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     var ref = Database.database().reference()
     var storageRef = Storage.storage().reference()
 
-
+    @IBOutlet weak var petProfileImage: UIImageView!
+    
     @IBOutlet weak var petNameLabel: UITextField!
 
     //butonlar
@@ -48,6 +49,10 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        petProfileImage.layer.cornerRadius = petProfileImage.frame.size.width / 2
+        petProfileImage.clipsToBounds = true
+        petProfileImage.layer.borderColor = UIColor.white.cgColor
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -101,8 +106,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBAction func healthPressed(_ sender: Any) {
         healthPicker.isHidden = false
         
-    }
-    
+    } 
     @IBAction func chooseImage(_ sender: Any) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
@@ -129,9 +133,9 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let image_Camera = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        imageView.image = image
+        imageView.image = image_Camera
         picker.dismiss(animated: true, completion: nil)
         
         
@@ -211,7 +215,6 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         view.endEditing(true)
     }
     
-    
     //saving data to firebase about pet info
     @IBAction func kaydetPressed(_ sender: Any) {
         
@@ -253,7 +256,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                                     print(error!)
                                     return
                                 }
-                                print("saving to firebase successfully")
+                                print("saving pet info to firebase successfully")
                             })
                         }
                     })

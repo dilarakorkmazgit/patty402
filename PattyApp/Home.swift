@@ -50,6 +50,9 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      
+        
+        
         burgerMenuView.layer.shadowOpacity = 1
         burgerMenuView.layer.shadowRadius = 6
         
@@ -95,11 +98,12 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                         DispatchQueue.main.async { [unowned self] in
                             //print(self.locations)
                             let dog = PPointAnnotation()
-                            let dogCordinates = CLLocationCoordinate2DMake(latitude, longitude)
+                            let dogCordinates = CLLocationCoordinate2DMake(latitude,longitude)
                             dog.coordinate = dogCordinates
                             dog.title = userValue.value(forKey: "petName") as? String ?? ""
                             dog.photoURL = userValue.value(forKey: "photo") as? String ?? ""
                             self.mapView.addAnnotation(dog)
+                            //print(dog.title)
                             
                         }
                     })
@@ -155,7 +159,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
         let pannotation : PPointAnnotation = annotation as! PPointAnnotation
         let petImage : UIImageView = UIImageView()
-        petImage.frame = CGRect(x: -16, y: -4, width: 32, height: 32)
+        petImage.frame = CGRect(x: -16, y: -4, width: 50, height: 50)
         petImage.layer.cornerRadius = 16
         petImage.layer.masksToBounds = true
         petImage.clipsToBounds = true
@@ -183,11 +187,8 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             UIView.animate(withDuration: 0.2, animations: {
                 self.view.layoutIfNeeded()
             })
-        
-            
     }
     else{
-            
             leadingConst.constant = 0
             
             UIView.animate(withDuration: 0.3, animations: {

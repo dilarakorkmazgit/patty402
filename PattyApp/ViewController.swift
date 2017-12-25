@@ -77,8 +77,6 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         Player.seek(to: kCMTimeZero)
         
     }
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -91,4 +89,3 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     }
     
 }
-
