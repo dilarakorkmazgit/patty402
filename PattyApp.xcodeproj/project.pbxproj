@@ -24,6 +24,7 @@
 		590845F71F97ED9D009A2D6A /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590845F61F97ED9D009A2D6A /* LoggedInVC.swift */; };
 		590845FB1F980238009A2D6A /* resetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590845FA1F980238009A2D6A /* resetPasswordVC.swift */; };
 		59972FCE1FBE1EA400CD6C57 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59972FCD1FBE1EA400CD6C57 /* Home.swift */; };
+		59ABD9771FF434A70030CE8C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59ABD9761FF434A70030CE8C /* Contact.swift */; };
 		59BE0E101F96A971008DD52B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BE0E0F1F96A971008DD52B /* LoginVC.swift */; };
 		59E383881FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
 		59E383891FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
@@ -73,6 +74,7 @@
 		590845F61F97ED9D009A2D6A /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
 		590845FA1F980238009A2D6A /* resetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resetPasswordVC.swift; sourceTree = "<group>"; };
 		59972FCD1FBE1EA400CD6C57 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		59ABD9761FF434A70030CE8C /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = ../Contact.swift; sourceTree = "<group>"; };
 		59BE0E0C1F96A32C008DD52B /* PattyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PattyApp.entitlements; sourceTree = "<group>"; };
 		59BE0E0F1F96A971008DD52B /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		59C98F8E1F95428C0000F65D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -139,6 +141,7 @@
 		3C832F441F94C96400EC8390 /* PattyApp */ = {
 			isa = PBXGroup;
 			children = (
+				59ABD9761FF434A70030CE8C /* Contact.swift */,
 				59BE0E0C1F96A32C008DD52B /* PattyApp.entitlements */,
 				3C832F451F94C96400EC8390 /* AppDelegate.swift */,
 				3C832F471F94C96400EC8390 /* ViewController.swift */,
@@ -514,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59ABD9771FF434A70030CE8C /* Contact.swift in Sources */,
 				3C5217071F979FF200F52725 /* CreateAccountVC.swift in Sources */,
 				3C832F4E1F94C96400EC8390 /* PattyApp.xcdatamodeld in Sources */,
 				3C832F481F94C96400EC8390 /* ViewController.swift in Sources */,
