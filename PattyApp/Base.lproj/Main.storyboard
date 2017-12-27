@@ -532,7 +532,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PET BİLGİLERİ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r5u-a3-dxS">
-                                <rect key="frame" x="-10" y="-11" width="375" height="75"/>
+                                <rect key="frame" x="-10" y="-11" width="385" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.19328997470000001" green="0.19328997470000001" blue="0.19328997470000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="23"/>
@@ -767,22 +767,22 @@
                                             <color key="titleColor" red="1" green="0.3608216011" blue="0.14940686340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XzK-ah-npi">
-                                        <rect key="frame" x="26" y="318" width="89" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="İLETİŞİM">
-                                            <color key="titleColor" red="1" green="0.3608216011" blue="0.14940686340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="0ZG-ZS-njm" kind="show" id="x0Q-ml-1Ax"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eh-oo-dEI">
                                         <rect key="frame" x="39" y="402" width="62" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="ÇIKIŞ">
                                             <color key="titleColor" red="1" green="0.3608216011" blue="0.14940686340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ho9-23-kK9">
+                                        <rect key="frame" x="41" y="318" width="60" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="İLETİŞİM">
+                                            <color key="titleColor" red="1" green="0.3608216011" blue="0.14940686340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="0ZG-ZS-njm" kind="show" id="j8M-gI-mlY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -912,7 +912,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIC-uN-N3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5044" y="1513"/>
+            <point key="canvasLocation" x="5044" y="1512.5937031484259"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WDB-Sy-Bcs">
@@ -942,11 +942,11 @@
         <image name="usericon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p58-cq-gZi"/>
+        <segue reference="b3Q-wU-OBD"/>
+        <segue reference="Kqg-Py-BMg"/>
         <segue reference="8cU-ra-oSp"/>
         <segue reference="qHX-im-FsE"/>
-        <segue reference="b3Q-wU-OBD"/>
+        <segue reference="p58-cq-gZi"/>
         <segue reference="kYo-Op-ASQ"/>
-        <segue reference="Kqg-Py-BMg"/>
     </inferredMetricsTieBreakers>
 </document>
