@@ -21,6 +21,8 @@ class ContactInfo: UITableViewController {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Geri", style: .plain, target: self, action: #selector(handleCancel))
         
+        tableView.register(UserCell.self , forCellReuseIdentifier: cellId )
+        
         fetchUser()
     }
     func fetchUser() {
@@ -55,14 +57,26 @@ class ContactInfo: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
+       // let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        
         let user = users[indexPath.row]
         cell.textLabel?.text = user.username
         cell.detailTextLabel?.text = user.email
         
-        cell.textLabel?.text = "Dummy"
+        cell.textLabel?.text = "burakk"
         
         return cell
     }
+}
+class UserCell: UITableViewCell {
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("not implemented")
+    }
+    
 }
