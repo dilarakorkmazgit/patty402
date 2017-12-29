@@ -57,6 +57,11 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "BACKGROUND.login")
+        backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        
         self.loggedInUser = Auth.auth().currentUser
         
         cinsiyetPicker.dataSource = self

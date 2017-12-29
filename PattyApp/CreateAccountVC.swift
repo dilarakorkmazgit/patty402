@@ -29,6 +29,14 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //fit the background image
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "BACKGROUND.login")
+        backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        
+        
      //   let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
       //  view.addGestureRecognizer(tap)
          ref = Database.database().reference().child("user")
@@ -43,12 +51,10 @@ class CreateAccountVC: UIViewController {
         
         Auth.auth().createUser(withEmail: mailLabel.text!, password: poasswordLabel.text!, completion: {(user,error) in
             
-            
             if error != nil {
-                print(error)
+                print(error!)
                 return
             }
-            
             
             let userID: String = user!.uid
             let firstname: String = self.firstnameLabel.text!
@@ -63,13 +69,10 @@ class CreateAccountVC: UIViewController {
         })
         self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
 
-
     }
     func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-
 }
 
 

@@ -164,7 +164,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         petImage.layer.masksToBounds = true
         petImage.clipsToBounds = true
         petImage.backgroundColor = UIColor.white
-        petImage.sd_setImage(with: URL(string: pannotation.photoURL as! String), placeholderImage: UIImage(named: "placeholder.png"))
+        petImage.sd_setImage(with: URL(string: pannotation.photoURL as String), placeholderImage: UIImage(named: "placeholder.png"))
 
         annotationView?.addSubview(petImage)
         annotationView?.bringSubview(toFront: petImage)

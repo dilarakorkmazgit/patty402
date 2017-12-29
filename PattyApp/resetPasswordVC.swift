@@ -18,6 +18,12 @@ class resetPasswordVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "BACKGROUND.login")
+        backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
 
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
