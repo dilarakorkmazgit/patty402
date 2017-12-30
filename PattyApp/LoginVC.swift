@@ -24,6 +24,15 @@ class LoginVC: UIViewController {
       let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
        view.addGestureRecognizer(tap)
                 // Do any additional setup after loading the view.
+        
+        //fit the background image
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "BACKGROUND.login")
+        backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
