@@ -93,17 +93,14 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                         locDict.setValue(longitude, forKey: "longitude")
                         locDict.setValue(userValue, forKey: "pet")
                         
-                        //self.locations.add(locDict)
                         
                         DispatchQueue.main.async { [unowned self] in
-                            //print(self.locations)
                             let dog = PPointAnnotation()
                             let dogCordinates = CLLocationCoordinate2DMake(latitude,longitude)
                             dog.coordinate = dogCordinates
                             dog.title = userValue.value(forKey: "petName") as? String ?? ""
                             dog.photoURL = userValue.value(forKey: "photo") as? String ?? ""
                             self.mapView.addAnnotation(dog)
-                            //print(dog.title)
                             
                         }
                     })
@@ -138,25 +135,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }else {
             annotationView!.annotation = annotation
         }
-       // let storageRef = Storage.storage().reference().child("ProfilImage/\(UUID().uuidString)") HATA????
-
-        
-        
-      //  imageView.sd_setImage(with: URL(string: "http://www.domain.com/path/to/image.jpg")
-        
-//        let imageURL : NSURL? = NSURL(string:"https://firebasestorage.googleapis.com/v0/b/pattyapp-34c16.appspot.com/o/profileImage%2Fmango.png?alt=media&token=ba613ed4-51a0-4d32-8a31-136948606138")
-//
-//        if let URLimage = imageURL{
-//
-//
-//            //annotationView?.image = UIImage(URLimage.sd_setImage(with: URLimage as URL))
-//          petImageOntoMap.sd_setImage(with: URLimage as URL)
-//
-//
-//
-//
-//        }
-    
+     
         let pannotation : PPointAnnotation = annotation as! PPointAnnotation
         let petImage : UIImageView = UIImageView()
         petImage.frame = CGRect(x: -16, y: -4, width: 50, height: 50)
@@ -169,8 +148,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         annotationView?.addSubview(petImage)
         annotationView?.bringSubview(toFront: petImage)
         return annotationView
-    
-    
+
     }
     
     override func didReceiveMemoryWarning() {

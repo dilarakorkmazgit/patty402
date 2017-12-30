@@ -21,8 +21,8 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-   //    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
-     //   view.addGestureRecognizer(tap)
+      let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginVC.dismissKeyboard))
+       view.addGestureRecognizer(tap)
                 // Do any additional setup after loading the view.
         
         //fit the background image
