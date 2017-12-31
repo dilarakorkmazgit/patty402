@@ -567,7 +567,7 @@
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wng-fh-Aqu">
-                                <rect key="frame" x="2" y="287" width="76" height="18"/>
+                                <rect key="frame" x="16" y="287" width="76" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="Cinsiyet">
@@ -578,11 +578,11 @@
                                 </connections>
                             </button>
                             <pickerView hidden="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWd-uF-CBG">
-                                <rect key="frame" x="0.0" y="302" width="100" height="105"/>
+                                <rect key="frame" x="0.0" y="287" width="121" height="105"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6F-wN-3e5">
-                                <rect key="frame" x="2" y="415" width="76" height="18"/>
+                                <rect key="frame" x="16" y="415" width="76" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="Renk">
@@ -604,19 +604,19 @@
                                 </connections>
                             </button>
                             <pickerView hidden="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b4a-k0-rSP">
-                                <rect key="frame" x="252" y="302" width="123" height="105"/>
+                                <rect key="frame" x="255" y="287" width="123" height="105"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <pickerView hidden="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PlL-Ki-shh">
-                                <rect key="frame" x="137" y="302" width="100" height="105"/>
+                                <rect key="frame" x="127" y="287" width="120" height="105"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <pickerView hidden="YES" tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="htr-Uh-uKm">
-                                <rect key="frame" x="137" y="415" width="120" height="105"/>
+                                <rect key="frame" x="127" y="415" width="120" height="105"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwf-p1-20h">
-                                <rect key="frame" x="302" y="447" width="48" height="54"/>
+                                <rect key="frame" x="293" y="440" width="48" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="23"/>
                                 <state key="normal" backgroundImage="konum">
@@ -626,26 +626,15 @@
                                     <segue destination="GJU-su-2qu" kind="show" id="UI6-xq-IDt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05T-3B-Gp8">
-                                <rect key="frame" x="240" y="116" width="58" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="chooseImage:" destination="Ido-7X-vUM" eventType="touchUpInside" id="yUz-I4-3hX"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Konum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIg-9T-mNl">
-                                <rect key="frame" x="288" y="415" width="66" height="21"/>
+                                <rect key="frame" x="284" y="414" width="66" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                 <color key="textColor" red="1" green="0.3608216011" blue="0.14940686340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deH-ou-ubF">
-                                <rect key="frame" x="288" y="287" width="76" height="18"/>
+                                <rect key="frame" x="278" y="287" width="76" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="Tür">
@@ -674,9 +663,20 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView hidden="YES" tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZH-xJ-6ei">
-                                <rect key="frame" x="0.0" y="415" width="100" height="105"/>
+                                <rect key="frame" x="0.0" y="415" width="121" height="105"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05T-3B-Gp8">
+                                <rect key="frame" x="222" y="114" width="58" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseImage:" destination="Ido-7X-vUM" eventType="touchUpInside" id="yUz-I4-3hX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
