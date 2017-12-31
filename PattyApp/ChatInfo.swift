@@ -59,6 +59,7 @@ class ChatInfo: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         let user = users[indexPath.row]
         cell.detailTextLabel?.text = user.userId
+        cell.imageView?.image = UIImage(named: "mail")
         return cell
  }
     class UserCell: UITableViewCell {

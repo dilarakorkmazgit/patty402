@@ -13,5 +13,7 @@ class User: NSObject {
     var userId : String?
     var latitude : Double?
     var longitude : Double?
+    var firstname : String?
+    var email : String?
 
 }
