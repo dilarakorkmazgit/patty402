@@ -25,7 +25,7 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="main" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -790,6 +790,15 @@
                                     <constraint firstItem="JHk-Nq-fyK" firstAttribute="top" secondItem="b6W-Am-xcG" secondAttribute="top" constant="126" id="izy-fT-07r"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6B-CB-mrP">
+                                <rect key="frame" x="329" y="82" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="signoutPressed:" destination="qdY-FY-Fon" eventType="touchUpInside" id="kdZ-bF-eY7"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="cyT-z9-7WV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -944,11 +953,11 @@
         <image name="usericon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bCy-rq-1ey"/>
-        <segue reference="iRc-WG-sBR"/>
-        <segue reference="Bzz-Nb-hIG"/>
-        <segue reference="nce-Hn-ksq"/>
-        <segue reference="kYo-Op-ASQ"/>
+        <segue reference="b3Q-wU-OBD"/>
+        <segue reference="lTw-xv-TOV"/>
         <segue reference="SOV-IS-Bpw"/>
+        <segue reference="nce-Hn-ksq"/>
+        <segue reference="P47-43-vH9"/>
+        <segue reference="F0q-Y6-emL"/>
     </inferredMetricsTieBreakers>
 </document>

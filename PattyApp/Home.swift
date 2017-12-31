@@ -50,7 +50,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      
+        
         
         
         burgerMenuView.layer.shadowOpacity = 1
@@ -78,35 +78,50 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             self.database.child("locations").child(userId).observe(.value, with: { snapshot in
                 let value = snapshot.value as! NSDictionary
                 
-                    let usersId = value["userId"] as! String
-                    let latitude = value["latitude"] as! Double
-                    let longitude = value["longitude"] as! Double
+                let usersId = value["userId"] as! String
+                let latitude = value["latitude"] as! Double
+                let longitude = value["longitude"] as! Double
+                
+                self.database.child("user").child(userId).child("pet").observe(.value, with: { snapshot in
+                    let userValue = snapshot.value as! NSDictionary
+                    print(userValue)
+                    print(usersId)
+                    let locDict : NSMutableDictionary! = NSMutableDictionary()
                     
-                    self.database.child("user").child(userId).child("pet").observe(.value, with: { snapshot in
-                        let userValue = snapshot.value as! NSDictionary
-                        print(userValue)
-                        print(usersId)
-                        let locDict : NSMutableDictionary! = NSMutableDictionary()
+                    locDict.setValue(usersId, forKey: "userId")
+                    locDict.setValue(latitude, forKey: "latitude")
+                    locDict.setValue(longitude, forKey: "longitude")
+                    locDict.setValue(userValue, forKey: "pet")
+                    
+                    
+                    DispatchQueue.main.async { [unowned self] in
+                        let dog = PPointAnnotation()
+                        let dogCordinates = CLLocationCoordinate2DMake(latitude,longitude)
+                        dog.coordinate = dogCordinates
+                        dog.title = userValue.value(forKey: "petName") as? String ?? ""
+                        dog.photoURL = userValue.value(forKey: "photo") as? String ?? ""
+                        self.mapView.addAnnotation(dog)
                         
-                        locDict.setValue(usersId, forKey: "userId")
-                        locDict.setValue(latitude, forKey: "latitude")
-                        locDict.setValue(longitude, forKey: "longitude")
-                        locDict.setValue(userValue, forKey: "pet")
-                        
-                        
-                        DispatchQueue.main.async { [unowned self] in
-                            let dog = PPointAnnotation()
-                            let dogCordinates = CLLocationCoordinate2DMake(latitude,longitude)
-                            dog.coordinate = dogCordinates
-                            dog.title = userValue.value(forKey: "petName") as? String ?? ""
-                            dog.photoURL = userValue.value(forKey: "photo") as? String ?? ""
-                            self.mapView.addAnnotation(dog)
-                            
-                        }
-                    })
+                    }
+                })
             })
         })
     }
+    
+    @IBAction func signoutPressed(_ sender: Any) {
+        
+        if Auth.auth().currentUser != nil {
+            
+            
+            do
+            {
+                try? Auth.auth().signOut()
+                
+            }
+        }
+        
+    }
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations [0]
@@ -135,7 +150,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         }else {
             annotationView!.annotation = annotation
         }
-     
+        
         let pannotation : PPointAnnotation = annotation as! PPointAnnotation
         let petImage : UIImageView = UIImageView()
         petImage.frame = CGRect(x: -16, y: -4, width: 50, height: 50)
@@ -144,11 +159,11 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         petImage.clipsToBounds = true
         petImage.backgroundColor = UIColor.white
         petImage.sd_setImage(with: URL(string: pannotation.photoURL as String), placeholderImage: UIImage(named: "placeholder.png"))
-
+        
         annotationView?.addSubview(petImage)
         annotationView?.bringSubview(toFront: petImage)
         return annotationView
-
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -165,8 +180,8 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             UIView.animate(withDuration: 0.2, animations: {
                 self.view.layoutIfNeeded()
             })
-    }
-    else{
+        }
+        else{
             leadingConst.constant = 0
             
             UIView.animate(withDuration: 0.3, animations: {
