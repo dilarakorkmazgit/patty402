@@ -32,13 +32,17 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     let manager = CLLocationManager()
     var locations : NSMutableArray! = NSMutableArray()
     
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        
         burgerMenuView.layer.shadowOpacity = 1
         burgerMenuView.layer.shadowRadius = 6
-        
+       
         
         self.mapView.delegate = self
         mapView.showsUserLocation = true
@@ -86,7 +90,8 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         })
     }
 
-
+    
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations [0]
         
@@ -130,21 +135,6 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         
     }
     
-    @IBAction func handleLogout(_ sender: Any) {
-        func handleLogout() {
-            
-            do {
-                try Auth.auth().signOut()
-                
-            } catch let logoutError {
-                print(logoutError)
-            }
-            let main = ViewController()
-            present(main, animated: true, completion: nil)
-
-        }
-
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
