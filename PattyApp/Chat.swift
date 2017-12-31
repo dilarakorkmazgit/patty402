@@ -16,7 +16,6 @@ class Chat: UITableViewController {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Çıkış", style: .plain, target: self, action: #selector(handleLogout))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Yeni Mesaj", style: .plain, target: self, action: #selector(newMessage))
-
         
         checkIfUserIsLoggedIn()
     }
@@ -26,21 +25,18 @@ class Chat: UITableViewController {
         let navController = UINavigationController(rootViewController: chatInfo)
         present(navController, animated: true, completion: nil)
         
-        
     }
     func checkIfUserIsLoggedIn() {
-        
         
         if Auth.auth().currentUser?.uid == nil {
             perform(#selector(handleLogout), with: nil, afterDelay: 0)
         }else {
             let uid = Auth.auth().currentUser?.uid
-            Database.database().reference().child("locations").child(uid!).observe(.value, with: {(snapshot) in
+            Database.database().reference().child("user").child(uid!).child("personalInfo").observe(.value, with: {(snapshot) in
                 
                 if let dictionary = snapshot.value as? [String: Any] {
-                    self.navigationItem.title = dictionary["userId"] as? String
+                    self.navigationItem.title = dictionary["firstname"] as? String
                 }
-                
                 
                 print(snapshot)
             } , withCancel: nil)
@@ -56,8 +52,7 @@ class Chat: UITableViewController {
             print(logoutError)
         }
         
-        
-        let chatInfo = ChatInfo()
-        present(chatInfo, animated: true, completion: nil)
+        let main = ViewController()
+        present(main, animated: true, completion: nil)
     }
 }

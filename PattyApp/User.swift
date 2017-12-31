@@ -10,7 +10,6 @@ import UIKit
 
 class User: NSObject {
     
- 
     var userId : String?
     var latitude : Double?
     var longitude : Double?

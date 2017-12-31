@@ -18,7 +18,8 @@ class ChatInfo: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Geri", style: .plain, target:self, action: #selector(handleCancel))
-        fetchUser()
+        tableView.register(UserCell.self, forCellReuseIdentifier: cellId)
+            fetchUser()
     }
     func handleCancel() {
         
@@ -49,17 +50,25 @@ class ChatInfo: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
-    
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
-        
+       // let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         let user = users[indexPath.row]
         cell.detailTextLabel?.text = user.userId
         return cell
+ }
+    class UserCell: UITableViewCell {
+        
+        override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+            super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+        }
+        required init?(coder aDecoder: NSCoder) {
+            fatalError("not implemented")
+        }
     }
+    
 }

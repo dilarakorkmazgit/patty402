@@ -62,7 +62,7 @@ class LoginVC: UIViewController {
                     return
                 }
                 else{
-                    self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
+                    self.performSegue(withIdentifier: "Home", sender: nil)
 
                 }
 
