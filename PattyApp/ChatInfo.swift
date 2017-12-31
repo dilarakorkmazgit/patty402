@@ -29,21 +29,21 @@ class ChatInfo: UITableViewController {
         
         Database.database().reference().child("locations").observe(.childAdded, with: {(snapshot) in
             
-            if let dictionary = snapshot.value as? [String: Any] {
-                
+            if let dictionary = snapshot.value as? [String: AnyObject] {
                 
                 let user = User()
-                user.setValuesForKeys(dictionary)
+                
+                user.userId = dictionary["userId"] as! String
+                print(user.userId)
                 self.users.append(user)
                 
                 DispatchQueue.main.async(execute: {
-                    self.tableView.reloadData()
+                 self.tableView.reloadData()
                 })
             }
             
         } , withCancel: nil)
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -53,12 +53,13 @@ class ChatInfo: UITableViewController {
         return users.count
     }
     
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
         
         let user = users[indexPath.row]
-        cell.textLabel?.text = user.userId
+        cell.detailTextLabel?.text = user.userId
         return cell
     }
 }
