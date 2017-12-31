@@ -42,10 +42,10 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBOutlet weak var imageView: UIImageView!
     
     let cinsiyet = ["Erkek","Dişi"]
-    let tur = ["pug","terrier","dogo","doberman"]
-    let color = ["siyah","beyaz","kahverangi","karışık"]
+    let tur = ["Pug","Terrier","Dogo","Doberman"]
+    let color = ["Siyah","Beyaz","Kahverangi","Karışık"]
     let age = ["1","2","3","4","5"]
-    let health = ["kısır","Kısır Değil"]
+    let health = ["Kısır","Kısır Değil"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
