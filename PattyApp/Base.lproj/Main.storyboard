@@ -358,6 +358,34 @@
             </objects>
             <point key="canvasLocation" x="1661.5999999999999" y="807.34632683658174"/>
         </scene>
+        <!--Chat-->
+        <scene sceneID="Yf5-19-H0w">
+            <objects>
+                <tableViewController id="and-Lo-KKc" customClass="Chat" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="KdF-g1-ozW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="k7v-94-7if">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k7v-94-7if" id="c8a-7t-5qR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="and-Lo-KKc" id="LIE-0Y-5XP"/>
+                            <outlet property="delegate" destination="and-Lo-KKc" id="d0Z-FX-1Uy"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQE-tf-w4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3916" y="1665"/>
+        </scene>
         <!--Reset PasswordVC-->
         <scene sceneID="jMG-tD-ukz">
             <objects>
@@ -767,7 +795,7 @@
                                             <color key="titleColor" red="1" green="0.3608216011" blue="0.14940686340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="0ZG-ZS-njm" kind="show" id="j8M-gI-mlY"/>
+                                            <segue destination="and-Lo-KKc" kind="show" id="x4g-VA-AsU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eh-oo-dEI">
@@ -790,15 +818,6 @@
                                     <constraint firstItem="JHk-Nq-fyK" firstAttribute="top" secondItem="b6W-Am-xcG" secondAttribute="top" constant="126" id="izy-fT-07r"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6B-CB-mrP">
-                                <rect key="frame" x="329" y="82" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="signoutPressed:" destination="qdY-FY-Fon" eventType="touchUpInside" id="kdZ-bF-eY7"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="cyT-z9-7WV"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -903,24 +922,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qr-Pm-z7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4989.6000000000004" y="796.55172413793105"/>
-        </scene>
-        <!--Contact-->
-        <scene sceneID="fuU-QB-VTs">
-            <objects>
-                <viewController id="0ZG-ZS-njm" customClass="Contact" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Q0k-cy-9xp"/>
-                        <viewControllerLayoutGuide type="bottom" id="lkO-Fx-Cqy"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Phc-10-nFJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VIC-uN-N3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4990" y="1513"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WDB-Sy-Bcs">
