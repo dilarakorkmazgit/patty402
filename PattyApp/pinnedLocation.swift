@@ -34,7 +34,7 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
-      //  manager.startUpdatingLocation()
+        manager.startUpdatingLocation()
         
         let dialog = UIAlertController(title: "Pet Konumu", message: "Petinizin konumunu haritada uzun basarak belirleyebilirsiniz", preferredStyle: UIAlertControllerStyle.alert)
         dialog.addAction(UIAlertAction(title: "TAMAM", style: UIAlertActionStyle.default, handler: nil))
