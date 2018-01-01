@@ -38,6 +38,7 @@ class ChatInfo: UITableViewController {
                 user.firstname = dictionary["firstname"] as! String
                 user.lastname = dictionary["lastname"] as! String
                 user.email = dictionary["email"] as! String
+                user.photo = dictionary["photo"] as! String
 
                 
                 self.users.append(user)
@@ -65,13 +66,52 @@ class ChatInfo: UITableViewController {
         
         cell.textLabel?.text = "\(user.firstname!) \(user.lastname!)"
         cell.detailTextLabel?.text = user.email
-        cell.imageView?.image = UIImage(named: "mail")
+       // cell.imageView?.image = UIImage(named: "mail")
+       // cell.imageView?.contentMode = .scaleAspectFill
+        
+        if let profileImageUrl = user.photo {
+            let url = NSURL(string: profileImageUrl)
+            URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) in
+                
+                if error != nil {
+                    print(error)
+                    return
+                }
+                DispatchQueue.main.async(execute: {
+         //           cell.imageView?.image = UIImage(data: data!)
+                })
+            }).resume()
+            
+        }
+        
+        
         return cell
  }
     class UserCell: UITableViewCell {
         
+        override func layoutSubviews() {
+            
+            super.layoutSubviews()
+            
+        }
+        
+        let profileImageView: UIImageView = {
+            let imageView = UIImageView()
+            imageView.image = UIImage(named: "mail")
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            return imageView
+        }()
+        
         override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
             super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+            
+            addSubview(profileImageView)
+            
+            profileImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
+            profileImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+            profileImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
+            profileImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+            
         }
         required init?(coder aDecoder: NSCoder) {
             fatalError("not implemented")
