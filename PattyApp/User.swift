@@ -14,6 +14,8 @@ class User: NSObject {
     var latitude : Double?
     var longitude : Double?
     var firstname : String?
+    var lastname : String?
+    var photo : String?
     var email : String?
 
 }

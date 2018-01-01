@@ -263,6 +263,14 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                                 }
                                 print("saving pet info to firebase successfully")
                             })
+                            self.ref.child("locations").child(userid).updateChildValues(newValuesforProfile,withCompletionBlock:{(error,ref) in
+                                if error != nil{
+                                    print(error!)
+                                    return
+                                }
+                                print("loca gitti")
+                            })
+
                         }
                     })
                 })

@@ -18,7 +18,8 @@ import FirebaseDatabase
 class CreateAccountVC: UIViewController {
     
     var ref: DatabaseReference!
-    
+    var ref1: DatabaseReference!
+
     @IBOutlet weak var firstnameLabel: UITextField!
     @IBOutlet weak var lastnameLabel: UITextField!
     @IBOutlet weak var usernameLabel: UITextField!
@@ -40,6 +41,8 @@ class CreateAccountVC: UIViewController {
       let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
        view.addGestureRecognizer(tap)
          ref = Database.database().reference().child("user")
+        ref1 = Database.database().reference().child("locations")
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -65,6 +68,8 @@ class CreateAccountVC: UIViewController {
             
             self.ref.child(userID).child("personalInfo").setValue(["firstname": firstname, "lastname": lastname, "email": email, "password":password, "username": username])
             print("user registered " + user!.uid)
+            self.ref1.child(userID).setValue(["firstname": firstname, "lastname": lastname, "email": email])
+
             
         })
         self.performSegue(withIdentifier: "LoggedInVC", sender: nil)

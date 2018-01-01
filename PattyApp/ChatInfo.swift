@@ -35,7 +35,11 @@ class ChatInfo: UITableViewController {
                 let user = User()
                 
                 user.userId = dictionary["userId"] as! String
-                print(user.userId)
+                user.firstname = dictionary["firstname"] as! String
+                user.lastname = dictionary["lastname"] as! String
+                user.email = dictionary["email"] as! String
+
+                
                 self.users.append(user)
                 
                 DispatchQueue.main.async(execute: {
@@ -58,7 +62,9 @@ class ChatInfo: UITableViewController {
        // let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
         let user = users[indexPath.row]
-        cell.detailTextLabel?.text = user.userId
+        
+        cell.textLabel?.text = "\(user.firstname!) \(user.lastname!)"
+        cell.detailTextLabel?.text = user.email
         cell.imageView?.image = UIImage(named: "mail")
         return cell
  }
