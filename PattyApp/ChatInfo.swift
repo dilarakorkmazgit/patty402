@@ -90,7 +90,7 @@ class ChatInfo: UITableViewController {
         return cell
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75
+        return 72
     }
   
     class UserCell: UITableViewCell {
@@ -99,8 +99,8 @@ class ChatInfo: UITableViewController {
             
             super.layoutSubviews()
             
-            textLabel?.frame = CGRectMake(56, textLabel!.frame.origin.y - 2, textLabel!.frame.width, textLabel!.frame.height)
-            detailTextLabel?.frame = CGRectMake(56, detailTextLabel!.frame.origin.y + 2, detailTextLabel!.frame.width, textLabel!.frame.height)
+            textLabel?.frame = CGRectMake(64, textLabel!.frame.origin.y - 2, textLabel!.frame.width, textLabel!.frame.height)
+            detailTextLabel?.frame = CGRectMake(64, detailTextLabel!.frame.origin.y + 2, detailTextLabel!.frame.width, textLabel!.frame.height)
             
         }
         
@@ -111,8 +111,9 @@ class ChatInfo: UITableViewController {
         let profileImageView: UIImageView = {
             let imageView = UIImageView()
             imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.layer.cornerRadius = 20
+            imageView.layer.cornerRadius = 24
             imageView.layer.masksToBounds = true
+            imageView.contentMode = .scaleAspectFill
             return imageView
         }()
         
@@ -123,8 +124,8 @@ class ChatInfo: UITableViewController {
             
             profileImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
             profileImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-            profileImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
-            profileImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
+            profileImageView.widthAnchor.constraint(equalToConstant: 48).isActive = true
+            profileImageView.heightAnchor.constraint(equalToConstant: 48).isActive = true
             
         }
         required init?(coder aDecoder: NSCoder) {
