@@ -20,7 +20,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -955,11 +955,11 @@
         <image name="usericon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iRc-WG-sBR"/>
         <segue reference="b3Q-wU-OBD"/>
-        <segue reference="Bzz-Nb-hIG"/>
+        <segue reference="iRc-WG-sBR"/>
+        <segue reference="F0q-Y6-emL"/>
+        <segue reference="P47-43-vH9"/>
         <segue reference="nce-Hn-ksq"/>
         <segue reference="SOV-IS-Bpw"/>
-        <segue reference="F0q-Y6-emL"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -19,7 +19,7 @@ class ChatInfo: UITableViewController {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Geri", style: .plain, target:self, action: #selector(handleCancel))
         tableView.register(UserCell.self, forCellReuseIdentifier: cellId)
-            fetchUser()
+        fetchUser()
     }
     func handleCancel() {
         
@@ -39,12 +39,12 @@ class ChatInfo: UITableViewController {
                 user.lastname = dictionary["lastname"] as! String
                 user.email = dictionary["email"] as! String
                 user.photo = dictionary["photo"] as! String
-
+                
                 
                 self.users.append(user)
                 
                 DispatchQueue.main.async(execute: {
-                 self.tableView.reloadData()
+                    self.tableView.reloadData()
                 })
             }
             
@@ -58,19 +58,21 @@ class ChatInfo: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-       // let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
         let user = users[indexPath.row]
         
         cell.textLabel?.text = "\(user.firstname!) \(user.lastname!)"
         cell.detailTextLabel?.text = user.email
-       // cell.imageView?.image = UIImage(named: "mail")
-       // cell.imageView?.contentMode = .scaleAspectFill
+      
         
         if let profileImageUrl = user.photo {
-            let url = NSURL(string: profileImageUrl)
+           
+            cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
+            
+            /* let url = NSURL(string: profileImageUrl)
             URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) in
                 
                 if error != nil {
@@ -78,24 +80,28 @@ class ChatInfo: UITableViewController {
                     return
                 }
                 DispatchQueue.main.async(execute: {
-         //           cell.imageView?.image = UIImage(data: data!)
+                    cell.profileImageView.image = UIImage(data: data!)
                 })
             }).resume()
-            
+            */
         }
         
         
         return cell
- }
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
+  
     class UserCell: UITableViewCell {
         
         override func layoutSubviews() {
             
             super.layoutSubviews()
-          
-            textLabel?.frame = CGRectMake(56, textLabel!.frame.origin.y, textLabel!.frame.width, textLabel!.frame.height)
-            detailTextLabel?.frame = CGRectMake(56, detailTextLabel!.frame.origin.y, detailTextLabel!.frame.width, textLabel!.frame.height)
-       
+            
+            textLabel?.frame = CGRectMake(56, textLabel!.frame.origin.y - 2, textLabel!.frame.width, textLabel!.frame.height)
+            detailTextLabel?.frame = CGRectMake(56, detailTextLabel!.frame.origin.y + 2, detailTextLabel!.frame.width, textLabel!.frame.height)
+            
         }
         
         func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
@@ -104,8 +110,9 @@ class ChatInfo: UITableViewController {
         
         let profileImageView: UIImageView = {
             let imageView = UIImageView()
-            imageView.image = UIImage(named: "mail")
             imageView.translatesAutoresizingMaskIntoConstraints = false
+            imageView.layer.cornerRadius = 20
+            imageView.layer.masksToBounds = true
             return imageView
         }()
         
