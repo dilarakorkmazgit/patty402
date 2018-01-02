@@ -164,7 +164,7 @@
                                     <color key="titleColor" red="1" green="0.3608216011" blue="0.14940686340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="and-Lo-KKc" kind="show" id="gHd-3d-8iZ"/>
+                                    <segue destination="and-Lo-KKc" kind="show" id="msE-8r-EOD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHU-mg-0d6">
@@ -864,7 +864,7 @@
                                             <color key="titleColor" red="1" green="0.3608216011" blue="0.14940686340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="and-Lo-KKc" kind="show" id="x4g-VA-AsU"/>
+                                            <segue destination="and-Lo-KKc" kind="show" id="Pqj-i2-k1Z"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8eh-oo-dEI">
@@ -1020,7 +1020,7 @@
         <image name="usericon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="x4g-VA-AsU"/>
+        <segue reference="Pqj-i2-k1Z"/>
         <segue reference="nce-Hn-ksq"/>
         <segue reference="qHX-im-FsE"/>
         <segue reference="lI0-XZ-NYO"/>
