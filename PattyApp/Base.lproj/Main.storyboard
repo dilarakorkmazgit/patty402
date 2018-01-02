@@ -767,17 +767,6 @@
                                     <action selector="chooseImage:" destination="Ido-7X-vUM" eventType="touchUpInside" id="yUz-I4-3hX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIr-Oi-vWM">
-                                <rect key="frame" x="100" y="519" width="174" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
-                                <state key="normal" title="TEST" backgroundImage="BUTON-BEYAZ">
-                                    <color key="titleColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="H1i-C9-sJ2" kind="show" id="2NL-1A-tSu"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -810,7 +799,7 @@
             </objects>
             <point key="canvasLocation" x="2552.8000000000002" y="793.8530734632684"/>
         </scene>
-        <!--ARAMA-->
+        <!--ANA SAYFA-->
         <scene sceneID="U4c-UT-FnC">
             <objects>
                 <viewController id="qdY-FY-Fon" customClass="Home" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -900,7 +889,7 @@
                             <constraint firstItem="Lv0-TX-dBa" firstAttribute="centerX" secondItem="aJ1-Po-db2" secondAttribute="centerX" id="yaQ-bp-J6E"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ARAMA" id="Gy9-5U-pwp">
+                    <navigationItem key="navigationItem" title="ANA SAYFA" id="Gy9-5U-pwp">
                         <barButtonItem key="leftBarButtonItem" systemItem="organize" id="vYg-6H-Q7K">
                             <connections>
                                 <action selector="openBurgerMenu:" destination="qdY-FY-Fon" id="uXo-Cm-r0H"/>
@@ -1027,7 +1016,7 @@
         <segue reference="Bzz-Nb-hIG"/>
         <segue reference="b3Q-wU-OBD"/>
         <segue reference="iRc-WG-sBR"/>
-        <segue reference="F0q-Y6-emL"/>
-        <segue reference="wwA-hK-wjM"/>
+        <segue reference="nce-Hn-ksq"/>
+        <segue reference="kYo-Op-ASQ"/>
     </inferredMetricsTieBreakers>
 </document>
