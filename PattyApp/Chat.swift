@@ -15,7 +15,9 @@ class Chat: UITableViewController {
         super.viewDidLoad()
         
      //   navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Çıkış", style: .plain, target: self, action: #selector(handleLogout))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Yeni Mesaj", style: .plain, target: self, action: #selector(newMessage))
+        let image = UIImage(named: "write")
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(newMessage))
         
         checkIfUserIsLoggedIn()
     }

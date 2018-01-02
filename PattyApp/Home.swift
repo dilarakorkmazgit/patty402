@@ -19,9 +19,11 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var burgerMenuView: UIView!
     @IBOutlet weak var leadingConst: NSLayoutConstraint!
-    
+    @IBOutlet weak var ProfileImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var mailLabel: UILabel!
+   
     var showMenu = false
-    
     var imageURL = [String]()
     
     @IBOutlet weak var mapView: MKMapView!
@@ -31,14 +33,17 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var storageRef = Storage.storage().reference()
     let manager = CLLocationManager()
     var users = [User] ()
-
     
-   
+    let userid = Auth.auth().currentUser?.uid
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        ProfileImage.layer.cornerRadius = ProfileImage.frame.size.width / 2
+        ProfileImage.clipsToBounds = true
+        ProfileImage.layer.borderColor = UIColor.white.cgColor
+        profileImage()
+
         burgerMenuView.layer.shadowOpacity = 1
         burgerMenuView.layer.shadowRadius = 6
        
@@ -48,7 +53,6 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         fetchUser()
-
       
     }
     func fetchUser() {
@@ -61,7 +65,6 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                 let latitude = dictionary["latitude"] as! Float
                 let longitude = dictionary["longitude"] as! Float
                 user.photo = dictionary["photo"] as! String
-                //user.username = dictionary["username"] as! String
                 
                 print(user.latitude, user.longitude, user.photo)
                 
@@ -75,12 +78,10 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
                     dog.title = userValue.value(forKey: "petName") as? String ?? ""
                     dog.photoURL = userValue.value(forKey: "photo") as? String ?? ""
                     self.mapView.addAnnotation(dog)
-                    
                 }
             }
             
         } , withCancel: nil)
-        
         
     }
 
@@ -128,9 +129,44 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         return annotationView
         
     }
-    
-    
-    
+    func profileImage () {
+        
+        
+        ref.child("user").child(userid!).child("personalInfo").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            let username = value?["username"] as? String ?? ""
+            let firstname = value?["firstname"] as? String ?? ""
+            let lastname = value?["lastname"] as? String ?? ""
+            let mail = value?["email"] as? String ?? ""
+
+            self.nameLabel.text = "\(firstname.description) \(lastname.description)"
+            self.mailLabel.text = mail.description
+            self.nameLabel.adjustsFontSizeToFitWidth = true
+            self.mailLabel.adjustsFontSizeToFitWidth = true
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        ref.child("user").child(userid!).child("pet").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            let profileImageURL = value?["photo"] as? String ?? ""
+            
+            self.ProfileImage.sd_setImage(with: URL(string: profileImageURL ), placeholderImage: UIImage(named: "placeholder.png"))
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "BACKGROUND-1")
+        backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+
+    }
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations [0]
         

@@ -17,15 +17,12 @@ extension UIImageView {
     
     func loadImageUsingCacheWithUrlString(urlString: String) {
         
-        
         self.image = nil
-       
+        
         if let cachedImage = imageCache.object(forKey: urlString as AnyObject) as? UIImage{
-            
             
             self.image = cachedImage
             return
-            
             
             
         }
@@ -43,14 +40,14 @@ extension UIImageView {
                 if let downloadedImage = UIImage(data: data!) {
                     
                     imageCache.setObject(downloadedImage, forKey: urlString as AnyObject)
-                 
+                    
                     self.image = downloadedImage
                     
                 }
-
+                
             })
         }).resume()
-
+        
         
         
     }

@@ -71,19 +71,6 @@ class ChatInfo: UITableViewController {
         if let profileImageUrl = user.photo {
            
             cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
-            
-            /* let url = NSURL(string: profileImageUrl)
-            URLSession.shared.dataTask(with: url! as URL, completionHandler: { (data, response, error) in
-                
-                if error != nil {
-                    print(error)
-                    return
-                }
-                DispatchQueue.main.async(execute: {
-                    cell.profileImageView.image = UIImage(data: data!)
-                })
-            }).resume()
-            */
         }
         
         

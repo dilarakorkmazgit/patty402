@@ -15,7 +15,6 @@ class resetPasswordVC: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var resetButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,12 +49,10 @@ class resetPasswordVC: UIViewController {
                     })
                 
 
-                
             }
             
             
         }
-        
         
         
     }
