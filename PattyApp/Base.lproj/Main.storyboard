@@ -85,20 +85,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="530"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6h9-W8-9GG">
-                                <rect key="frame" x="329" y="629" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuE-3N-6pO">
+                                <rect key="frame" x="329" y="637" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="CHAT"/>
                                 <connections>
-                                    <segue destination="Ido-7X-vUM" kind="show" id="P47-43-vH9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixJ-VD-4RA">
-                                <rect key="frame" x="16" y="629" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="sVx-c4-Mlb" kind="show" id="lii-oJ-xGD"/>
+                                    <segue destination="H1i-C9-sJ2" kind="show" id="wwA-hK-wjM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -164,7 +156,7 @@
                                     <color key="titleColor" red="1" green="0.3608216011" blue="0.14940686340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="and-Lo-KKc" kind="show" id="msE-8r-EOD"/>
+                                    <segue destination="and-Lo-KKc" kind="show" id="Dwq-2R-Z80"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHU-mg-0d6">
@@ -199,7 +191,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="soQ-sO-Oyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4084" y="1673.6131934032985"/>
+            <point key="canvasLocation" x="3836" y="1670"/>
         </scene>
         <!--Create AccountVC-->
         <scene sceneID="0yh-9d-B3n">
@@ -453,7 +445,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQE-tf-w4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5055" y="1674"/>
+            <point key="canvasLocation" x="6788" y="1349"/>
         </scene>
         <!--Reset PasswordVC-->
         <scene sceneID="jMG-tD-ukz">
@@ -640,7 +632,7 @@
                                     <color key="titleColor" red="1" green="0.36078431372549019" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="H1i-C9-sJ2" kind="show" id="p58-cq-gZi"/>
+                                    <segue destination="sVx-c4-Mlb" kind="show" id="uUV-KS-VZ3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuj-3R-SUe">
@@ -911,7 +903,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFf-DT-Xuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4234" y="87"/>
+            <point key="canvasLocation" x="4412" y="807"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5fc-Bk-vjm">
@@ -987,7 +979,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qr-Pm-z7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4989.6000000000004" y="796.55172413793105"/>
+            <point key="canvasLocation" x="5418" y="806"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WDB-Sy-Bcs">
@@ -1005,7 +997,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IZ-Zf-fpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3375" y="77"/>
+            <point key="canvasLocation" x="3444" y="807"/>
         </scene>
     </scenes>
     <resources>
@@ -1020,13 +1012,13 @@
         <image name="usericon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Pqj-i2-k1Z"/>
-        <segue reference="nce-Hn-ksq"/>
-        <segue reference="qHX-im-FsE"/>
-        <segue reference="lI0-XZ-NYO"/>
+        <segue reference="wwA-hK-wjM"/>
+        <segue reference="V2m-ba-hVP"/>
         <segue reference="I21-1d-af1"/>
-        <segue reference="kYo-Op-ASQ"/>
-        <segue reference="Kqg-Py-BMg"/>
+        <segue reference="HUP-lG-6R0"/>
+        <segue reference="qHX-im-FsE"/>
+        <segue reference="Dwq-2R-Z80"/>
         <segue reference="b3Q-wU-OBD"/>
+        <segue reference="F0q-Y6-emL"/>
     </inferredMetricsTieBreakers>
 </document>
