@@ -11,6 +11,13 @@ import Firebase
 
 class ChatLogController: UICollectionViewController, UITextFieldDelegate {
     
+    var user: User? {
+        didSet{
+            navigationItem.title = "\(user!.firstname!) \(user!.lastname!)"
+        }
+        
+    }
+    
     lazy var inputTextField: UITextField = {
         
         let textField = UITextField()
@@ -30,7 +37,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         
-        navigationItem.title = "Chat Log Controller"
+        
         
         collectionView?.backgroundColor = UIColor.white
         
@@ -88,10 +95,19 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
         
         let ref = Database.database().reference().child("messages")
         let childRef = ref.childByAutoId()
-        let values = ["text": inputTextField.text]
+        let toId = user!.userId!
+        let fromId = Auth.auth().currentUser!.uid
+
+        
+        let timeStamp: NSNumber = NSNumber(value: Int(NSDate().timeIntervalSince1970))
+
+        
+        let values = ["text": inputTextField.text!, "toId": toId, "fromId": fromId, "date": timeStamp] as [String : Any]
         
         childRef.updateChildValues(values)
         
+
+
         
     }
     func dismissKeyboard() {

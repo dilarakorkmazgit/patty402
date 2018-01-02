@@ -17,9 +17,9 @@ class Chat: UITableViewController {
      //   navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Çıkış", style: .plain, target: self, action: #selector(handleLogout))
         let image = UIImage(named: "write")
 
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(newMessage))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(newMessage))
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(showChatController))
+        //navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(showChatController))
 
         checkIfUserIsLoggedIn()
         
@@ -27,6 +27,7 @@ class Chat: UITableViewController {
     func newMessage() {
         
         let chatInfo = ChatInfo()
+        chatInfo.messagesController = self
         let navController = UINavigationController(rootViewController: chatInfo)
         present(navController, animated: true, completion: nil)
         
@@ -47,9 +48,11 @@ class Chat: UITableViewController {
             } , withCancel: nil)
         }
     }
-    func showChatController() {
+    func showChatControllerForUser(user: User) {
         
         let chatLogController = ChatLogController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        chatLogController.user = user
         navigationController?.pushViewController(chatLogController, animated: true)
         
         
