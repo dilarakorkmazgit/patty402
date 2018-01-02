@@ -14,16 +14,42 @@ class Chat: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     //   navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Çıkış", style: .plain, target: self, action: #selector(handleLogout))
+        //   navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Çıkış", style: .plain, target: self, action: #selector(handleLogout))
         let image = UIImage(named: "write")
-
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(newMessage))
         
         //navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(showChatController))
-
-        checkIfUserIsLoggedIn()
         
+        checkIfUserIsLoggedIn()
+        observeMessage()
     }
+    
+    func observeMessage() {
+        
+        let ref = Database.database().reference().child("messages")
+        ref.observe(.childAdded, with: {(snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+                let message = Message()
+                message.setValuesForKeys(dictionary)
+                print(snapshot)
+
+            }
+            
+        }, withCancel: nil)
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cellId")
+        
+        cell.textLabel?.text = "some "
+        return cell
+    }
+    
     func newMessage() {
         
         let chatInfo = ChatInfo()
@@ -63,7 +89,7 @@ class Chat: UITableViewController {
         do {
             try Auth.auth().signOut()
             print("çıkış yapıldı")
-
+            
         } catch let logoutError {
             print(logoutError)
         }

@@ -24,6 +24,7 @@
 		590845F71F97ED9D009A2D6A /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590845F61F97ED9D009A2D6A /* LoggedInVC.swift */; };
 		590845FB1F980238009A2D6A /* resetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590845FA1F980238009A2D6A /* resetPasswordVC.swift */; };
 		5979CE211FFC289C00FB7BC2 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979CE201FFC289C00FB7BC2 /* ChatLogController.swift */; };
+		5979CE231FFC4AD800FB7BC2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979CE221FFC4AD800FB7BC2 /* Message.swift */; };
 		59972FCE1FBE1EA400CD6C57 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59972FCD1FBE1EA400CD6C57 /* Home.swift */; };
 		59A7133B1FF95C95005FE0B5 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A7133A1FF95C95005FE0B5 /* Chat.swift */; };
 		59A7133D1FF95DC3005FE0B5 /* ChatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A7133C1FF95DC3005FE0B5 /* ChatInfo.swift */; };
@@ -78,6 +79,7 @@
 		590845F61F97ED9D009A2D6A /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
 		590845FA1F980238009A2D6A /* resetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resetPasswordVC.swift; sourceTree = "<group>"; };
 		5979CE201FFC289C00FB7BC2 /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
+		5979CE221FFC4AD800FB7BC2 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		59972FCD1FBE1EA400CD6C57 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		59A7133A1FF95C95005FE0B5 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		59A7133C1FF95DC3005FE0B5 /* ChatInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInfo.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				59A7133E1FF96EB2005FE0B5 /* User.swift */,
 				59E531D21FFAEE4500CE4DAD /* Extensions.swift */,
 				5979CE201FFC289C00FB7BC2 /* ChatLogController.swift */,
+				5979CE221FFC4AD800FB7BC2 /* Message.swift */,
 			);
 			path = PattyApp;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				3C5217071F979FF200F52725 /* CreateAccountVC.swift in Sources */,
 				59A7133B1FF95C95005FE0B5 /* Chat.swift in Sources */,
 				3C832F4E1F94C96400EC8390 /* PattyApp.xcdatamodeld in Sources */,
+				5979CE231FFC4AD800FB7BC2 /* Message.swift in Sources */,
 				3C832F481F94C96400EC8390 /* ViewController.swift in Sources */,
 				59A7133D1FF95DC3005FE0B5 /* ChatInfo.swift in Sources */,
 				590845F71F97ED9D009A2D6A /* LoggedInVC.swift in Sources */,
