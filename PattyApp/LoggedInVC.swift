@@ -325,5 +325,12 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                 })
             }
         }
+        let dialog = UIAlertController(title: "Pet Bilgileri", message: "Pet bilgileriniz kaydedildi. Yakınınızdaki diğer petleri görmek için devam butonuna basınız", preferredStyle: UIAlertControllerStyle.alert)
+        dialog.addAction(UIAlertAction(title: "TAMAM", style: UIAlertActionStyle.default, handler: nil))
+        DispatchQueue.main.async(execute: {
+            self.present(dialog, animated: true, completion: nil)
+        })
     }
+   
+
 }

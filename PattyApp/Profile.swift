@@ -20,16 +20,42 @@ class Profile: UIViewController{
     @IBOutlet weak var ProfileImage: UIImageView!
     
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var welcome: UILabel!
     
     @IBOutlet weak var petNameLabel: UILabel!
     
+    @IBOutlet weak var update: UIButton!
     
+    @IBOutlet weak var goMap: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ProfileImage.layer.cornerRadius = ProfileImage.frame.size.width / 2
         ProfileImage.clipsToBounds = true
         ProfileImage.layer.borderColor = UIColor.white.cgColor
+        
+        let size = CGSize(width: 5, height: 5)
+        
+        userNameLabel.layer.shadowOffset = size
+        userNameLabel.layer.shadowRadius = 5
+        userNameLabel.layer.shadowColor = UIColor.black.cgColor
+        userNameLabel.layer.shadowOpacity = 0.5
+        petNameLabel.layer.shadowOffset = size
+        petNameLabel.layer.shadowRadius = 5
+        petNameLabel.layer.shadowColor = UIColor.black.cgColor
+        petNameLabel.layer.shadowOpacity = 0.5
+        update.layer.shadowOffset = size
+        update.layer.shadowRadius = 5
+        update.layer.shadowColor = UIColor.black.cgColor
+        update.layer.shadowOpacity = 0.5
+        goMap.layer.shadowOffset = size
+        goMap.layer.shadowRadius = 5
+        goMap.layer.shadowColor = UIColor.black.cgColor
+        goMap.layer.shadowOpacity = 0.5
+        welcome.layer.shadowOffset = size
+        welcome.layer.shadowRadius = 5
+        welcome.layer.shadowColor = UIColor.black.cgColor
+        welcome.layer.shadowOpacity = 0.5
         
         let userid = Auth.auth().currentUser?.uid
         
