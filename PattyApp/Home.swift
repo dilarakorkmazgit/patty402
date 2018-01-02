@@ -98,8 +98,8 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
             print(logoutError)
         }
         
-        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        self.present(loginVC, animated: true, completion: nil)
+        let loginVCc = UIStoryboard(name: "Mainn", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.present(loginVCc, animated: true, completion: nil)
 
     }
     

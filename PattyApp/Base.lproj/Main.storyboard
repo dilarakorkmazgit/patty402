@@ -807,7 +807,6 @@
                                         </state>
                                         <connections>
                                             <action selector="signOutPressed:" destination="qdY-FY-Fon" eventType="touchUpInside" id="q30-XP-Gyn"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="lTw-xv-TOV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -974,7 +973,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="P47-43-vH9"/>
-        <segue reference="lTw-xv-TOV"/>
+        <segue reference="Kqg-Py-BMg"/>
         <segue reference="SOV-IS-Bpw"/>
         <segue reference="nce-Hn-ksq"/>
         <segue reference="b3Q-wU-OBD"/>
