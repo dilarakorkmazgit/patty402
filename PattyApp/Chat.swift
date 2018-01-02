@@ -11,6 +11,7 @@ import Firebase
 
 class Chat: UITableViewController {
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +25,7 @@ class Chat: UITableViewController {
         checkIfUserIsLoggedIn()
         observeMessage()
     }
+    var messages = [Message] ()
     
     func observeMessage() {
         
@@ -33,20 +35,30 @@ class Chat: UITableViewController {
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 
                 let message = Message()
-                message.setValuesForKeys(dictionary)
-                print(snapshot)
+                
 
+                message.text = dictionary["text"] as! String
+
+                
+                self.messages.append(message)
+             
+                DispatchQueue.main.async(execute: {
+                    self.tableView.reloadData()
+                })
             }
             
         }, withCancel: nil)
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return messages.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cellId")
         
-        cell.textLabel?.text = "some "
+        let message = messages[indexPath.row]
+        cell.textLabel?.text = message.toId
+        cell.detailTextLabel?.text = message.text
+        
         return cell
     }
     
