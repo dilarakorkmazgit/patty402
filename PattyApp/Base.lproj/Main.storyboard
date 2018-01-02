@@ -143,7 +143,7 @@
         <!--Home Test-->
         <scene sceneID="wAL-ZP-UhZ">
             <objects>
-                <viewController id="sVx-c4-Mlb" customClass="HomeTest" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="HomeTest" storyboardIdentifier="HomeTest" id="sVx-c4-Mlb" customClass="HomeTest" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fxd-yX-Yn9"/>
                         <viewControllerLayoutGuide type="bottom" id="eGI-kW-V7e"/>
@@ -156,6 +156,40 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dJ-K6-Lxd">
+                                <rect key="frame" x="247" y="61" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="İLETİŞİM">
+                                    <color key="titleColor" red="1" green="0.3608216011" blue="0.14940686340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="and-Lo-KKc" kind="show" id="gHd-3d-8iZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHU-mg-0d6">
+                                <rect key="frame" x="235" y="99" width="124" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="PROFİL">
+                                    <color key="titleColor" red="1" green="0.3608216011" blue="0.14940686340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vZA-7L-Edu" kind="show" id="HUP-lG-6R0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiH-XG-fvM">
+                                <rect key="frame" x="253" y="195" width="88" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="ÇIKIŞ">
+                                    <color key="titleColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutPressed:" destination="sVx-c4-Mlb" eventType="touchUpInside" id="zOA-wG-Chj"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="V2m-ba-hVP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -165,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="soQ-sO-Oyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="701.60000000000002" y="1528.785607196402"/>
+            <point key="canvasLocation" x="4084" y="1673.6131934032985"/>
         </scene>
         <!--Create AccountVC-->
         <scene sceneID="0yh-9d-B3n">
@@ -419,7 +453,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQE-tf-w4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3916" y="1665"/>
+            <point key="canvasLocation" x="5055" y="1674"/>
         </scene>
         <!--Reset PasswordVC-->
         <scene sceneID="jMG-tD-ukz">
@@ -877,25 +911,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFf-DT-Xuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4205.6000000000004" y="792.95352323838085"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="7JS-GC-P3r">
-            <objects>
-                <viewController id="mVB-ZG-igD" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uJs-Ol-Fwq"/>
-                        <viewControllerLayoutGuide type="bottom" id="d4a-Jb-4UH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Z6I-hk-aca">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pe6-EY-Oi2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4687" y="1656"/>
+            <point key="canvasLocation" x="4234" y="87"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5fc-Bk-vjm">
@@ -944,7 +960,7 @@
                                     <color key="titleColor" red="1" green="0.3608216011" blue="0.14940686340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="qdY-FY-Fon" kind="show" id="8cU-ra-oSp"/>
+                                    <segue destination="sVx-c4-Mlb" kind="show" id="I21-1d-af1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMN-Qj-5X6">
@@ -989,7 +1005,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8IZ-Zf-fpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3488" y="793.40329835082468"/>
+            <point key="canvasLocation" x="3375" y="77"/>
         </scene>
     </scenes>
     <resources>
@@ -1004,11 +1020,13 @@
         <image name="usericon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P47-43-vH9"/>
-        <segue reference="Kqg-Py-BMg"/>
-        <segue reference="SOV-IS-Bpw"/>
+        <segue reference="x4g-VA-AsU"/>
         <segue reference="nce-Hn-ksq"/>
+        <segue reference="qHX-im-FsE"/>
+        <segue reference="lI0-XZ-NYO"/>
+        <segue reference="I21-1d-af1"/>
+        <segue reference="kYo-Op-ASQ"/>
+        <segue reference="Kqg-Py-BMg"/>
         <segue reference="b3Q-wU-OBD"/>
-        <segue reference="F0q-Y6-emL"/>
     </inferredMetricsTieBreakers>
 </document>

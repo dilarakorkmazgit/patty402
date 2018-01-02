@@ -62,8 +62,9 @@ class LoginVC: UIViewController {
                     return
                 }
                 else{
-                    self.performSegue(withIdentifier: "Home", sender: nil)
-
+                    print("oturum açıldı")
+                    let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeTest")
+                    self.present(loginVC, animated: true, completion: nil)
                 }
 
             }

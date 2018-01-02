@@ -65,6 +65,22 @@ class HomeTest: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         
         
     }
+    @IBAction func logOutPressed(_ sender: Any) {
+       
+            
+            do {
+                try Auth.auth().signOut()
+                print("çıkış yapıldı")
+                
+            } catch let logoutError {
+                print(logoutError)
+            }
+            
+            let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            self.present(loginVC, animated: true, completion: nil)
+       
+    }
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         
