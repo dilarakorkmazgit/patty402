@@ -47,12 +47,13 @@ class Chat: UITableViewController {
         
         do {
             try Auth.auth().signOut()
-            
+            print("çıkış yapıldı")
+
         } catch let logoutError {
             print(logoutError)
         }
         
-        let main = ViewController()
-        present(main, animated: true, completion: nil)
+        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.present(loginVC, animated: true, completion: nil)
     }
 }
