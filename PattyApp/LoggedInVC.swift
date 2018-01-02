@@ -19,17 +19,22 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     var loggedInUser:AnyObject?
     var ref = Database.database().reference()
     var storageRef = Storage.storage().reference()
-
+    
     @IBOutlet weak var petProfileImage: UIImageView!
     
     @IBOutlet weak var petNameLabel: UITextField!
-
+    @IBOutlet weak var kaydetPressed: UIButton!
+    @IBOutlet weak var noPet: UIButton!
+    @IBOutlet weak var devam: UIButton!
+    @IBOutlet weak var konum: UILabel!
+    
     //butonlar
     @IBOutlet weak var cinsiyetButton: UIButton!
     @IBOutlet weak var türButton: UIButton!
     @IBOutlet weak var ageButton: UIButton!
     @IBOutlet weak var colorBotton: UIButton!
     @IBOutlet weak var healthButton: UIButton!
+    @IBOutlet weak var plus: UIButton!
     
     //pickerlar
     @IBOutlet weak var cinsiyetPicker: UIPickerView!
@@ -79,6 +84,50 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         healthPicker.dataSource = self
         healthPicker.delegate = self
         
+        let size = CGSize(width: 5, height: 5)
+        
+        kaydetPressed.layer.shadowOffset = size
+        kaydetPressed.layer.shadowRadius = 5
+        kaydetPressed.layer.shadowColor = UIColor.black.cgColor
+        kaydetPressed.layer.shadowOpacity = 0.5
+        noPet.layer.shadowOffset = size
+        noPet.layer.shadowRadius = 5
+        noPet.layer.shadowColor = UIColor.black.cgColor
+        noPet.layer.shadowOpacity = 0.5
+        devam.layer.shadowOffset = size
+        devam.layer.shadowRadius = 5
+        devam.layer.shadowColor = UIColor.black.cgColor
+        devam.layer.shadowOpacity = 0.5
+        cinsiyetButton.layer.shadowOffset = size
+        cinsiyetButton.layer.shadowRadius = 5
+        cinsiyetButton.layer.shadowColor = UIColor.black.cgColor
+        cinsiyetButton.layer.shadowOpacity = 0.5
+        türButton.layer.shadowOffset = size
+        türButton.layer.shadowRadius = 5
+        türButton.layer.shadowColor = UIColor.black.cgColor
+        türButton.layer.shadowOpacity = 0.5
+        ageButton.layer.shadowOffset = size
+        ageButton.layer.shadowRadius = 5
+        ageButton.layer.shadowColor = UIColor.black.cgColor
+        ageButton.layer.shadowOpacity = 0.5
+        colorBotton.layer.shadowOffset = size
+        colorBotton.layer.shadowRadius = 5
+        colorBotton.layer.shadowColor = UIColor.black.cgColor
+        colorBotton.layer.shadowOpacity = 0.5
+        healthButton.layer.shadowOffset = size
+        healthButton.layer.shadowRadius = 5
+        healthButton.layer.shadowColor = UIColor.black.cgColor
+        healthButton.layer.shadowOpacity = 0.5
+        konum.layer.shadowOffset = size
+        konum.layer.shadowRadius = 5
+        konum.layer.shadowColor = UIColor.black.cgColor
+        konum.layer.shadowOpacity = 0.5
+        plus.layer.shadowOffset = size
+        plus.layer.shadowRadius = 5
+        plus.layer.shadowColor = UIColor.black.cgColor
+        plus.layer.shadowOpacity = 0.5
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -111,7 +160,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     @IBAction func healthPressed(_ sender: Any) {
         healthPicker.isHidden = false
         
-    } 
+    }
     @IBAction func chooseImage(_ sender: Any) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
@@ -215,7 +264,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
             healthPicker.isHidden = true
         }
     }
-        
+    
     func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -255,7 +304,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                                                      "tur": tur,
                                                      "health": health,
                                                      "color" :color]
-                                                     
+                            
                             self.ref.child("user").child(userid).child("pet").setValue(newValuesforProfile,withCompletionBlock:{(error,ref) in
                                 if error != nil{
                                     print(error!)
@@ -270,7 +319,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
                                 }
                                 print("loca gitti")
                             })
-
+                            
                         }
                     })
                 })

@@ -6,13 +6,15 @@
 //  Copyright © 2017 Dilara Korkmaz. All rights reserved.
 //
 import UIKit
-import AVFoundation
-import MapKit
+//import AVFoundation
+//import MapKit
 
 class ViewController: UIViewController,UIScrollViewDelegate {
     
     @IBOutlet weak var ScrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var create: UIButton!
+    @IBOutlet weak var login: UIButton!
     
     var logoImage: [UIImage] = [
         UIImage(named: "hosgeldiniz.png")!,
@@ -25,15 +27,25 @@ class ViewController: UIViewController,UIScrollViewDelegate {
     
     var frame = CGRect(x:0,y:0,width:0,height:0)
     
-    var Player: AVPlayer!
-    var PlayerLayer: AVPlayerLayer!
+    //var Player: AVPlayer!
+    //var PlayerLayer: AVPlayerLayer!
     
    
     
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        let size = CGSize(width: 5, height: 5)
+        create.layer.shadowOffset = size
+        create.layer.shadowRadius = 5
+        create.layer.shadowColor = UIColor.black.cgColor
+        create.layer.shadowOpacity = 0.5
+        login.layer.shadowOffset = size
+        login.layer.shadowRadius = 5
+        login.layer.shadowColor = UIColor.black.cgColor
+        login.layer.shadowOpacity = 0.5
 
+        
         
         //fit the background image
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
@@ -72,11 +84,11 @@ class ViewController: UIViewController,UIScrollViewDelegate {
         
     }
     
-    func playerItemReachEnd(notification: NSNotification) {
+    /*func playerItemReachEnd(notification: NSNotification) {
         
         Player.seek(to: kCMTimeZero)
         
-    }
+    }*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

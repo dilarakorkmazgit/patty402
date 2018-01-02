@@ -42,6 +42,13 @@ class CreateAccountVC: UIViewController {
        view.addGestureRecognizer(tap)
          ref = Database.database().reference().child("user")
         ref1 = Database.database().reference().child("locations")
+        let size = CGSize(width: 5, height: 5)
+        kaydolButton.layer.shadowOffset = size
+        kaydolButton.layer.shadowRadius = 5
+        kaydolButton.layer.shadowColor = UIColor.black.cgColor
+        kaydolButton.layer.shadowOpacity = 0.5
+        
+        
 
     }
     

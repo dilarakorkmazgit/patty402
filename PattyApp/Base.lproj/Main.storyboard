@@ -125,6 +125,8 @@
                     <navigationItem key="navigationItem" id="GJ6-Hf-R7t"/>
                     <connections>
                         <outlet property="ScrollView" destination="FAy-tS-6v5" id="8n3-V9-ffn"/>
+                        <outlet property="create" destination="Zgf-EJ-sbk" id="Lty-dg-fvz"/>
+                        <outlet property="login" destination="pSZ-E8-IrD" id="EWO-Fg-7of"/>
                         <outlet property="pageControl" destination="ofE-AM-veu" id="tXA-mn-NAa"/>
                     </connections>
                 </viewController>
@@ -783,11 +785,16 @@
                         <outlet property="cinsiyetPicker" destination="dWd-uF-CBG" id="n8K-Nb-wiB"/>
                         <outlet property="colorBotton" destination="i6F-wN-3e5" id="PnS-79-UC3"/>
                         <outlet property="colorPicker" destination="iZH-xJ-6ei" id="CjN-Xr-6HS"/>
+                        <outlet property="devam" destination="UmC-Iy-6iv" id="N1u-om-oCV"/>
                         <outlet property="healthButton" destination="EVL-Xd-hhK" id="QpU-wD-Roe"/>
                         <outlet property="healthPicker" destination="htr-Uh-uKm" id="3nZ-rW-jgj"/>
                         <outlet property="imageView" destination="fCS-IV-iwB" id="sfK-ye-Lon"/>
+                        <outlet property="kaydetPressed" destination="jXB-Hd-EXD" id="aBt-Az-lB2"/>
+                        <outlet property="konum" destination="BIg-9T-mNl" id="AAb-Wi-dUb"/>
+                        <outlet property="noPet" destination="heC-06-41V" id="yud-z5-2Nx"/>
                         <outlet property="petNameLabel" destination="vox-Zk-cEr" id="t3b-kK-L2k"/>
                         <outlet property="petProfileImage" destination="fCS-IV-iwB" id="EfK-VB-4Wx"/>
+                        <outlet property="plus" destination="05T-3B-Gp8" id="ImY-RA-FxE"/>
                         <outlet property="turPicher" destination="b4a-k0-rSP" id="hMU-Gy-x7U"/>
                         <outlet property="türButton" destination="deH-ou-ubF" id="Y9f-kR-RiK"/>
                     </connections>
@@ -921,11 +928,16 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ProfileImage" destination="AEg-2N-6kP" id="5hQ-nE-AoZ"/>
+                        <outlet property="bildirimler" destination="6o8-Tn-ybC" id="Zo2-r0-4RG"/>
                         <outlet property="burgerMenuView" destination="b6W-Am-xcG" id="gwC-b3-yTr"/>
+                        <outlet property="cikis" destination="8eh-oo-dEI" id="Fi6-Y6-0n5"/>
+                        <outlet property="iletişim" destination="Ho9-23-kK9" id="DIX-Ss-Bh2"/>
                         <outlet property="leadingConst" destination="i8y-jc-5nf" id="Cxa-4G-5vb"/>
                         <outlet property="mailLabel" destination="gtl-Aj-Xh9" id="Eho-Ue-7qp"/>
                         <outlet property="mapView" destination="Lv0-TX-dBa" id="N3l-b3-2ar"/>
+                        <outlet property="merhaba" destination="EBR-nz-Zs4" id="tDm-pb-tUO"/>
                         <outlet property="nameLabel" destination="fJ6-B2-E1U" id="Sjp-lU-CAz"/>
+                        <outlet property="profile" destination="JHk-Nq-fyK" id="wdN-Zd-ebX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFf-DT-Xuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1039,9 +1051,9 @@
         <image name="usericon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bzz-Nb-hIG"/>
-        <segue reference="b3Q-wU-OBD"/>
+        <segue reference="YIP-G9-mCR"/>
         <segue reference="iRc-WG-sBR"/>
+        <segue reference="b3Q-wU-OBD"/>
         <segue reference="iPc-TP-4hi"/>
         <segue reference="kYo-Op-ASQ"/>
     </inferredMetricsTieBreakers>

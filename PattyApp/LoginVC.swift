@@ -31,7 +31,12 @@ class LoginVC: UIViewController {
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         
-        
+        let size = CGSize(width: 5, height: 5)
+        loginButton.layer.shadowOffset = size
+        loginButton.layer.shadowRadius = 5
+        loginButton.layer.shadowColor = UIColor.black.cgColor
+        loginButton.layer.shadowOpacity = 0.5
+
         
     }
     

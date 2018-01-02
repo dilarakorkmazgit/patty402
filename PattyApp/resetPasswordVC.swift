@@ -18,6 +18,12 @@ class resetPasswordVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let size = CGSize(width: 5, height: 5)
+        resetButton.layer.shadowOffset = size
+        resetButton.layer.shadowRadius = 5
+        resetButton.layer.shadowColor = UIColor.black.cgColor
+        resetButton.layer.shadowOpacity = 0.5
+        
         
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "BACKGROUND.login")

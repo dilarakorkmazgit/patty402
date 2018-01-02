@@ -22,6 +22,11 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var ProfileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var mailLabel: UILabel!
+    @IBOutlet weak var profile: UIButton!
+    @IBOutlet weak var bildirimler: UIButton!
+    @IBOutlet weak var iletişim: UIButton!
+    @IBOutlet weak var cikis: UIButton!
+    @IBOutlet weak var merhaba: UILabel!
    
     var showMenu = false
     var imageURL = [String]()
@@ -53,6 +58,52 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         fetchUser()
+        let size = CGSize(width: 5, height: 5)
+        
+        profile.layer.shadowOffset = size
+        profile.layer.shadowRadius = 5
+        profile.layer.shadowColor = UIColor.black.cgColor
+        profile.layer.shadowOpacity = 0.5
+        
+        
+        bildirimler.layer.shadowOffset = size
+        bildirimler.layer.shadowRadius = 5
+        bildirimler.layer.shadowColor = UIColor.black.cgColor
+        bildirimler.layer.shadowOpacity = 0.5
+        
+        
+        iletişim.layer.shadowOffset = size
+        iletişim.layer.shadowRadius = 5
+        iletişim.layer.shadowColor = UIColor.black.cgColor
+        iletişim.layer.shadowOpacity = 0.5
+        
+        
+        cikis.layer.shadowOffset = size
+        cikis.layer.shadowRadius = 5
+        cikis.layer.shadowColor = UIColor.black.cgColor
+        cikis.layer.shadowOpacity = 0.5
+        
+        
+        ProfileImage.layer.shadowOffset = size
+        ProfileImage.layer.shadowRadius = 5
+        ProfileImage.layer.shadowColor = UIColor.black.cgColor
+        ProfileImage.layer.shadowOpacity = 0.5
+        
+        nameLabel.layer.shadowOffset = size
+        nameLabel.layer.shadowRadius = 5
+        nameLabel.layer.shadowColor = UIColor.black.cgColor
+        nameLabel.layer.shadowOpacity = 0.5
+       
+        mailLabel.layer.shadowOffset = size
+        mailLabel.layer.shadowRadius = 5
+        mailLabel.layer.shadowColor = UIColor.black.cgColor
+        mailLabel.layer.shadowOpacity = 0.5
+        
+        merhaba.layer.shadowOffset = size
+        merhaba.layer.shadowRadius = 5
+        merhaba.layer.shadowColor = UIColor.black.cgColor
+        merhaba.layer.shadowOpacity = 0.5
+        
       
     }
     func fetchUser() {
