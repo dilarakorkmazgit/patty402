@@ -8,14 +8,16 @@
 
 import UIKit
 
+
 class User: NSObject {
     
     var userId : String?
-    var latitude : Double?
-    var longitude : Double?
     var firstname : String?
     var lastname : String?
+    var username : String?
     var photo : String?
     var email : String?
+    var latitude : Float?
+    var longitude : Float?
 
 }
