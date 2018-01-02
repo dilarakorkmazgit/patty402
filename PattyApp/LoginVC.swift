@@ -63,7 +63,7 @@ class LoginVC: UIViewController {
                 }
                 else{
                     print("oturum açıldı")
-                    let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeTest")
+                    let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Home")
                     self.present(loginVC, animated: true, completion: nil)
                 }
 

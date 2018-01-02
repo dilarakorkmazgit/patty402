@@ -25,12 +25,13 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var imageURL = [String]()
     
     @IBOutlet weak var mapView: MKMapView!
-    
-    let database = Database.database().reference()
-    let storage = Storage.storage().reference()
     @IBOutlet weak var petImageOntoMap: UIImageView!
+    
+    var ref = Database.database().reference()
+    var storageRef = Storage.storage().reference()
     let manager = CLLocationManager()
-    var locations : NSMutableArray! = NSMutableArray()
+    var users = [User] ()
+
     
    
     
@@ -38,70 +39,64 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         super.viewDidLoad()
         
         
-        
-        
         burgerMenuView.layer.shadowOpacity = 1
         burgerMenuView.layer.shadowRadius = 6
        
-        
-        self.mapView.delegate = self
-        mapView.showsUserLocation = true
-        
         self.mapView.delegate = self
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
+        fetchUser()
+
+      
+    }
+    func fetchUser() {
+        Database.database().reference().child("locations").observe(.childAdded, with: {(snapshot) in
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+                let user = User()
+                
+                let latitude = dictionary["latitude"] as! Float
+                let longitude = dictionary["longitude"] as! Float
+                user.photo = dictionary["photo"] as! String
+                //user.username = dictionary["username"] as! String
+                
+                print(user.latitude, user.longitude, user.photo)
+                
+                self.users.append(user)
+                let userValue = snapshot.value as! NSDictionary
+                
+                DispatchQueue.main.async { [unowned self] in
+                    let dog = PPointAnnotation()
+                    let dogCordinates = CLLocationCoordinate2DMake(CLLocationDegrees(latitude), CLLocationDegrees(longitude))
+                    dog.coordinate = dogCordinates
+                    dog.title = userValue.value(forKey: "petName") as? String ?? ""
+                    dog.photoURL = userValue.value(forKey: "photo") as? String ?? ""
+                    self.mapView.addAnnotation(dog)
+                    
+                }
+            }
+            
+        } , withCancel: nil)
         
         
-        database.child("locations").observe(.value, with: { snapshot in
-            let value = snapshot.value as! NSDictionary
-            let userId = value.allKeys[0] as! String
-            self.database.child("locations").child(userId).observe(.value, with: { snapshot in
-                let value = snapshot.value as! NSDictionary
-                
-                let usersId = value["userId"] as! String
-                let latitude = value["latitude"] as! Double
-                let longitude = value["longitude"] as! Double
-                
-                self.database.child("user").child(userId).child("pet").observe(.value, with: { snapshot in
-                    let userValue = snapshot.value as! NSDictionary
-                    print(userValue)
-                    print(usersId)
-                    let locDict : NSMutableDictionary! = NSMutableDictionary()
-                    
-                    locDict.setValue(usersId, forKey: "userId")
-                    locDict.setValue(latitude, forKey: "latitude")
-                    locDict.setValue(longitude, forKey: "longitude")
-                    locDict.setValue(userValue, forKey: "pet")
-                    
-                    
-                    DispatchQueue.main.async { [unowned self] in
-                        let dog = PPointAnnotation()
-                        let dogCordinates = CLLocationCoordinate2DMake(latitude,longitude)
-                        dog.coordinate = dogCordinates
-                        dog.title = userValue.value(forKey: "petName") as? String ?? ""
-                        dog.photoURL = userValue.value(forKey: "photo") as? String ?? ""
-                        self.mapView.addAnnotation(dog)
-                        
-                    }
-                })
-            })
-        })
     }
 
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations [0]
+    @IBAction func signOutPress(_ sender: Any) {
         
-        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.020,0.020)
+        do {
+            try Auth.auth().signOut()
+            print("çıkış yapıldı")
+            
+        } catch let logoutError {
+            print(logoutError)
+        }
         
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation,span)
-        self.mapView.setRegion(region, animated: true)
-        self.mapView.isZoomEnabled = true
-        self.mapView.isScrollEnabled = true
-        self.mapView.showsUserLocation = true
+        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.present(loginVC, animated: true, completion: nil)
+
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -133,6 +128,22 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         return annotationView
         
     }
+    
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations [0]
+        
+        let myLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.020,0.020)
+        
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation,span)
+        self.mapView.setRegion(region, animated: true)
+        self.mapView.isZoomEnabled = true
+        self.mapView.isScrollEnabled = true
+        self.mapView.showsUserLocation = true
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
