@@ -85,14 +85,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="530"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuE-3N-6pO">
-                                <rect key="frame" x="329" y="637" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="CHAT"/>
-                                <connections>
-                                    <segue destination="H1i-C9-sJ2" kind="show" id="wwA-hK-wjM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fP-Gn-MKK">
                                 <rect key="frame" x="329" y="617" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -614,7 +606,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXB-Hd-EXD">
-                                <rect key="frame" x="106" y="564" width="174" height="37"/>
+                                <rect key="frame" x="106" y="528" width="174" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="KAYDET" backgroundImage="BUTON-TURUNCU">
@@ -622,11 +614,10 @@
                                 </state>
                                 <connections>
                                     <action selector="kaydetPressed:" destination="Ido-7X-vUM" eventType="touchUpInside" id="QQq-3m-GhV"/>
-                                    <segue destination="H1i-C9-sJ2" kind="show" id="nce-Hn-ksq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heC-06-41V">
-                                <rect key="frame" x="106" y="610" width="174" height="37"/>
+                                <rect key="frame" x="106" y="573" width="174" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="PETİM YOK" backgroundImage="BUTON-BEYAZ">
@@ -765,6 +756,17 @@
                                 </state>
                                 <connections>
                                     <action selector="chooseImage:" destination="Ido-7X-vUM" eventType="touchUpInside" id="yUz-I4-3hX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmC-Iy-6iv">
+                                <rect key="frame" x="268" y="611" width="97" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" title="DEVAM &gt;">
+                                    <color key="titleColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="H1i-C9-sJ2" kind="show" id="KME-RP-Q68"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1013,10 +1015,10 @@
         <image name="usericon" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bzz-Nb-hIG"/>
-        <segue reference="b3Q-wU-OBD"/>
+        <segue reference="YIP-G9-mCR"/>
         <segue reference="iRc-WG-sBR"/>
-        <segue reference="nce-Hn-ksq"/>
-        <segue reference="kYo-Op-ASQ"/>
+        <segue reference="b3Q-wU-OBD"/>
+        <segue reference="F0q-Y6-emL"/>
+        <segue reference="iPc-TP-4hi"/>
     </inferredMetricsTieBreakers>
 </document>
