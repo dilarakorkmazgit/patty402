@@ -90,19 +90,6 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         })
     }
 
-    @IBAction func signOutPressed(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            print("çıkış yapıldı")
-        } catch let logoutError {
-            print(logoutError)
-        }
-        
-        let loginVCc = UIStoryboard(name: "Mainn", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        self.present(loginVCc, animated: true, completion: nil)
-
-    }
-    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations [0]
