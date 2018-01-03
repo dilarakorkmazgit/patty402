@@ -58,8 +58,26 @@ class Chat: UITableViewController {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cellId")
         
         let message = messages[indexPath.row]
+        if let toId = message.toId {
+            
+          let ref =  Database.database().reference().child("locations").child(toId)
+            
+            ref.observe(.value, with: {(snapshot) in
+                
+                if let dictionary = snapshot.value as? [String: AnyObject] {
+                    let user = User()
+                    user.firstname = dictionary["firstname"] as! String
+                    user.lastname = dictionary["lastname"] as! String
+
+                    
+                    cell.textLabel?.text = "\(user.firstname!) \(user.lastname!)"
+                    
+                }
+                
+            } , withCancel: nil)
+            
+        }
         
-        cell.textLabel?.text = message.toId
         
         
         cell.detailTextLabel?.text = message.text
