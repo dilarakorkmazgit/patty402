@@ -45,7 +45,21 @@ class Chat: UITableViewController {
                 message.toId = dictionary["toId"] as! String
                 
                 
-                self.messages.append(message)
+              //  self.messages.append(message)
+                
+                if let toId = message.toId {
+                    
+                    self.messagesDictionary[toId] = message
+                    self.messages = Array(self.messagesDictionary.values)
+                  
+                    
+                    /*self.messages.sort(by: { (message1, message2) ->
+                        Bool in
+                        
+                        return (message1.timestamp?.intValue)! > (message2.timestamp?.intValue)!
+                    })*/
+                
+                }
                 
                 DispatchQueue.main.async(execute: {
                     self.tableView.reloadData()
