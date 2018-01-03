@@ -85,7 +85,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAy-tS-6v5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="530"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="539"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
                         </subviews>
@@ -210,7 +210,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.098039215686274508" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="firstnameLabel" destination="7OX-bU-UBS" id="umf-H1-bz2"/>
@@ -1057,11 +1056,10 @@
         <image name="yas-icon" width="101" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LaH-WU-OdQ"/>
-        <segue reference="k3c-Ta-K2N"/>
-        <segue reference="Bzz-Nb-hIG"/>
-        <segue reference="bCy-rq-1ey"/>
+        <segue reference="KME-RP-Q68"/>
+        <segue reference="qHX-im-FsE"/>
+        <segue reference="b3Q-wU-OBD"/>
         <segue reference="kYo-Op-ASQ"/>
-        <segue reference="iRc-WG-sBR"/>
+        <segue reference="YFf-Q5-tSo"/>
     </inferredMetricsTieBreakers>
 </document>
