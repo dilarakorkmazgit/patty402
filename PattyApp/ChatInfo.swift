@@ -91,44 +91,5 @@ class ChatInfo: UITableViewController {
     
     }
   
-    class UserCell: UITableViewCell {
-        
-        override func layoutSubviews() {
-            
-            super.layoutSubviews()
-            
-            textLabel?.frame = CGRectMake(64, textLabel!.frame.origin.y - 2, textLabel!.frame.width, textLabel!.frame.height)
-            detailTextLabel?.frame = CGRectMake(64, detailTextLabel!.frame.origin.y + 2, detailTextLabel!.frame.width, textLabel!.frame.height)
-            
-        }
-        
-        func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
-            return CGRect(x: x, y: y, width: width, height: height)
-        }
-        
-        let profileImageView: UIImageView = {
-            let imageView = UIImageView()
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.layer.cornerRadius = 24
-            imageView.layer.masksToBounds = true
-            imageView.contentMode = .scaleAspectFill
-            return imageView
-        }()
-        
-        override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-            super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
-            
-            addSubview(profileImageView)
-            
-            profileImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 8).isActive = true
-            profileImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-            profileImageView.widthAnchor.constraint(equalToConstant: 48).isActive = true
-            profileImageView.heightAnchor.constraint(equalToConstant: 48).isActive = true
-            
-        }
-        required init?(coder aDecoder: NSCoder) {
-            fatalError("not implemented")
-        }
-    }
-    
+       
 }

@@ -11,6 +11,7 @@ import Firebase
 
 class Chat: UITableViewController {
     
+    let cellId = "cellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class Chat: UITableViewController {
         //navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(showChatController))
         
         checkIfUserIsLoggedIn()
+        tableView.register(UserCell.self, forCellReuseIdentifier: cellId)
         observeMessage()
     }
     var messages = [Message] ()
@@ -55,34 +57,16 @@ class Chat: UITableViewController {
         return messages.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cellId")
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
         
         let message = messages[indexPath.row]
-        if let toId = message.toId {
-            
-          let ref =  Database.database().reference().child("locations").child(toId)
-            
-            ref.observe(.value, with: {(snapshot) in
-                
-                if let dictionary = snapshot.value as? [String: AnyObject] {
-                    let user = User()
-                    user.firstname = dictionary["firstname"] as! String
-                    user.lastname = dictionary["lastname"] as! String
-
-                    
-                    cell.textLabel?.text = "\(user.firstname!) \(user.lastname!)"
-                    
-                }
-                
-            } , withCancel: nil)
-            
-        }
         
-        
-        
-        cell.detailTextLabel?.text = message.text
-        
+        cell.message = message
         return cell
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
     }
     
     func newMessage() {
