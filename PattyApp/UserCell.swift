@@ -48,7 +48,8 @@ class UserCell: UITableViewCell {
                 dateFormatter.dateFormat = "hh:mm:ss a"
                 timeLabel.text = dateFormatter.string(from: timestampDate as Date)
             }
-            
+            timeLabel.text = "HH:MM:SS"
+
             
             
             
@@ -78,7 +79,7 @@ class UserCell: UITableViewCell {
     }()
     let timeLabel: UILabel = {
         let label = UILabel()
-        label.text = "HH:MM:SS"
+       // label.text = "HH:MM:SS"
         label.font = UIFont.systemFont(ofSize: 12)
         label.textColor = UIColor.darkGray
         label.translatesAutoresizingMaskIntoConstraints = false
