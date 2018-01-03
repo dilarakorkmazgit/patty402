@@ -918,7 +918,7 @@
                                 <rect key="frame" x="87" y="72" width="201" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dC1-5x-4Sv">
@@ -946,11 +946,11 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="renk-icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="xoi-gT-pLf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="renk-icon" translatesAutoresizingMaskIntoConstraints="NO" id="xoi-gT-pLf">
                                 <rect key="frame" x="117" y="403" width="34" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saglik-icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="pOR-5I-mbO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saglik-icon" translatesAutoresizingMaskIntoConstraints="NO" id="pOR-5I-mbO">
                                 <rect key="frame" x="228" y="403" width="29" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -974,18 +974,18 @@
                                 <rect key="frame" x="152" y="281" width="78" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KOPEK-ICON" translatesAutoresizingMaskIntoConstraints="NO" id="CWq-6K-s1o">
                                 <rect key="frame" x="117" y="101" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinsiyet-icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="xoc-ck-A2O">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cinsiyet-icon" translatesAutoresizingMaskIntoConstraints="NO" id="xoc-ck-A2O">
                                 <rect key="frame" x="117" y="319" width="34" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yas-icon-1" translatesAutoresizingMaskIntoConstraints="NO" id="bDs-JB-zDL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yas-icon" translatesAutoresizingMaskIntoConstraints="NO" id="bDs-JB-zDL">
                                 <rect key="frame" x="228" y="319" width="29" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1065,13 +1065,13 @@
         <image name="PATTY-LOGO-RENKLI" width="1082" height="492"/>
         <image name="bildirim-icon" width="76" height="87"/>
         <image name="burger-icon" width="61" height="45"/>
-        <image name="cinsiyet-icon-1" width="97" height="94"/>
+        <image name="chat-icon" width="79" height="75"/>
+        <image name="cinsiyet-icon" width="97" height="94"/>
         <image name="hero10" width="800" height="400"/>
         <image name="konum" width="300" height="300"/>
-        <image name="renk-icon-1" width="83" height="82"/>
-        <image name="saglik-icon-1" width="82" height="82"/>
-        <image name="usericon" width="512" height="512"/>
-        <image name="yas-icon-1" width="101" height="96"/>
+        <image name="renk-icon" width="83" height="82"/>
+        <image name="saglik-icon" width="82" height="82"/>
+        <image name="yas-icon" width="101" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="b3Q-wU-OBD"/>
