@@ -17,7 +17,7 @@ class Chat: UITableViewController {
         super.viewDidLoad()
         
         //   navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Çıkış", style: .plain, target: self, action: #selector(handleLogout))
-        let image = UIImage(named: "write")
+        let image = UIImage(named: "new_message_icon")
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(newMessage))
         
