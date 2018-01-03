@@ -822,7 +822,7 @@
                                             <segue destination="vZA-7L-Edu" kind="show" id="Ngl-fh-hX1"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6V6-bV-cKg">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KOPEK-ICON" translatesAutoresizingMaskIntoConstraints="NO" id="6V6-bV-cKg">
                                         <rect key="frame" x="10" y="458" width="25" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -830,7 +830,7 @@
                                         <rect key="frame" x="-59" y="342" width="31" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J7I-MT-eX5">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bildirim-icon" translatesAutoresizingMaskIntoConstraints="NO" id="J7I-MT-eX5">
                                         <rect key="frame" x="10" y="505" width="25" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -842,7 +842,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcy-Iw-I2J">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chat-icon" translatesAutoresizingMaskIntoConstraints="NO" id="fcy-Iw-I2J">
                                         <rect key="frame" x="10" y="554" width="25" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -1062,7 +1062,9 @@
         <image name="KOPEK-ICON" width="172" height="143"/>
         <image name="PATTY-LOGO" width="1082" height="492"/>
         <image name="PATTY-LOGO-RENKLI" width="1082" height="492"/>
+        <image name="bildirim-icon" width="76" height="87"/>
         <image name="burger-icon" width="61" height="45"/>
+        <image name="chat-icon" width="79" height="75"/>
         <image name="cinsiyet-icon" width="97" height="94"/>
         <image name="hero10" width="800" height="400"/>
         <image name="konum" width="300" height="300"/>
@@ -1071,8 +1073,9 @@
         <image name="yas-icon" width="101" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Ngl-fh-hX1"/>
         <segue reference="k3c-Ta-K2N"/>
-        <segue reference="qHX-im-FsE"/>
+        <segue reference="Bzz-Nb-hIG"/>
         <segue reference="bCy-rq-1ey"/>
         <segue reference="kYo-Op-ASQ"/>
         <segue reference="iRc-WG-sBR"/>
