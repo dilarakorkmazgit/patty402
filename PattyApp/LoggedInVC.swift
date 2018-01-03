@@ -55,6 +55,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         petProfileImage.layer.cornerRadius = petProfileImage.frame.size.width / 2
         petProfileImage.clipsToBounds = true
         petProfileImage.layer.borderColor = UIColor.white.cgColor
@@ -63,7 +64,7 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         view.addGestureRecognizer(tap)
         
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "BACKGROUND.login")
+        backgroundImage.image = UIImage(named: "background-profil-1")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         

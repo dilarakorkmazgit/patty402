@@ -20,13 +20,24 @@ class Profile: UIViewController{
     @IBOutlet weak var ProfileImage: UIImageView!
     
     @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var welcome: UILabel!
     
     @IBOutlet weak var petNameLabel: UILabel!
     
     @IBOutlet weak var update: UIButton!
     
+    @IBOutlet weak var petTypeLabel: UILabel!
     @IBOutlet weak var goMap: UIButton!
+    
+    @IBOutlet weak var pertGenderLabel: UILabel!
+    
+    @IBOutlet weak var petAgeLabel: UILabel!
+    
+    @IBOutlet weak var petColorLabel: UILabel!
+    
+    @IBOutlet weak var petHealthLabel: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,10 +63,7 @@ class Profile: UIViewController{
         goMap.layer.shadowRadius = 5
         goMap.layer.shadowColor = UIColor.black.cgColor
         goMap.layer.shadowOpacity = 0.5
-        welcome.layer.shadowOffset = size
-        welcome.layer.shadowRadius = 5
-        welcome.layer.shadowColor = UIColor.black.cgColor
-        welcome.layer.shadowOpacity = 0.5
+      
         
         let userid = Auth.auth().currentUser?.uid
         
@@ -82,10 +90,22 @@ class Profile: UIViewController{
             let value = snapshot.value as? NSDictionary
             let profileImageURL = value?["photo"] as? String ?? ""
             let pattyName = value?["petName"] as? String ?? ""
+            let pattyType = value?["tur"] as? String ?? ""
+            
+            let pattyGender = value?["gender"] as? String ?? ""
+            let pattyAge = value?["age"] as? String ?? ""
+            let pattyColor = value?["color"] as? String ?? ""
+            let pattyHealth = value?["health"] as? String ?? ""
+
             
             self.ProfileImage.sd_setImage(with: URL(string: profileImageURL ), placeholderImage: UIImage(named: "placeholder.png"))
            
             self.petNameLabel.text = pattyName.description
+            self.petTypeLabel.text = pattyType.description
+            self.pertGenderLabel.text = pattyGender.description
+            self.petAgeLabel.text = pattyAge.description
+            self.petColorLabel.text = pattyColor.description
+            self.petHealthLabel.text = pattyHealth.description
 
             
             
@@ -96,7 +116,7 @@ class Profile: UIViewController{
         
         //fit the background image
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "BACKGROUND-1")
+        backgroundImage.image = UIImage(named: "background-profil-1")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         
