@@ -20,23 +20,23 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         
     }
     var messages = [Message] ()
-
-    func observeMessages () {
     
+    func observeMessages () {
+        
         guard let uid = Auth.auth().currentUser?.uid else {
             return
         }
         
-    let userMessagesRef = Database.database().reference().child("user-messages").child(uid)
-    
-        userMessagesRef.observe(.childAdded, with: {(snapshot) in
+        let userMessagesRef = Database.database().reference().child("user-messages").child(uid)
         
+        userMessagesRef.observe(.childAdded, with: {(snapshot) in
+            
             let messageId = snapshot.key
             let messagesRef = Database.database().reference().child("messages").child(messageId)
             
             
             messagesRef.observe(.value, with: {(snapshot) in
-        
+                
                 print(snapshot)
                 guard let dictionary = snapshot.value as? [String: AnyObject] else {
                     return
@@ -48,16 +48,17 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
                 message.fromId = dictionary["fromId"] as! String
                 message.toId = dictionary["toId"] as! String
                 //message.timestamp = dictionary["date"] as! String
-
+                
                 self.messages.append(message)
                 
-                print(message.text)
-
                 
-        }, withCancel: nil)
+                DispatchQueue.main.async(execute: {
+                    self.collectionView?.reloadData()
+                })
+            }, withCancel: nil)
             
         }, withCancel: nil)
-    
+        
     }
     
     lazy var inputTextField: UITextField = {
@@ -83,25 +84,25 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         
         
         collectionView?.backgroundColor = UIColor.white
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(ChatMessageCell.self, forCellWithReuseIdentifier: cellId)
         
         setupInputComponents()
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return messages.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
         
-        cell.backgroundColor = UIColor.red
+       // cell.backgroundColor = UIColor.red
         return cell
     }
-
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: view.frame.height, height: 80)
+        return CGSize(width: view.frame.width, height: 80)
     }
     
     
@@ -109,7 +110,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
     func setupInputComponents() {
         
         let containerView = UIView ()
-        
+        containerView.backgroundColor = UIColor.white
         // containerView.backgroundColor = UIColor.red
         containerView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -182,13 +183,13 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
             recipientUserMessagesRef.updateChildValues([messageId: 1])
         }
         
-        }
-        func dismissKeyboard() {
-            view.endEditing(true)
-        }
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            handleSend()
-            return true
-        }
-        
+    }
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        handleSend()
+        return true
+    }
+    
 }
