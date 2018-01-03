@@ -36,14 +36,7 @@ class UserCell: UITableViewCell {
     
     private func setupNameAndProfileImage() {
         
-        let chatPartnerId: String?
-        
-        if message?.fromId == Auth.auth().currentUser?.uid {
-            
-            chatPartnerId = message?.toId
-        }else {
-            chatPartnerId = message?.fromId
-        }
+     
         
         if let id = message?.toId {
             
