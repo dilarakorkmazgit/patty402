@@ -787,7 +787,7 @@
                                             <segue destination="and-Lo-KKc" kind="show" id="Pqj-i2-k1Z"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-2N-6kP">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KOPEK-ICON" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-2N-6kP">
                                         <rect key="frame" x="10" y="86" width="122" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -977,7 +977,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="usericon" translatesAutoresizingMaskIntoConstraints="NO" id="CWq-6K-s1o">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KOPEK-ICON" translatesAutoresizingMaskIntoConstraints="NO" id="CWq-6K-s1o">
                                 <rect key="frame" x="117" y="101" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
