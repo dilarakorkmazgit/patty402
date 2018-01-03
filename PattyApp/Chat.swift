@@ -26,6 +26,7 @@ class Chat: UITableViewController {
         observeMessage()
     }
     var messages = [Message] ()
+    var users = [User] ()
     
     func observeMessage() {
         
@@ -36,12 +37,13 @@ class Chat: UITableViewController {
                 
                 let message = Message()
                 
-
+                
                 message.text = dictionary["text"] as! String
-
+                message.toId = dictionary["toId"] as! String
+                
                 
                 self.messages.append(message)
-             
+                
                 DispatchQueue.main.async(execute: {
                     self.tableView.reloadData()
                 })
@@ -56,7 +58,10 @@ class Chat: UITableViewController {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "cellId")
         
         let message = messages[indexPath.row]
+        
         cell.textLabel?.text = message.toId
+        
+        
         cell.detailTextLabel?.text = message.text
         
         return cell
