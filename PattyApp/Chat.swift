@@ -28,6 +28,7 @@ class Chat: UITableViewController {
         observeMessage()
     }
     var messages = [Message] ()
+    var messagesDictionary = [String: Message]()
     var users = [User] ()
     
     func observeMessage() {
