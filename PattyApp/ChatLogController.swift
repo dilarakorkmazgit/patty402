@@ -48,13 +48,18 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
                 message.fromId = dictionary["fromId"] as! String
                 message.toId = dictionary["toId"] as! String
                 //message.timestamp = dictionary["date"] as! String
+                if message.chatPartnerId() == self.user?.userId {
+                    self.messages.append(message)
+                    DispatchQueue.main.async(execute: {
+                        self.collectionView?.reloadData()
+                    })
+                    
+                }
                 
-                self.messages.append(message)
                 
                 
-                DispatchQueue.main.async(execute: {
-                    self.collectionView?.reloadData()
-                })
+                
+              
             }, withCancel: nil)
             
         }, withCancel: nil)
@@ -82,7 +87,8 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         view.addGestureRecognizer(tap)
         
         
-        
+        collectionView?.alwaysBounceVertical = true
+
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(ChatMessageCell.self, forCellWithReuseIdentifier: cellId)
         
@@ -93,9 +99,12 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         return messages.count
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ChatMessageCell
         
        // cell.backgroundColor = UIColor.red
+        let message = messages[indexPath.item]
+        cell.textView.text = message.text
+        
         return cell
     }
     
