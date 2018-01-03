@@ -36,10 +36,18 @@ class UserCell: UITableViewCell {
     
     private func setupNameAndProfileImage() {
         
+        let chatPartnerId: String?
         
-        if let toId = message?.toId {
+        if message?.fromId == Auth.auth().currentUser?.uid {
             
-            let ref =  Database.database().reference().child("locations").child(toId)
+            chatPartnerId = message?.toId
+        }else {
+            chatPartnerId = message?.fromId
+        }
+        
+        if let id = message?.toId {
+            
+            let ref =  Database.database().reference().child("locations").child(id)
             
             ref.observe(.value, with: {(snapshot) in
                 

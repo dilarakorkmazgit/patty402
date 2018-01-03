@@ -140,6 +140,15 @@ class Chat: UITableViewController {
         return 72
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let message = messages[indexPath.row]
+        
+        print(message.text, message.toId, message.fromId)
+    
+    }
+    
+    
     func newMessage() {
         
         let chatInfo = ChatInfo()
