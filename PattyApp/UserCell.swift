@@ -14,31 +14,9 @@ class UserCell: UITableViewCell {
     var message: Message? {
         
         didSet{
-            if let toId = message?.toId {
-                
-                let ref =  Database.database().reference().child("locations").child(toId)
-                
-                ref.observe(.value, with: {(snapshot) in
-                    
-                    if let dictionary = snapshot.value as? [String: AnyObject] {
-                        let user = User()
-                        user.firstname = dictionary["firstname"] as! String
-                        user.lastname = dictionary["lastname"] as! String
-                        user.photo = dictionary["photo"] as! String
-                        
-                        
-                        self.textLabel?.text = "\(user.firstname!) \(user.lastname!)"
-                        if let profileImageUrl = user.photo {
-                            
-                            self.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
-                        }
-                    }
-                    
-                } , withCancel: nil)
-                
-            }
+        
             
-            
+            setupNameAndProfileImage()
             
             detailTextLabel?.text = message?.text
             
@@ -51,9 +29,38 @@ class UserCell: UITableViewCell {
             timeLabel.text = "HH:MM:SS"
 
             
+        
+        
+        }
+    }
+    
+    private func setupNameAndProfileImage() {
+        
+        
+        if let toId = message?.toId {
             
+            let ref =  Database.database().reference().child("locations").child(toId)
+            
+            ref.observe(.value, with: {(snapshot) in
+                
+                if let dictionary = snapshot.value as? [String: AnyObject] {
+                    let user = User()
+                    user.firstname = dictionary["firstname"] as! String
+                    user.lastname = dictionary["lastname"] as! String
+                    user.photo = dictionary["photo"] as! String
+                    
+                    
+                    self.textLabel?.text = "\(user.firstname!) \(user.lastname!)"
+                    if let profileImageUrl = user.photo {
+                        
+                        self.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
+                    }
+                }
+                
+            } , withCancel: nil)
             
         }
+        
     }
     
     override func layoutSubviews() {
