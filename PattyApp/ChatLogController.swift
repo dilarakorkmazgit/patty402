@@ -27,7 +27,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
         return textField
     }()
     
-
+    
     
     
     override func viewDidLoad() {
@@ -48,7 +48,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
         
         let containerView = UIView ()
         
-       // containerView.backgroundColor = UIColor.red
+        // containerView.backgroundColor = UIColor.red
         containerView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(containerView)
@@ -70,7 +70,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
         sendButton.heightAnchor.constraint(equalTo: containerView.heightAnchor).isActive = true
         
         
-     
+        
         containerView.addSubview(inputTextField)
         
         
@@ -97,25 +97,36 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate {
         let childRef = ref.childByAutoId()
         let toId = user!.userId!
         let fromId = Auth.auth().currentUser!.uid
-
+        
         
         let timeStamp: NSNumber = NSNumber(value: Int(NSDate().timeIntervalSince1970))
-
+        
         
         let values = ["text": inputTextField.text!, "toId": toId, "fromId": fromId, "date": timeStamp] as [String : Any]
         
-        childRef.updateChildValues(values)
+        //childRef.updateChildValues(values)
         
-
-
+        childRef.updateChildValues(values) {(error, ref) in
+            
+            if error != nil {
+                print(error)
+                return
+            }
+            let userMessagesRef = Database.database().reference().child("user-messages").child(fromId)
+            let messageId = childRef.key
+            userMessagesRef.updateChildValues([messageId: 1])
+            
+            let recipientUserMessagesRef = Database.database().reference().child("user-messages").child(toId)
+            recipientUserMessagesRef.updateChildValues([messageId: 1])
+        }
         
-    }
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        handleSend()
-        return true
-    }
-    
- }
+        }
+        func dismissKeyboard() {
+            view.endEditing(true)
+        }
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            handleSend()
+            return true
+        }
+        
+}

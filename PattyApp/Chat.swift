@@ -25,12 +25,68 @@ class Chat: UITableViewController {
         
         checkIfUserIsLoggedIn()
         tableView.register(UserCell.self, forCellReuseIdentifier: cellId)
-        observeMessage()
+        //observeMessage()
+        observeUserMessages()
+        
     }
+    
     var messages = [Message] ()
     var messagesDictionary = [String: Message]()
     var users = [User] ()
     
+    func observeUserMessages() {
+        
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+            
+        }
+        let ref = Database.database().reference().child("user-messages").child(uid)
+        ref.observe(.childAdded, with: {(snapshot) in
+            
+            let messageId = snapshot.key
+            let messageReference = Database.database().reference().child("messages").child(messageId)
+            
+            messageReference.observe(.value, with: {(snapshot) in
+                
+                
+                if let dictionary = snapshot.value as? [String: AnyObject] {
+                    
+                    let message = Message()
+                    
+                    
+                    message.text = dictionary["text"] as! String
+                    message.toId = dictionary["toId"] as! String
+                    
+                    
+                    //  self.messages.append(message)
+                    
+                    if let toId = message.toId {
+                        
+                        self.messagesDictionary[toId] = message
+                        self.messages = Array(self.messagesDictionary.values)
+                        
+                        
+                        /*self.messages.sort(by: { (message1, message2) ->
+                         Bool in
+                         
+                         return (message1.timestamp?.intValue)! > (message2.timestamp?.intValue)!
+                         })*/
+                        
+                    }
+                    
+                    DispatchQueue.main.async(execute: {
+                        self.tableView.reloadData()
+                    })
+                }
+
+                
+            }, withCancel: nil)
+            
+            
+        }, withCancel: nil)
+        
+        
+    }
     func observeMessage() {
         
         let ref = Database.database().reference().child("messages")
@@ -83,6 +139,15 @@ class Chat: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 72
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let message = messages[indexPath.row]
+        
+        print(message.text, message.toId, message.fromId)
+    
+    }
+    
     
     func newMessage() {
         
