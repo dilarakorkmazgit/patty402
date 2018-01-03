@@ -116,7 +116,7 @@ class Profile: UIViewController{
         
         //fit the background image
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "background-profil-1")
+        backgroundImage.image = UIImage(named: "background-profil")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         
