@@ -21,7 +21,6 @@ class Chat: UITableViewController {
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(newMessage))
         
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(showChatController))
         
         checkIfUserIsLoggedIn()
         tableView.register(UserCell.self, forCellReuseIdentifier: cellId)
