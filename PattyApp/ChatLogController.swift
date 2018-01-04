@@ -83,15 +83,12 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         
         super.viewDidLoad()
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
-        
-        
         collectionView?.alwaysBounceVertical = true
-
         collectionView?.backgroundColor = UIColor.white
         collectionView?.register(ChatMessageCell.self, forCellWithReuseIdentifier: cellId)
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         setupInputComponents()
     }
     
@@ -105,15 +102,33 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         let message = messages[indexPath.item]
         cell.textView.text = message.text
         
+        
+        
+        
         return cell
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: view.frame.width, height: 80)
+        var height: CGFloat = 80
+        
+        if let text = messages[indexPath.item].text {
+            
+            height = estimateFrameForText(text: text).height + 20
+        }
+        
+        return CGSize(width: view.frame.width, height: height)
     }
-    
+    private func estimateFrameForText(text: String) -> CGRect {
+        
+        let size = CGSize(width: 200, height: 1000)
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 16)], context: nil)
+        
+        
+        
+    }
     
     
     func setupInputComponents() {
