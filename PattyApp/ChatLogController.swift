@@ -103,7 +103,7 @@ class ChatLogController: UICollectionViewController, UITextFieldDelegate, UIColl
         cell.textView.text = message.text
         
         
-        
+        cell.bubbleWidthAnchor = 50
         
         return cell
     }
