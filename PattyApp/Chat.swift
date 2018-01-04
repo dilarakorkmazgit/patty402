@@ -73,6 +73,7 @@ class Chat: UITableViewController {
                         
                     }
                     
+                    
                     DispatchQueue.main.async(execute: {
                         self.tableView.reloadData()
                     })
