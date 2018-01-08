@@ -73,6 +73,7 @@ class Chat: UITableViewController {
                         
                     }
                     
+                    
                     DispatchQueue.main.async(execute: {
                         self.tableView.reloadData()
                     })
@@ -143,8 +144,38 @@ class Chat: UITableViewController {
         
         let message = messages[indexPath.row]
         
-        print(message.text, message.toId, message.fromId)
-    
+        guard let chatPartnerId = message.toId else {
+            
+            print("aa")
+            return
+            
+        }
+        
+        let ref = Database.database().reference().child("locations").child(message.toId!)
+        
+        ref.observe(.value, with: {(snapshot) in
+         
+            
+            if let dictionary = snapshot.value as? [String: AnyObject] {
+                
+                let user = User()
+                
+                user.userId = dictionary["userId"] as! String
+                user.firstname = dictionary["firstname"] as! String
+                user.lastname = dictionary["lastname"] as! String
+                user.email = dictionary["email"] as! String
+                user.photo = dictionary["photo"] as! String
+                user.userId = dictionary["userId"] as! String
+
+                
+                self.users.append(user)
+                self.showChatControllerForUser(user: user)
+                
+                DispatchQueue.main.async(execute: {
+                    self.tableView.reloadData()
+                })
+            }
+        }, withCancel: nil)
     }
     
     
