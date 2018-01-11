@@ -12,14 +12,34 @@ class WelcomeViewController: UIViewController {
     
     
   
-
+    @IBAction func showProfileView(_ sender: Any) {
+        
+        performSegue(withIdentifier: "showprofileview", sender: sender)
+    
+    }
+    
+    @IBAction func showMapBack(_ sender: Any) {
+        
+         performSegue(withIdentifier: "showMapback", sender: sender)
+    }
+    
+    @IBAction func goToChat(_ sender: Any) {
+       
+        
+         performSegue(withIdentifier: "goToChatView", sender: sender)
+    }
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
         //fit the background image
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "background-profil")
+        backgroundImage.image = UIImage(named: "back")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         

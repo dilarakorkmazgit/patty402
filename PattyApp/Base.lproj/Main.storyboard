@@ -396,7 +396,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQE-tf-w4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5468" y="1669"/>
+            <point key="canvasLocation" x="6404" y="1451"/>
         </scene>
         <!--Reset PasswordVC-->
         <scene sceneID="jMG-tD-ukz">
@@ -944,61 +944,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4K-nZ-fXj">
-                                <rect key="frame" x="36" y="128" width="135" height="135"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4K-nZ-fXj">
+                                <rect key="frame" x="54" y="135" width="133" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Eş Bul">
+                                <state key="normal" title="Harita" image="harita-buton">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="showMapBack:" destination="wLh-V0-ZmK" eventType="touchUpInside" id="UU6-nn-qUo"/>
+                                    <segue destination="qdY-FY-Fon" kind="presentation" identifier="showMapback" id="zTp-wG-JKc"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clW-6T-jKX">
-                                <rect key="frame" x="206" y="128" width="135" height="135"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clW-6T-jKX">
+                                <rect key="frame" x="187" y="136" width="133" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Eş Bul">
+                                <state key="normal" title="Chat" image="chat-buton">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToChat:" destination="wLh-V0-ZmK" eventType="touchUpInside" id="kKu-m3-0D1"/>
+                                    <segue destination="and-Lo-KKc" kind="presentation" identifier="goToChatView" id="44I-iC-cF5"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkN-kp-Z3g">
-                                <rect key="frame" x="36" y="305" width="135" height="135"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkN-kp-Z3g">
+                                <rect key="frame" x="54" y="267" width="133" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Eş Bul">
+                                <state key="normal" title="Eş Bul" image="es-bul-buton">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBG-56-99t">
-                                <rect key="frame" x="206" y="305" width="135" height="135"/>
+                                <rect key="frame" x="187" y="267" width="133" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Eş Bul">
+                                <state key="normal" backgroundImage="veteriner-buton">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWk-3r-yxT">
-                                <rect key="frame" x="36" y="482" width="135" height="135"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWk-3r-yxT">
+                                <rect key="frame" x="54" y="408" width="133" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Profil">
+                                <state key="normal" title="Profil" image="profil-buton">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="showProfileView:" destination="wLh-V0-ZmK" eventType="touchUpInside" id="CCT-Vw-CGz"/>
+                                    <segue destination="vZA-7L-Edu" kind="presentation" identifier="showprofileview" id="S50-qZ-Lzh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvr-kN-PSd">
-                                <rect key="frame" x="206" y="482" width="135" height="135"/>
+                                <rect key="frame" x="187" y="408" width="133" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Eş Bul">
+                                <state key="normal" backgroundImage="yakindakiler-buton">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KATEGORILER-1" translatesAutoresizingMaskIntoConstraints="NO" id="nhX-fC-dsL">
+                                <rect key="frame" x="87" y="28" width="201" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="TVQ-kd-Z4T" appends="YES" id="Cqh-8p-osP"/>
                         </connections>
                     </view>
+                    <connections>
+                        <segue destination="vZA-7L-Edu" kind="show" id="Zsn-Pa-LT4"/>
+                        <segue destination="qdY-FY-Fon" kind="show" id="I1G-XJ-rIg"/>
+                        <segue destination="and-Lo-KKc" kind="show" id="cgH-3j-2od"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8CR-wP-jPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="up" id="TVQ-kd-Z4T">
@@ -1007,7 +1022,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5078" y="22"/>
+            <point key="canvasLocation" x="5445.6000000000004" y="12.143928035982009"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5fc-Bk-vjm">
@@ -1141,7 +1156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qr-Pm-z7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5416.8000000000002" y="805.54722638680664"/>
+            <point key="canvasLocation" x="5380" y="860"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WDB-Sy-Bcs">
@@ -1167,24 +1182,32 @@
         <image name="BUTON-BEYAZ" width="791" height="128"/>
         <image name="BUTON-TURUNCU" width="791" height="128"/>
         <image name="FACEBOOK-ILE-OTURUM-AC-ICON" width="855" height="281"/>
+        <image name="KATEGORILER-1" width="456" height="69"/>
         <image name="KOPEK-ICON" width="172" height="143"/>
         <image name="PATTY-LOGO" width="1082" height="492"/>
         <image name="PATTY-LOGO-RENKLI" width="1082" height="492"/>
         <image name="bildirim-icon" width="76" height="87"/>
         <image name="burger-icon" width="61" height="45"/>
+        <image name="chat-buton" width="460" height="432"/>
         <image name="chat-icon" width="79" height="75"/>
         <image name="cinsiyet-icon" width="97" height="94"/>
+        <image name="es-bul-buton" width="460" height="432"/>
+        <image name="harita-buton" width="460" height="432"/>
         <image name="hero10" width="800" height="400"/>
         <image name="konum" width="300" height="300"/>
+        <image name="profil-buton" width="460" height="432"/>
         <image name="renk-icon" width="83" height="82"/>
         <image name="saglik-icon" width="82" height="82"/>
+        <image name="veteriner-buton" width="460" height="432"/>
+        <image name="yakindakiler-buton" width="460" height="432"/>
         <image name="yas-icon" width="101" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rma-WX-x2V"/>
-        <segue reference="KME-RP-Q68"/>
-        <segue reference="Ga0-4r-ZlH"/>
-        <segue reference="1Mf-qM-oO4"/>
+        <segue reference="k3c-Ta-K2N"/>
+        <segue reference="S50-qZ-Lzh"/>
+        <segue reference="zTp-wG-JKc"/>
+        <segue reference="qHX-im-FsE"/>
+        <segue reference="44I-iC-cF5"/>
         <segue reference="bCy-rq-1ey"/>
         <segue reference="kYo-Op-ASQ"/>
         <segue reference="iRc-WG-sBR"/>
