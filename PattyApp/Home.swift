@@ -59,9 +59,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIVi
         super.viewDidLoad()
         
         
-        switchtoGeneralHome.layer.cornerRadius = ProfileImage.frame.size.width / 2
-        switchtoGeneralHome.clipsToBounds = true
-         switchtoGeneralHome.layer.borderColor = UIColor.white.cgColor
+        
        
         ProfileImage.layer.cornerRadius = ProfileImage.frame.size.width / 2
         ProfileImage.clipsToBounds = true

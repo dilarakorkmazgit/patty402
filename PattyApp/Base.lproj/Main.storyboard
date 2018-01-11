@@ -309,11 +309,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KOPEK-ICON" translatesAutoresizingMaskIntoConstraints="NO" id="l51-Tc-NX3">
-                                <rect key="frame" x="149" y="80" width="70" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PATTY-LOGO-RENKLI" translatesAutoresizingMaskIntoConstraints="NO" id="j3S-9E-ZCw">
-                                <rect key="frame" x="86" y="185" width="203" height="93"/>
+                                <rect key="frame" x="140" y="60" width="89" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OTURUM AÇ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ou1-pK-PPn">
@@ -324,7 +320,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rw7-QJ-d6k">
-                                <rect key="frame" x="16" y="269" width="343" height="129"/>
+                                <rect key="frame" x="36" y="281" width="297" height="104"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="FACEBOOK-ILE-OTURUM-AC-ICON"/>
                             </button>
@@ -355,6 +351,10 @@
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BOK-ICON" translatesAutoresizingMaskIntoConstraints="NO" id="4AQ-o2-ECb">
                                 <rect key="frame" x="170" y="527" width="29" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PATTY-LOGO-RENKLI" translatesAutoresizingMaskIntoConstraints="NO" id="j3S-9E-ZCw">
+                                <rect key="frame" x="105" y="203" width="165" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -868,11 +868,6 @@
                                         <rect key="frame" x="10" y="461" width="26" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRr-rG-LKw">
-                                        <rect key="frame" x="31" y="423" width="81" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="ANA SAYFA"/>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KOPEK-ICON" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-2N-6kP">
                                         <rect key="frame" x="12" y="100" width="115" height="114"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -886,8 +881,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U8-ha-zwb">
                                 <rect key="frame" x="158" y="572" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" backgroundImage="map-e-giden"/>
                                 <connections>
                                     <action selector="TappedswitchButton:" destination="qdY-FY-Fon" eventType="touchUpInside" id="Qdw-Qr-x1T"/>
                                     <segue destination="wLh-V0-ZmK" kind="presentation" identifier="showAction" id="rma-WX-x2V"/>
@@ -1195,6 +1189,7 @@
         <image name="harita-buton" width="460" height="432"/>
         <image name="hero10" width="800" height="400"/>
         <image name="konum" width="300" height="300"/>
+        <image name="map-e-giden" width="323" height="359"/>
         <image name="profil-buton" width="460" height="432"/>
         <image name="renk-icon" width="83" height="82"/>
         <image name="saglik-icon" width="82" height="82"/>
@@ -1203,11 +1198,12 @@
         <image name="yas-icon" width="101" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="LaH-WU-OdQ"/>
         <segue reference="k3c-Ta-K2N"/>
-        <segue reference="S50-qZ-Lzh"/>
+        <segue reference="Ngl-fh-hX1"/>
         <segue reference="zTp-wG-JKc"/>
-        <segue reference="qHX-im-FsE"/>
-        <segue reference="44I-iC-cF5"/>
+        <segue reference="Bzz-Nb-hIG"/>
+        <segue reference="Pqj-i2-k1Z"/>
         <segue reference="bCy-rq-1ey"/>
         <segue reference="kYo-Op-ASQ"/>
         <segue reference="iRc-WG-sBR"/>
