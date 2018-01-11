@@ -17,6 +17,17 @@ import SDWebImage
 
 class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
+    
+
+    
+    @IBAction func TappedswitchButton(_ sender: Any) {
+        
+        
+       
+    }
+    
+    @IBOutlet weak var switchtoGeneralHome: UIButton!
+    
     @IBOutlet weak var burgerMenuView: UIView!
     @IBOutlet weak var leadingConst: NSLayoutConstraint!
     @IBOutlet weak var ProfileImage: UIImageView!
@@ -27,7 +38,10 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var iletişim: UIButton!
     @IBOutlet weak var cikis: UIButton!
     @IBOutlet weak var merhaba: UILabel!
-   
+    
+    
+  
+    
     var showMenu = false
     var imageURL = [String]()
     
@@ -41,8 +55,19 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     let userid = Auth.auth().currentUser?.uid
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        switchtoGeneralHome.layer.cornerRadius = ProfileImage.frame.size.width / 2
+        switchtoGeneralHome.clipsToBounds = true
+         switchtoGeneralHome.layer.borderColor = UIColor.white.cgColor
+       
+        
+        
+    
         
         ProfileImage.layer.cornerRadius = ProfileImage.frame.size.width / 2
         ProfileImage.clipsToBounds = true
@@ -135,6 +160,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         } , withCancel: nil)
         
     }
+    
 
     @IBAction func signOutPress(_ sender: Any) {
         

@@ -776,6 +776,7 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Lv0-TX-dBa">
                                 <rect key="frame" x="0.0" y="63" width="375" height="604"/>
+                                <gestureRecognizers/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMp-Kt-cE7">
                                 <rect key="frame" x="16" y="19" width="48" height="36"/>
@@ -871,9 +872,6 @@
                                         <rect key="frame" x="31" y="423" width="81" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="ANA SAYFA"/>
-                                        <connections>
-                                            <segue destination="wLh-V0-ZmK" kind="show" id="CAp-hZ-yuk"/>
-                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="KOPEK-ICON" translatesAutoresizingMaskIntoConstraints="NO" id="AEg-2N-6kP">
                                         <rect key="frame" x="12" y="100" width="115" height="114"/>
@@ -885,6 +883,16 @@
                                     <constraint firstAttribute="width" constant="140" id="Ve9-45-BSz"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U8-ha-zwb">
+                                <rect key="frame" x="158" y="572" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="TappedswitchButton:" destination="qdY-FY-Fon" eventType="touchUpInside" id="Qdw-Qr-x1T"/>
+                                    <segue destination="wLh-V0-ZmK" kind="presentation" id="rma-WX-x2V"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -917,6 +925,7 @@
                         <outlet property="merhaba" destination="EBR-nz-Zs4" id="tDm-pb-tUO"/>
                         <outlet property="nameLabel" destination="fJ6-B2-E1U" id="Sjp-lU-CAz"/>
                         <outlet property="profile" destination="JHk-Nq-fyK" id="wdN-Zd-ebX"/>
+                        <outlet property="switchtoGeneralHome" destination="1U8-ha-zwb" id="V7t-Xq-O7H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFf-DT-Xuk" userLabel="First Responder" sceneMemberID="firstResponder"/>
