@@ -890,7 +890,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="TappedswitchButton:" destination="qdY-FY-Fon" eventType="touchUpInside" id="Qdw-Qr-x1T"/>
-                                    <segue destination="wLh-V0-ZmK" kind="presentation" id="rma-WX-x2V"/>
+                                    <segue destination="wLh-V0-ZmK" kind="presentation" identifier="showAction" id="rma-WX-x2V"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -932,10 +932,10 @@
             </objects>
             <point key="canvasLocation" x="4412" y="806.44677661169419"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="83h-XE-7vV">
             <objects>
-                <viewController id="wLh-V0-ZmK" sceneMemberID="viewController">
+                <viewController id="wLh-V0-ZmK" customClass="WelcomeViewController" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DdY-sR-A5J"/>
                         <viewControllerLayoutGuide type="bottom" id="Ddt-gx-2vU"/>
@@ -980,7 +980,7 @@
                                 <rect key="frame" x="36" y="482" width="135" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Eş Bul">
+                                <state key="normal" title="Profil">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -994,11 +994,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="TVQ-kd-Z4T" appends="YES" id="Cqh-8p-osP"/>
+                        </connections>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8CR-wP-jPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="TVQ-kd-Z4T">
+                    <connections>
+                        <segue destination="qdY-FY-Fon" kind="show" id="Ga0-4r-ZlH"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4989.6000000000004" y="105.69715142428787"/>
+            <point key="canvasLocation" x="5078" y="22"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5fc-Bk-vjm">
@@ -1172,9 +1181,10 @@
         <image name="yas-icon" width="101" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ngl-fh-hX1"/>
-        <segue reference="k3c-Ta-K2N"/>
-        <segue reference="qHX-im-FsE"/>
+        <segue reference="rma-WX-x2V"/>
+        <segue reference="KME-RP-Q68"/>
+        <segue reference="Ga0-4r-ZlH"/>
+        <segue reference="1Mf-qM-oO4"/>
         <segue reference="bCy-rq-1ey"/>
         <segue reference="kYo-Op-ASQ"/>
         <segue reference="iRc-WG-sBR"/>

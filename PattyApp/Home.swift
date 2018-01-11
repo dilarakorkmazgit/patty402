@@ -15,13 +15,12 @@ import FirebaseDatabase
 import SDWebImage
 
 
-class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIViewControllerTransitioningDelegate{
     
+      let customPresentationController = CustomViewPresentationController(direction: .top)
     
-
     
     @IBAction func TappedswitchButton(_ sender: Any) {
-        
         
        
     }
@@ -56,7 +55,6 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     let userid = Auth.auth().currentUser?.uid
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,10 +63,6 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         switchtoGeneralHome.clipsToBounds = true
          switchtoGeneralHome.layer.borderColor = UIColor.white.cgColor
        
-        
-        
-    
-        
         ProfileImage.layer.cornerRadius = ProfileImage.frame.size.width / 2
         ProfileImage.clipsToBounds = true
         ProfileImage.layer.borderColor = UIColor.white.cgColor
@@ -160,6 +154,8 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
         } , withCancel: nil)
         
     }
+    
+    
     
 
     @IBAction func signOutPress(_ sender: Any) {
@@ -258,10 +254,20 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     }
     
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAction" {
+            
+            let toVC = segue.destination as UIViewController
+            toVC.transitioningDelegate = self
+            
+        }
+        
     }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return customPresentationController
+    }
+
     @IBAction func openBurgerMenu(_ sender: Any) {
         
         if(showMenu){
