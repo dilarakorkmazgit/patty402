@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		272926C0ADAABDC88FE44877 /* Pods_PattyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08841108E2B19C64A20469D8 /* Pods_PattyAppUITests.framework */; };
 		3B45CE98B24B163B2567D721 /* Pods_PattyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036190BF56667C874DCB8773 /* Pods_PattyAppTests.framework */; };
+		3C1365D52007B4350036721C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1365D42007B4350036721C /* WelcomeViewController.swift */; };
 		3C2BF6A11FEFCF64001EE084 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2BF6A01FEFCF64001EE084 /* Profile.swift */; };
 		3C5217071F979FF200F52725 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5217061F979FF200F52725 /* CreateAccountVC.swift */; };
 		3C832F461F94C96400EC8390 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C832F451F94C96400EC8390 /* AppDelegate.swift */; };
@@ -61,6 +62,7 @@
 		08841108E2B19C64A20469D8 /* Pods_PattyAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PattyAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B4B1C740B46D3B26C2F60F /* Pods-PattyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyApp/Pods-PattyApp.release.xcconfig"; sourceTree = "<group>"; };
 		38E564C490E80FCD1144FF30 /* Pods-PattyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppTests/Pods-PattyAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C1365D42007B4350036721C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		3C2BF6A01FEFCF64001EE084 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		3C5217061F979FF200F52725 /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		3C832F421F94C96400EC8390 /* PattyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PattyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +182,7 @@
 				5979CE221FFC4AD800FB7BC2 /* Message.swift */,
 				596D47EC1FFC61370061AE5C /* UserCell.swift */,
 				59C29D821FFD99DC005245E9 /* ChatMessageCell.swift */,
+				3C1365D42007B4350036721C /* WelcomeViewController.swift */,
 			);
 			path = PattyApp;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C5217071F979FF200F52725 /* CreateAccountVC.swift in Sources */,
+				3C1365D52007B4350036721C /* WelcomeViewController.swift in Sources */,
 				59A7133B1FF95C95005FE0B5 /* Chat.swift in Sources */,
 				3C832F4E1F94C96400EC8390 /* PattyApp.xcdatamodeld in Sources */,
 				5979CE231FFC4AD800FB7BC2 /* Message.swift in Sources */,
