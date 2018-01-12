@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 enum PresentingDirection {
     case top , right , bottom , left
 
@@ -36,15 +35,8 @@ func offSetWithFrame(viewFrame : CGRect) -> CGRect{
         return viewFrame.offsetBy(dx: bounds.size.width, dy: 0)
 
         
-        
-        
-        
+        }
     }
-    
-    
-    }
-
-    
 
 }
 
@@ -85,9 +77,6 @@ class CustomViewPresentationController: NSObject , UIViewControllerAnimatedTrans
             fromViewController?.view.alpha = 1.0
             
         }
-            
-        
-        
     }
 
 }

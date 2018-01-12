@@ -15,14 +15,11 @@ import FirebaseDatabase
 import SDWebImage
 
 
-class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIViewControllerTransitioningDelegate{
+class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIViewControllerTransitioningDelegate{
     
       let customPresentationController = CustomViewPresentationController(direction: .top)
     
-    
     @IBAction func TappedswitchButton(_ sender: Any) {
-        
-       
     }
     
     @IBOutlet weak var switchtoGeneralHome: UIButton!
@@ -55,8 +52,6 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
        
         ProfileImage.layer.cornerRadius = ProfileImage.frame.size.width / 2
         ProfileImage.clipsToBounds = true
@@ -85,18 +80,15 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIVi
         bildirimler.layer.shadowColor = UIColor.black.cgColor
         bildirimler.layer.shadowOpacity = 0.5
         
-        
         iletişim.layer.shadowOffset = size
         iletişim.layer.shadowRadius = 5
         iletişim.layer.shadowColor = UIColor.black.cgColor
         iletişim.layer.shadowOpacity = 0.5
         
-        
         cikis.layer.shadowOffset = size
         cikis.layer.shadowRadius = 5
         cikis.layer.shadowColor = UIColor.black.cgColor
         cikis.layer.shadowOpacity = 0.5
-        
         
         ProfileImage.layer.shadowOffset = size
         ProfileImage.layer.shadowRadius = 5
@@ -118,7 +110,6 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIVi
         merhaba.layer.shadowColor = UIColor.black.cgColor
         merhaba.layer.shadowOpacity = 0.5
         
-      
     }
     func fetchUser() {
         Database.database().reference().child("locations").observe(.childAdded, with: {(snapshot) in
@@ -129,7 +120,7 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIVi
                 
                 let latitude = dictionary["latitude"] as! Float
                 let longitude = dictionary["longitude"] as! Float
-                user.photo = dictionary["photo"] as! String
+                user.photo = dictionary["photo"] as? String
                 
                 print(user.latitude, user.longitude, user.photo)
                 
@@ -150,7 +141,9 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIVi
         
     }
     
-    
+    public override func menuTapped(sender: AnyObject) {
+        self.openBurgerMenu(self)
+    }
     
 
     @IBAction func signOutPress(_ sender: Any) {
@@ -252,7 +245,8 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showAction" {
             
-            let toVC = segue.destination as UIViewController
+            let toVC = segue.destination as! WelcomeViewController
+            toVC.prVC = self
             toVC.transitioningDelegate = self
             
         }
@@ -261,6 +255,10 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIVi
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return customPresentationController
+    }
+    
+    func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
     }
 
     @IBAction func openBurgerMenu(_ sender: Any) {

@@ -9,9 +9,11 @@
 import UIKit
 import Firebase
 
-class Chat: UITableViewController {
+class Chat: RootViewController, UITableViewDelegate, UITableViewDataSource {
     
     let cellId = "cellId"
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,12 +75,11 @@ class Chat: UITableViewController {
                         
                     }
                     
-                    
                     DispatchQueue.main.async(execute: {
                         self.tableView.reloadData()
                     })
                 }
-
+                
                 
             }, withCancel: nil)
             
@@ -101,20 +102,20 @@ class Chat: UITableViewController {
                 message.toId = dictionary["toId"] as! String
                 
                 
-              //  self.messages.append(message)
+                //  self.messages.append(message)
                 
                 if let toId = message.toId {
                     
                     self.messagesDictionary[toId] = message
                     self.messages = Array(self.messagesDictionary.values)
-                  
+                    
                     
                     /*self.messages.sort(by: { (message1, message2) ->
-                        Bool in
-                        
-                        return (message1.timestamp?.intValue)! > (message2.timestamp?.intValue)!
-                    })*/
-                
+                     Bool in
+                     
+                     return (message1.timestamp?.intValue)! > (message2.timestamp?.intValue)!
+                     })*/
+                    
                 }
                 
                 DispatchQueue.main.async(execute: {
@@ -124,10 +125,11 @@ class Chat: UITableViewController {
             
         }, withCancel: nil)
     }
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(self.messages)
         return messages.count
     }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
         
@@ -136,11 +138,11 @@ class Chat: UITableViewController {
         cell.message = message
         return cell
     }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 72
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let message = messages[indexPath.row]
         
@@ -154,7 +156,7 @@ class Chat: UITableViewController {
         let ref = Database.database().reference().child("locations").child(message.toId!)
         
         ref.observe(.value, with: {(snapshot) in
-         
+            
             
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 
@@ -166,7 +168,7 @@ class Chat: UITableViewController {
                 user.email = dictionary["email"] as! String
                 user.photo = dictionary["photo"] as! String
                 user.userId = dictionary["userId"] as! String
-
+                
                 
                 self.users.append(user)
                 self.showChatControllerForUser(user: user)
@@ -227,3 +229,4 @@ class Chat: UITableViewController {
         self.present(loginVC, animated: true, completion: nil)
     }
 }
+

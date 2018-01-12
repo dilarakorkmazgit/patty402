@@ -14,7 +14,6 @@ import FirebaseStorage
 import FirebaseDatabase
 
 
-
 class CreateAccountVC: UIViewController {
     
     var ref: DatabaseReference!
@@ -27,7 +26,6 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var poasswordLabel: UITextField!
     @IBOutlet weak var kaydolButton: UIButton!
    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,10 +46,7 @@ class CreateAccountVC: UIViewController {
         kaydolButton.layer.shadowColor = UIColor.black.cgColor
         kaydolButton.layer.shadowOpacity = 0.5
         
-        
-
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -77,7 +72,6 @@ class CreateAccountVC: UIViewController {
             print("user registered " + user!.uid)
             self.ref1.child(userID).setValue(["firstname": firstname, "lastname": lastname, "email": email])
 
-            
         })
         self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
 
@@ -86,7 +80,3 @@ class CreateAccountVC: UIViewController {
         view.endEditing(true)
     }
 }
-
-
-
-

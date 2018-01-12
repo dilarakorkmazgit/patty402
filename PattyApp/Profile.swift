@@ -13,7 +13,7 @@ import Firebase
 import FirebaseDatabase
 import SDWebImage
 
-class Profile: UIViewController{
+class Profile: RootViewController{
     
     let ref = Database.database().reference()
    
@@ -41,6 +41,7 @@ class Profile: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Profil"
         ProfileImage.layer.cornerRadius = ProfileImage.frame.size.width / 2
         ProfileImage.clipsToBounds = true
         ProfileImage.layer.borderColor = UIColor.white.cgColor
