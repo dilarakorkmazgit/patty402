@@ -966,6 +966,10 @@
                                 <state key="normal" title="Eş Bul" image="es-bul-buton">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToFilteringTableView:" destination="wLh-V0-ZmK" eventType="touchUpInside" id="bS6-Au-PmS"/>
+                                    <segue destination="CVd-cS-iKB" kind="presentation" identifier="filteringTableView" id="tEJ-WG-gD3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBG-56-99t">
                                 <rect key="frame" x="184" y="276" width="150" height="150"/>
@@ -1007,6 +1011,7 @@
                         <segue destination="vZA-7L-Edu" kind="show" id="Zsn-Pa-LT4"/>
                         <segue destination="qdY-FY-Fon" kind="show" id="I1G-XJ-rIg"/>
                         <segue destination="and-Lo-KKc" kind="show" id="cgH-3j-2od"/>
+                        <segue destination="CVd-cS-iKB" kind="show" id="FkO-ZH-IdL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8CR-wP-jPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1017,6 +1022,55 @@
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="5445.6000000000004" y="12.143928035982009"/>
+        </scene>
+        <!--Filter Table View Controller-->
+        <scene sceneID="ihO-9r-9Kk">
+            <objects>
+                <tableViewController id="CVd-cS-iKB" customClass="FilterTableViewController" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ji1-8C-sdY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Yma-cg-Ab3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yma-cg-Ab3" id="dXw-nG-UTX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CVd-cS-iKB" id="oYp-dO-BHC"/>
+                            <outlet property="delegate" destination="CVd-cS-iKB" id="1RL-CA-HOy"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="N0E-W8-Pjb" kind="show" identifier="showUsersInfo" id="0Vc-jh-X0W"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CyW-cL-gVs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6430" y="12"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kIK-5p-xKj">
+            <objects>
+                <viewController id="N0E-W8-Pjb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LGa-2T-CpB"/>
+                        <viewControllerLayoutGuide type="bottom" id="LEY-7o-DBh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zPY-bV-zzT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eZ6-P6-hE1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7200" y="19"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5fc-Bk-vjm">
@@ -1199,10 +1253,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="k3c-Ta-K2N"/>
-        <segue reference="Ngl-fh-hX1"/>
+        <segue reference="S50-qZ-Lzh"/>
+        <segue reference="tEJ-WG-gD3"/>
         <segue reference="zTp-wG-JKc"/>
         <segue reference="qHX-im-FsE"/>
-        <segue reference="Pqj-i2-k1Z"/>
+        <segue reference="44I-iC-cF5"/>
         <segue reference="b3Q-wU-OBD"/>
         <segue reference="F0q-Y6-emL"/>
         <segue reference="iRc-WG-sBR"/>

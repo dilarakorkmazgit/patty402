@@ -38,9 +38,6 @@ class Home: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIVi
     @IBOutlet weak var cikis: UIButton!
     @IBOutlet weak var merhaba: UILabel!
     
-    
-  
-    
     var showMenu = false
     var imageURL = [String]()
     

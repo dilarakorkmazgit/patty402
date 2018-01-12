@@ -31,6 +31,10 @@ class WelcomeViewController: UIViewController {
     
     
     
+    @IBAction func goToFilteringTableView(_ sender: Any) {
+        
+          performSegue(withIdentifier: "filteringTableView", sender: sender)
+    }
     
     
     override func viewDidLoad() {

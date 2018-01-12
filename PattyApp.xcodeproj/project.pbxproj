@@ -22,6 +22,8 @@
 		3C832F5E1F94C96500EC8390 /* PattyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C832F5D1F94C96500EC8390 /* PattyAppTests.swift */; };
 		3C832F691F94C96500EC8390 /* PattyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C832F681F94C96500EC8390 /* PattyAppUITests.swift */; };
 		3C832F771F94D49A00EC8390 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C832F761F94D49A00EC8390 /* GoogleService-Info.plist */; };
+		3C89C8C42008B8F90044F4CC /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C89C8C32008B8F90044F4CC /* FilterTableViewController.swift */; };
+		3C89C8C62008BD680044F4CC /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C89C8C52008BD680044F4CC /* Pet.swift */; };
 		48F466356828E7E3936F2426 /* Pods_PattyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E21B3C9C6911D6FAF763564C /* Pods_PattyApp.framework */; };
 		590845F71F97ED9D009A2D6A /* LoggedInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590845F61F97ED9D009A2D6A /* LoggedInVC.swift */; };
 		590845FB1F980238009A2D6A /* resetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590845FA1F980238009A2D6A /* resetPasswordVC.swift */; };
@@ -82,6 +84,8 @@
 		3C832F681F94C96500EC8390 /* PattyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PattyAppUITests.swift; sourceTree = "<group>"; };
 		3C832F6A1F94C96500EC8390 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C832F761F94D49A00EC8390 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3C89C8C32008B8F90044F4CC /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		3C89C8C52008BD680044F4CC /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
 		590845F61F97ED9D009A2D6A /* LoggedInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInVC.swift; sourceTree = "<group>"; };
 		590845FA1F980238009A2D6A /* resetPasswordVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resetPasswordVC.swift; sourceTree = "<group>"; };
 		596D47EC1FFC61370061AE5C /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 				59C29D821FFD99DC005245E9 /* ChatMessageCell.swift */,
 				3C1365D42007B4350036721C /* WelcomeViewController.swift */,
 				3C76A6382007D97B00D790CD /* CustomViewPresentationController.swift */,
+				3C89C8C32008B8F90044F4CC /* FilterTableViewController.swift */,
+				3C89C8C52008BD680044F4CC /* Pet.swift */,
 			);
 			path = PattyApp;
 			sourceTree = "<group>";
@@ -549,6 +555,7 @@
 				3C5217071F979FF200F52725 /* CreateAccountVC.swift in Sources */,
 				3C1365D52007B4350036721C /* WelcomeViewController.swift in Sources */,
 				3C76A6392007D97B00D790CD /* CustomViewPresentationController.swift in Sources */,
+				3C89C8C62008BD680044F4CC /* Pet.swift in Sources */,
 				59A7133B1FF95C95005FE0B5 /* Chat.swift in Sources */,
 				3C832F4E1F94C96400EC8390 /* PattyApp.xcdatamodeld in Sources */,
 				5979CE231FFC4AD800FB7BC2 /* Message.swift in Sources */,
@@ -557,6 +564,7 @@
 				590845F71F97ED9D009A2D6A /* LoggedInVC.swift in Sources */,
 				59A7133F1FF96EB2005FE0B5 /* User.swift in Sources */,
 				59BE0E101F96A971008DD52B /* LoginVC.swift in Sources */,
+				3C89C8C42008B8F90044F4CC /* FilterTableViewController.swift in Sources */,
 				5979CE211FFC289C00FB7BC2 /* ChatLogController.swift in Sources */,
 				590845FB1F980238009A2D6A /* resetPasswordVC.swift in Sources */,
 				59972FCE1FBE1EA400CD6C57 /* Home.swift in Sources */,
