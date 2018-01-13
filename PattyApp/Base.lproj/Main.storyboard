@@ -316,7 +316,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="FACEBOOK-ILE-OTURUM-AC-ICON"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="damla@gmail.com" borderStyle="roundedRect" placeholder="E-posta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lyu-VH-rOv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-posta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lyu-VH-rOv">
                                 <rect key="frame" x="51" y="398" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -345,7 +345,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Parola" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usN-Vf-7aK">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Parola" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="usN-Vf-7aK">
                                 <rect key="frame" x="51" y="451" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="1" green="0.36078431370000003" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -777,17 +777,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHk-Nq-fyK">
-                                        <rect key="frame" x="7" y="565" width="124" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="14"/>
-                                        <state key="normal" title="PROFİL">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="vZA-7L-Edu" kind="show" id="Ngl-fh-hX1"/>
-                                        </connections>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfV-u9-wbG">
                                         <rect key="frame" x="-59" y="342" width="31" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -853,7 +842,6 @@
                         <outlet property="mapView" destination="Lv0-TX-dBa" id="N3l-b3-2ar"/>
                         <outlet property="merhaba" destination="EBR-nz-Zs4" id="tDm-pb-tUO"/>
                         <outlet property="nameLabel" destination="fJ6-B2-E1U" id="Sjp-lU-CAz"/>
-                        <outlet property="profile" destination="JHk-Nq-fyK" id="wdN-Zd-ebX"/>
                         <outlet property="switchtoGeneralHome" destination="1U8-ha-zwb" id="V7t-Xq-O7H"/>
                     </connections>
                 </viewController>
@@ -1292,10 +1280,9 @@
         <image name="yas-icon" width="101" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k3c-Ta-K2N"/>
         <segue reference="Bzz-Nb-hIG"/>
         <segue reference="b3Q-wU-OBD"/>
         <segue reference="F0q-Y6-emL"/>
-        <segue reference="YFf-Q5-tSo"/>
+        <segue reference="iRc-WG-sBR"/>
     </inferredMetricsTieBreakers>
 </document>
