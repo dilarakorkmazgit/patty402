@@ -53,6 +53,11 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
     }
     
     
+    
+    @IBAction func dismissMe(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations [0]
         
@@ -117,6 +122,8 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         self.ref.child("user").child(userid!).child("pet").updateChildValues(["longitude": annotation.coordinate.longitude, "latitude": annotation.coordinate.latitude])
         
         self.ref.child("locations").child(userid!).updateChildValues(["longitude": annotation.coordinate.longitude, "latitude": annotation.coordinate.latitude , "userId" : userid!])
+        
+        self.navigationController?.popViewController(animated: true)
         
     }
     

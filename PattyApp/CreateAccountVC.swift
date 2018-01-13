@@ -73,7 +73,14 @@ class CreateAccountVC: UIViewController {
             self.ref1.child(userID).setValue(["firstname": firstname, "lastname": lastname, "email": email])
 
         })
-        self.performSegue(withIdentifier: "LoggedInVC", sender: nil)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "homeView")
+        self.navigationController?.viewControllers = [initialViewController]
+//        let delegate : AppDelegate = AppDelegate()
+//        delegate.goToMainView()
 
     }
     func dismissKeyboard() {

@@ -158,6 +158,12 @@ class LoggedInVC: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
         
     }
     
+    @IBAction func popToRoot(_ sender: Any) {
+        
+        self.navigationController?.popToRootViewController(animated: true)
+        
+    }
+    
     @IBAction func healthPressed(_ sender: Any) {
         healthPicker.isHidden = false
         

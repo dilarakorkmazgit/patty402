@@ -17,6 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let applicationFrame = UIScreen.main.bounds
+        self.window = UIWindow(frame: applicationFrame)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
+        let navController = UINavigationController(rootViewController: initialViewController)
+        
+        
+        self.window?.rootViewController = navController
+        self.window?.makeKeyAndVisible()
         
         UINavigationBar.appearance().barTintColor = UIColor(red: 1, green: 80.0/255.0, blue: 0, alpha: 1.0)
         UINavigationBar.appearance().tintColor = UIColor.white
@@ -27,6 +38,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         return true
     }
+    
+    func goToMainView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let applicationFrame = UIScreen.main.bounds
+        self.window = UIWindow(frame: applicationFrame)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "homeView")
+        
+        let navController = UINavigationController(rootViewController: initialViewController)
+        DispatchQueue.main.async(execute: {
+            
+            self.window?.rootViewController = navController
+            self.window?.makeKeyAndVisible()
+        })
+    
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

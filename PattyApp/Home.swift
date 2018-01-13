@@ -114,6 +114,7 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
                 
                 let user = User()
                 
+                if(dictionary["latitude"] != nil) {
                 let latitude = dictionary["latitude"] as! Float
                 let longitude = dictionary["longitude"] as! Float
                 user.photo = dictionary["photo"] as? String
@@ -130,6 +131,7 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
                     dog.title = userValue.value(forKey: "petName") as? String ?? ""
                     dog.photoURL = userValue.value(forKey: "photo") as? String ?? ""
                     self.mapView.addAnnotation(dog)
+                }
                 }
             }
             

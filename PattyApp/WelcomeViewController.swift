@@ -49,6 +49,17 @@ class WelcomeViewController: UIViewController {
           //performSegue(withIdentifier: "filteringTableView", sender: sender)
     }
     
+    @IBAction func goToVeterineryViewView(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier :"veterineryView") as! RootViewController
+        
+        self.dismiss(animated: true) {
+            self.prVC.navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        //performSegue(withIdentifier: "filteringTableView", sender: sender)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -19,7 +19,7 @@ class RootViewController: UIViewController {
         if(viewControllerCount != nil) {
             
             
-            if(viewControllerCount! > 1) {
+            if(viewControllerCount! > 1 && !self.isKind(of: Home.self)) {
                 let sendButton = UIBarButtonItem(title: "<", style: UIBarButtonItemStyle.plain, target: self, action: #selector(goBackTapped))
                 
                 self.navigationItem.leftBarButtonItem = sendButton
