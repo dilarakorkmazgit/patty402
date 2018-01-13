@@ -31,7 +31,6 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
     @IBOutlet weak var mailLabel: UILabel!
     @IBOutlet weak var profile: UIButton!
     @IBOutlet weak var bildirimler: UIButton!
-    @IBOutlet weak var iletişim: UIButton!
     @IBOutlet weak var cikis: UIButton!
     @IBOutlet weak var merhaba: UILabel!
     
@@ -80,10 +79,7 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
         bildirimler.layer.shadowColor = UIColor.black.cgColor
         bildirimler.layer.shadowOpacity = 0.5
         
-        iletişim.layer.shadowOffset = size
-        iletişim.layer.shadowRadius = 5
-        iletişim.layer.shadowColor = UIColor.black.cgColor
-        iletişim.layer.shadowOpacity = 0.5
+        
         
         cikis.layer.shadowOffset = size
         cikis.layer.shadowRadius = 5
