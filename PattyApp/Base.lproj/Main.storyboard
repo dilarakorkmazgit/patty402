@@ -819,6 +819,14 @@
                                     <segue destination="wLh-V0-ZmK" kind="presentation" identifier="showAction" id="rma-WX-x2V"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNV-QH-p9a">
+                                <rect key="frame" x="325" y="597" width="34" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="HERE-ICON"/>
+                                <connections>
+                                    <action selector="currentLocation:" destination="qdY-FY-Fon" eventType="touchUpInside" id="7gH-v0-sod"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1261,6 +1269,7 @@
         <image name="BUTON-BEYAZ" width="791" height="128"/>
         <image name="BUTON-TURUNCU" width="791" height="128"/>
         <image name="FACEBOOK-ILE-OTURUM-AC-ICON" width="855" height="281"/>
+        <image name="HERE-ICON" width="375" height="375"/>
         <image name="KATEGORILER-1" width="456" height="69"/>
         <image name="KOPEK-ICON" width="172" height="143"/>
         <image name="PATTY-LOGO" width="1082" height="492"/>

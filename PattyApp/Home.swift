@@ -161,6 +161,10 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
         
     }
     
+    @IBAction func currentLocation(_ sender: Any) {
+        self.manager.startUpdatingLocation()
+
+    }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         
