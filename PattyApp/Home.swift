@@ -17,7 +17,7 @@ import SDWebImage
 
 class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIViewControllerTransitioningDelegate{
     
-      let customPresentationController = CustomViewPresentationController(direction: .top)
+    let customPresentationController = CustomViewPresentationController(direction: .top)
     
     @IBAction func TappedswitchButton(_ sender: Any) {
     }
@@ -29,7 +29,6 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
     @IBOutlet weak var ProfileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var mailLabel: UILabel!
-    @IBOutlet weak var profile: UIButton!
     @IBOutlet weak var bildirimler: UIButton!
     @IBOutlet weak var cikis: UIButton!
     @IBOutlet weak var merhaba: UILabel!
@@ -51,27 +50,30 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        self.mapView.delegate = self;
+        
+        
         ProfileImage.layer.cornerRadius = ProfileImage.frame.size.width / 2
         ProfileImage.clipsToBounds = true
         ProfileImage.layer.borderColor = UIColor.white.cgColor
         profileImage()
-
+        
         burgerMenuView.layer.shadowOpacity = 1
         burgerMenuView.layer.shadowRadius = 6
-       
+        
         self.mapView.delegate = self
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
+        manager.distanceFilter = 10.0
+        
+        mapView.userTrackingMode = .followWithHeading
+        
         fetchUser()
         let size = CGSize(width: 5, height: 5)
         
-        profile.layer.shadowOffset = size
-        profile.layer.shadowRadius = 5
-        profile.layer.shadowColor = UIColor.black.cgColor
-        profile.layer.shadowOpacity = 0.5
+      
         
         
         bildirimler.layer.shadowOffset = size
@@ -95,7 +97,7 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
         nameLabel.layer.shadowRadius = 5
         nameLabel.layer.shadowColor = UIColor.black.cgColor
         nameLabel.layer.shadowOpacity = 0.5
-       
+        
         mailLabel.layer.shadowOffset = size
         mailLabel.layer.shadowRadius = 5
         mailLabel.layer.shadowColor = UIColor.black.cgColor
@@ -114,27 +116,27 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
                 
                 let user = User()
                 
-                if(dictionary["latitude"] != nil) {
-                let latitude = dictionary["latitude"] as! Float
-                let longitude = dictionary["longitude"] as! Float
-                user.photo = dictionary["photo"] as? String
-                
-                print(user.latitude, user.longitude, user.photo)
-                
-                self.users.append(user)
-                let userValue = snapshot.value as! NSDictionary
-                
-                DispatchQueue.main.async { [unowned self] in
-                    let dog = PPointAnnotation()
-                    let dogCordinates = CLLocationCoordinate2DMake(CLLocationDegrees(latitude), CLLocationDegrees(longitude))
-                    dog.coordinate = dogCordinates
-                    dog.title = userValue.value(forKey: "petName") as? String ?? ""
-                    dog.photoURL = userValue.value(forKey: "photo") as? String ?? ""
-                    self.mapView.addAnnotation(dog)
+                if((dictionary["latitude"] != nil) && (dictionary["photo"] != nil) && dictionary["longitude"] != nil ) {
+                    let latitude = dictionary["latitude"] as! Float
+                    let longitude = dictionary["longitude"] as! Float
+                    user.photo = dictionary["photo"] as! String
+                    
+                    print(user.latitude, user.longitude, user.photo)
+                    
+                    self.users.append(user)
+                    let userValue = snapshot.value as! NSDictionary
+                    
+                    DispatchQueue.main.async { [unowned self] in
+                        let dog = PPointAnnotation()
+                        let dogCordinates = CLLocationCoordinate2DMake(CLLocationDegrees(latitude), CLLocationDegrees(longitude))
+                        dog.coordinate = dogCordinates
+                        dog.title = userValue.value(forKey: "petName") as? String ?? ""
+                        dog.photoURL = userValue.value(forKey: "photo") as? String ?? ""
+                        self.mapView.addAnnotation(dog)
+                    }
                 }
-                }
+                
             }
-            
         } , withCancel: nil)
         
     }
@@ -143,7 +145,7 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
         self.openBurgerMenu(self)
     }
     
-
+    
     @IBAction func signOutPress(_ sender: Any) {
         
         do {
@@ -156,9 +158,13 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
         
         let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
         self.present(loginVC, animated: true, completion: nil)
-
+        
     }
     
+    @IBAction func currentLocation(_ sender: Any) {
+        self.manager.startUpdatingLocation()
+
+    }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
         
@@ -198,7 +204,7 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
             let firstname = value?["firstname"] as? String ?? ""
             let lastname = value?["lastname"] as? String ?? ""
             let mail = value?["email"] as? String ?? ""
-
+            
             self.nameLabel.text = "\(firstname.description) \(lastname.description)"
             self.mailLabel.text = mail.description
             self.nameLabel.adjustsFontSizeToFitWidth = true
@@ -223,9 +229,9 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
         backgroundImage.image = UIImage(named: "BACKGROUND-1")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
-
+        
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations [0]
         
@@ -237,6 +243,9 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
         self.mapView.isZoomEnabled = true
         self.mapView.isScrollEnabled = true
         self.mapView.showsUserLocation = true
+        self.mapView.userTrackingMode = .followWithHeading
+        
+        
     }
     
     
@@ -258,7 +267,7 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
     func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
     }
-
+    
     @IBAction func openBurgerMenu(_ sender: Any) {
         
         if(showMenu){
@@ -280,3 +289,4 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
         showMenu = !showMenu
     }
 }
+

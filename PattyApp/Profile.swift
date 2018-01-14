@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
 import MapKit
 import Firebase
 import FirebaseDatabase
