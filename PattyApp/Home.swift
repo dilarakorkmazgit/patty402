@@ -148,14 +148,11 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
     
     @IBAction func signOutPress(_ sender: Any) {
         
-        do {
-            try Auth.auth().signOut()
+        try! Auth.auth().signOut()
+
             print("çıkış yapıldı")
             
-        } catch let logoutError {
-            print(logoutError)
-        }
-        
+       
         let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as! ViewController
         self.present(loginVC, animated: true, completion: nil)
         
@@ -197,7 +194,7 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
     func profileImage () {
         
         
-        ref.child("user").child(userid!).child("personalInfo").observeSingleEvent(of: .value, with: { (snapshot) in
+       ref.child("user").child(userid!).child("personalInfo").observeSingleEvent(of: .value, with: { (snapshot) in
             
             let value = snapshot.value as? NSDictionary
             let username = value?["username"] as? String ?? ""
@@ -214,7 +211,7 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
             print(error.localizedDescription)
         }
         
-        ref.child("user").child(userid!).child("pet").observeSingleEvent(of: .value, with: { (snapshot) in
+       ref.child("user").child(userid!).child("pet").observeSingleEvent(of: .value, with: { (snapshot) in
             
             let value = snapshot.value as? NSDictionary
             let profileImageURL = value?["photo"] as? String ?? ""
@@ -224,7 +221,7 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
         }) { (error) in
             print(error.localizedDescription)
         }
-        
+ 
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "BACKGROUND-1")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
