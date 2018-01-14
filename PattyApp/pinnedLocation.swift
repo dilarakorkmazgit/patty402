@@ -53,10 +53,7 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
     }
     
     
-    @IBAction func devamPressed(_ sender: Any) {
-        
-        
-    }
+   
     
     @IBAction func dismissMe(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

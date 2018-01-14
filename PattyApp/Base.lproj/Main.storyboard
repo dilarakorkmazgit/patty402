@@ -673,7 +673,6 @@
                                 </state>
                                 <connections>
                                     <action selector="popToRoot:" destination="Ido-7X-vUM" eventType="touchUpInside" id="DKy-sK-pZs"/>
-                                    <segue destination="H1i-C9-sJ2" kind="show" id="aPQ-oI-oDO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwf-p1-20h">
@@ -1293,10 +1292,9 @@
         <image name="yas-icon" width="101" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aPQ-oI-oDO"/>
         <segue reference="Bzz-Nb-hIG"/>
         <segue reference="b3Q-wU-OBD"/>
         <segue reference="kYo-Op-ASQ"/>
-        <segue reference="iRc-WG-sBR"/>
+        <segue reference="YFf-Q5-tSo"/>
     </inferredMetricsTieBreakers>
 </document>
