@@ -501,6 +501,9 @@
                                 <state key="normal" title="KAYDET" backgroundImage="BUTON-TURUNCU">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="kaydetPressed:" destination="GJU-su-2qu" eventType="touchUpInside" id="Kpq-E1-xWE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -650,7 +653,7 @@
                                     <action selector="healthPressed:" destination="Ido-7X-vUM" eventType="touchUpInside" id="0aD-Ct-Q3a"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="pet adı" borderStyle="roundedRect" placeholder="Pet Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vox-Zk-cEr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vox-Zk-cEr">
                                 <rect key="frame" x="76" y="198" width="222" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -670,6 +673,7 @@
                                 </state>
                                 <connections>
                                     <action selector="popToRoot:" destination="Ido-7X-vUM" eventType="touchUpInside" id="DKy-sK-pZs"/>
+                                    <segue destination="H1i-C9-sJ2" kind="show" id="aPQ-oI-oDO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwf-p1-20h">
@@ -1289,9 +1293,10 @@
         <image name="yas-icon" width="101" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="aPQ-oI-oDO"/>
         <segue reference="Bzz-Nb-hIG"/>
         <segue reference="b3Q-wU-OBD"/>
-        <segue reference="F0q-Y6-emL"/>
+        <segue reference="kYo-Op-ASQ"/>
         <segue reference="iRc-WG-sBR"/>
     </inferredMetricsTieBreakers>
 </document>

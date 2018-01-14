@@ -41,7 +41,7 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         DispatchQueue.main.async(execute: {
             self.present(dialog, animated: true, completion: nil)
         })
-
+        
         
     }
     
@@ -53,6 +53,10 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
     }
     
     
+    @IBAction func devamPressed(_ sender: Any) {
+        
+        
+    }
     
     @IBAction func dismissMe(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -70,12 +74,18 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         self.mapView.isScrollEnabled = true
         self.mapView.showsUserLocation = true
     }
+    @IBAction func kaydetPressed(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+        
+    }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         // Don't want to show a custom image if the annotation is the user's location.
         guard !(annotation is MKUserLocation) else {
             return nil
         }
+        
+        
         
         // Better to make this class property
         let annotationIdentifier = "AnnotationIdentifier"
@@ -123,9 +133,9 @@ class pinnedLocation: UIViewController, MKMapViewDelegate,CLLocationManagerDeleg
         
         self.ref.child("locations").child(userid!).updateChildValues(["longitude": annotation.coordinate.longitude, "latitude": annotation.coordinate.latitude , "userId" : userid!])
         
-        self.navigationController?.popViewController(animated: true)
         
     }
     
     
 }
+
