@@ -31,8 +31,12 @@ class FilterTableViewController: RootViewController, UITableViewDataSource, UITa
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 //print(dictionary["pet"])
                 let petInfo = Pet()
-                
+                print("ggggjh")
+
                 // get pet info
+               
+                    print("geldiiiii")
+
                 petInfo.petname = dictionary["pet"]!["petName"] as? String
                 petInfo.gendery = dictionary["pet"]!["gender"] as? String
                 petInfo.tur = dictionary["pet"]!["tur"] as? String
@@ -43,20 +47,19 @@ class FilterTableViewController: RootViewController, UITableViewDataSource, UITa
 
                 self.pets.append(petInfo)
                 
-                //print(snapshot.value!)
-                //print("oldu mu olmadı mı anlamıyommmmm")
-                //print("olmuşş:)))")
+                print("ggh")
+               
                 
                 
                  DispatchQueue.main.async(execute: {
                     self.tableViewForPet.reloadData()
                  })
-            }
+                }
             
         }, withCancel: nil)
         
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
