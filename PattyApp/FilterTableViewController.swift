@@ -36,7 +36,6 @@ class FilterTableViewController: RootViewController, UITableViewDataSource, UITa
                 // get pet info
                
                     print("geldiiiii")
-
                 petInfo.petname = dictionary["pet"]!["petName"] as? String
                 petInfo.gendery = dictionary["pet"]!["gender"] as? String
                 petInfo.tur = dictionary["pet"]!["tur"] as? String
@@ -54,8 +53,8 @@ class FilterTableViewController: RootViewController, UITableViewDataSource, UITa
                  DispatchQueue.main.async(execute: {
                     self.tableViewForPet.reloadData()
                  })
-                }
-            
+                
+            }
         }, withCancel: nil)
         
     }
