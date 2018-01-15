@@ -43,6 +43,7 @@
 		59E383891FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
 		59E3838A1FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
 		59E531D31FFAEE4500CE4DAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E531D21FFAEE4500CE4DAD /* Extensions.swift */; };
+		59FB4132200D037C00CF233D /* Veterinery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FB4131200D037C00CF233D /* Veterinery.swift */; };
 		FC41A1431FEBE62000CE2E6C /* PPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41A1421FEBE62000CE2E6C /* PPointAnnotation.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		59C98F921F9548A40000F65D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pinnedLocation.swift; sourceTree = "<group>"; };
 		59E531D21FFAEE4500CE4DAD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		59FB4131200D037C00CF233D /* Veterinery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Veterinery.swift; sourceTree = "<group>"; };
 		82AF6362E7D5EA0EFD43663C /* Pods-PattyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppUITests/Pods-PattyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B3B6A59C428E0ED63437E3 /* Pods-PattyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppTests/Pods-PattyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C458BF90183EE5C6DF74B305 /* Pods-PattyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PattyApp/Pods-PattyApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				3C67544320091807001C7010 /* RootViewController.swift */,
 				3C675445200927E3001C7010 /* RootTableViewController.swift */,
 				3CBAC7462009870C002E56D7 /* VeterineryViewController.swift */,
+				59FB4131200D037C00CF233D /* Veterinery.swift */,
 			);
 			path = PattyApp;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59FB4132200D037C00CF233D /* Veterinery.swift in Sources */,
 				3C5217071F979FF200F52725 /* CreateAccountVC.swift in Sources */,
 				3C1365D52007B4350036721C /* WelcomeViewController.swift in Sources */,
 				3C76A6392007D97B00D790CD /* CustomViewPresentationController.swift in Sources */,
