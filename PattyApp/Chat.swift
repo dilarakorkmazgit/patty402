@@ -136,6 +136,7 @@ class Chat: RootViewController, UITableViewDelegate, UITableViewDataSource {
         let message = messages[indexPath.row]
         
         cell.message = message
+        
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -15,7 +15,7 @@ class Pet: NSObject {
     var color : String?
     var gender : String?
     var health : String?
-    var photo : URL?
+    var photo : String?
     var tur : String?
     var gendery : String?
     var petname : String?

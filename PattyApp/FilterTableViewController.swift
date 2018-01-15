@@ -42,7 +42,7 @@ class FilterTableViewController: RootViewController, UITableViewDataSource, UITa
                 petInfo.age = dictionary["pet"]!["age"] as? Int
                 petInfo.color = dictionary["pet"]!["color"] as? String
                 petInfo.health = dictionary["pet"]!["health"] as? String
-                petInfo.photo = dictionary["pet"]!["photo"] as? URL
+                petInfo.photo = dictionary["pet"]!["photo"] as? String
 
                 self.pets.append(petInfo)
                 
@@ -61,7 +61,8 @@ class FilterTableViewController: RootViewController, UITableViewDataSource, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableViewForPet.register(UserCell.self, forCellReuseIdentifier: cellPets)
+
         self.title = "Filtre"
         self.tableViewForPet.delegate = self
         self.tableViewForPet.dataSource = self
@@ -73,7 +74,7 @@ class FilterTableViewController: RootViewController, UITableViewDataSource, UITa
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        tableViewForPet.register(UserCell.self, forCellReuseIdentifier: cellPets)
     }
 
     // MARK: - Table view data source
@@ -88,14 +89,24 @@ class FilterTableViewController: RootViewController, UITableViewDataSource, UITa
         
         return pets.count
     }
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 72
+    }
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: .subtitle,reuseIdentifier: cellPets)
+        let cell = tableViewForPet.dequeueReusableCell(withIdentifier: cellPets, for: indexPath) as! UserCell
         
         
-        cell.textLabel?.text = pets[indexPath.row].petname
+        let pet = self.pets[indexPath.row]
         
+        cell.textLabel?.text = pet.petname
+        cell.detailTextLabel?.text = pet.tur
+
+        if let profileImageUrl = pet.photo {
+            
+            cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
+        }
         return cell
     }
 
