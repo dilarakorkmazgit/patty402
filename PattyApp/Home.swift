@@ -22,6 +22,8 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
     @IBAction func TappedswitchButton(_ sender: Any) {
     }
     
+    
+    
     @IBOutlet weak var switchtoGeneralHome: UIButton!
     
     @IBOutlet weak var burgerMenuView: UIView!
@@ -51,6 +53,7 @@ class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UI
         super.viewDidLoad()
         
         self.mapView.delegate = self;
+        ProfileImage.image =  UIImage(named:"KOPEK-ICON")!
         
         
         ProfileImage.layer.cornerRadius = ProfileImage.frame.size.width / 2

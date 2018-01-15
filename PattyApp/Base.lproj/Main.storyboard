@@ -814,21 +814,21 @@
                                     <constraint firstAttribute="width" constant="140" id="Ve9-45-BSz"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U8-ha-zwb">
-                                <rect key="frame" x="147" y="579" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="map-e-giden"/>
-                                <connections>
-                                    <action selector="TappedswitchButton:" destination="qdY-FY-Fon" eventType="touchUpInside" id="Qdw-Qr-x1T"/>
-                                    <segue destination="wLh-V0-ZmK" kind="presentation" identifier="showAction" id="rma-WX-x2V"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNV-QH-p9a">
                                 <rect key="frame" x="325" y="597" width="34" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="HERE-ICON"/>
                                 <connections>
                                     <action selector="currentLocation:" destination="qdY-FY-Fon" eventType="touchUpInside" id="7gH-v0-sod"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1U8-ha-zwb">
+                                <rect key="frame" x="148" y="548" width="102" height="111"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="map-e-giden"/>
+                                <connections>
+                                    <action selector="TappedswitchButton:" destination="qdY-FY-Fon" eventType="touchUpInside" id="Qdw-Qr-x1T"/>
+                                    <segue destination="wLh-V0-ZmK" kind="presentation" identifier="showAction" id="rma-WX-x2V"/>
                                 </connections>
                             </button>
                         </subviews>
