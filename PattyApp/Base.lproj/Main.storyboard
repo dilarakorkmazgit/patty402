@@ -187,22 +187,15 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Büyük harf,küçük harf,sayı ve simge." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiz-y2-bxp">
-                                <rect key="frame" x="113" y="336" width="148" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="10"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parola rn az 8 karakterden oluşmalı ve içinde şunlardan en az ikisi bulunmalıdır:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6i-ev-uwH">
                                 <rect key="frame" x="27" y="307" width="320" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="10"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1C-oz-ggx">
-                                <rect key="frame" x="100" y="365" width="174" height="37"/>
+                                <rect key="frame" x="100" y="358" width="174" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="21"/>
                                 <state key="normal" title="KAYDOL" backgroundImage="BUTON-TURUNCU">
@@ -219,7 +212,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Büyük harf,küçük harf,sayı ve simge." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiz-y2-bxp">
+                                <rect key="frame" x="113" y="323" width="148" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="firstnameLabel" destination="7OX-bU-UBS" id="umf-H1-bz2"/>
@@ -310,7 +311,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="BOK-ICON" translatesAutoresizingMaskIntoConstraints="NO" id="4AQ-o2-ECb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bok" translatesAutoresizingMaskIntoConstraints="NO" id="4AQ-o2-ECb">
                                 <rect key="frame" x="173" y="327" width="29" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -321,7 +322,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PATTY-LOGO-RENKLI" translatesAutoresizingMaskIntoConstraints="NO" id="j3S-9E-ZCw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PATTY-LOGO" translatesAutoresizingMaskIntoConstraints="NO" id="j3S-9E-ZCw">
                                 <rect key="frame" x="105" y="78" width="165" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -330,7 +331,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
                                 <state key="normal" title="Paralona mı unuttun ?">
-                                    <color key="titleColor" red="1" green="0.36078431372549019" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="feS-Ra-oZR" kind="show" id="LaH-WU-OdQ"/>
@@ -1272,7 +1273,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BOK-ICON" width="75" height="77"/>
         <image name="BUTON-BEYAZ" width="791" height="128"/>
         <image name="BUTON-TURUNCU" width="791" height="128"/>
         <image name="HERE-ICON" width="375" height="375"/>
@@ -1280,6 +1280,7 @@
         <image name="KOPEK-ICON" width="172" height="143"/>
         <image name="PATTY-LOGO" width="1082" height="492"/>
         <image name="PATTY-LOGO-RENKLI" width="1082" height="492"/>
+        <image name="bok" width="75" height="77"/>
         <image name="chat-buton" width="460" height="432"/>
         <image name="cinsiyet-icon" width="97" height="94"/>
         <image name="es-bul-buton" width="460" height="432"/>
@@ -1298,6 +1299,6 @@
         <segue reference="Bzz-Nb-hIG"/>
         <segue reference="b3Q-wU-OBD"/>
         <segue reference="kYo-Op-ASQ"/>
-        <segue reference="YFf-Q5-tSo"/>
+        <segue reference="iRc-WG-sBR"/>
     </inferredMetricsTieBreakers>
 </document>

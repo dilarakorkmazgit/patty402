@@ -31,7 +31,7 @@ class CreateAccountVC: UIViewController {
         
         //fit the background image
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "BACKGROUND.login")
+        backgroundImage.image = UIImage(named: "back-turuncu-")
         backgroundImage.contentMode =  UIViewContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         

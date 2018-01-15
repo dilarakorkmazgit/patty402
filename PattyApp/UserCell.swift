@@ -15,7 +15,6 @@ class UserCell: UITableViewCell {
         
         didSet{
         
-            
             setupNameAndProfileImage()
             
             detailTextLabel?.text = message?.text
@@ -28,9 +27,6 @@ class UserCell: UITableViewCell {
             }
            // timeLabel.text = "HH:MM:SS"
 
-            
-        
-        
         }
     }
     
