@@ -39,6 +39,7 @@
 		59A7133F1FF96EB2005FE0B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A7133E1FF96EB2005FE0B5 /* User.swift */; };
 		59BE0E101F96A971008DD52B /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BE0E0F1F96A971008DD52B /* LoginVC.swift */; };
 		59C29D831FFD99DC005245E9 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C29D821FFD99DC005245E9 /* ChatMessageCell.swift */; };
+		59D1E8E9200D4D9700CBD6CB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D1E8E8200D4D9700CBD6CB /* DetailViewController.swift */; };
 		59E383881FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
 		59E383891FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
 		59E3838A1FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
@@ -107,6 +108,7 @@
 		59C29D821FFD99DC005245E9 /* ChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		59C98F8E1F95428C0000F65D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		59C98F921F9548A40000F65D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		59D1E8E8200D4D9700CBD6CB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pinnedLocation.swift; sourceTree = "<group>"; };
 		59E531D21FFAEE4500CE4DAD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		59FB4131200D037C00CF233D /* Veterinery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Veterinery.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				3C675445200927E3001C7010 /* RootTableViewController.swift */,
 				3CBAC7462009870C002E56D7 /* VeterineryViewController.swift */,
 				59FB4131200D037C00CF233D /* Veterinery.swift */,
+				59D1E8E8200D4D9700CBD6CB /* DetailViewController.swift */,
 			);
 			path = PattyApp;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				3CBAC7472009870C002E56D7 /* VeterineryViewController.swift in Sources */,
 				FC41A1431FEBE62000CE2E6C /* PPointAnnotation.swift in Sources */,
 				3C832F461F94C96400EC8390 /* AppDelegate.swift in Sources */,
+				59D1E8E9200D4D9700CBD6CB /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

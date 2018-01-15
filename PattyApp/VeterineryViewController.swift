@@ -76,6 +76,18 @@ class VeterineryViewController: RootViewController, UITableViewDataSource, UITab
      func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 72
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        
+       // let DvC = storyboard.instantiateViewController(withIdentifier: <#T##String#>)
+        
+       // storyboard.getImage =  self.vet[indexPath.row]
+      
+     //   self.navigationController?.pushViewController(DvC, animated: true)
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
