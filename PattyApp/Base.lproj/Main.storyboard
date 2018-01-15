@@ -998,11 +998,30 @@
                     <connections>
                         <outlet property="petNameLabel" destination="szv-KP-mGP" id="nLW-Ue-kU4"/>
                         <outlet property="tableViewForPet" destination="teC-MX-XKS" id="aj3-zz-XdX"/>
+                        <segue destination="QYi-Lc-Eqv" kind="show" identifier="segue" id="6Ux-xJ-5n3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZZ-Vu-jPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6838" y="10"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bsc-qs-mpG">
+            <objects>
+                <viewController id="QYi-Lc-Eqv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AA7-7t-GWq"/>
+                        <viewControllerLayoutGuide type="bottom" id="8rd-sP-tv0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6zm-gn-dpN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fbx-cR-Irv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7569" y="10"/>
         </scene>
         <!--Profile-->
         <scene sceneID="5fc-Bk-vjm">
