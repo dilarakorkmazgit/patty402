@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PattyApp/Profile.swift"
-            timestampString = "537642956.4038579"
+            timestampString = "537749303.2060601"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "Profile"
             landmarkType = "3">
          </BreakpointContent>

@@ -10,6 +10,7 @@
 		272926C0ADAABDC88FE44877 /* Pods_PattyAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08841108E2B19C64A20469D8 /* Pods_PattyAppUITests.framework */; };
 		3B45CE98B24B163B2567D721 /* Pods_PattyAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036190BF56667C874DCB8773 /* Pods_PattyAppTests.framework */; };
 		3C1365D52007B4350036721C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1365D42007B4350036721C /* WelcomeViewController.swift */; };
+		3C1F2328200D662C00FA029E /* FilteringCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1F2327200D662C00FA029E /* FilteringCellViewController.swift */; };
 		3C2BF6A11FEFCF64001EE084 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2BF6A01FEFCF64001EE084 /* Profile.swift */; };
 		3C5217071F979FF200F52725 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5217061F979FF200F52725 /* CreateAccountVC.swift */; };
 		3C67544420091807001C7010 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C67544320091807001C7010 /* RootViewController.swift */; };
@@ -71,6 +72,7 @@
 		28B4B1C740B46D3B26C2F60F /* Pods-PattyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyApp/Pods-PattyApp.release.xcconfig"; sourceTree = "<group>"; };
 		38E564C490E80FCD1144FF30 /* Pods-PattyAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppTests/Pods-PattyAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		3C1365D42007B4350036721C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		3C1F2327200D662C00FA029E /* FilteringCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringCellViewController.swift; sourceTree = "<group>"; };
 		3C2BF6A01FEFCF64001EE084 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		3C5217061F979FF200F52725 /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		3C67544320091807001C7010 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				3CBAC7462009870C002E56D7 /* VeterineryViewController.swift */,
 				59FB4131200D037C00CF233D /* Veterinery.swift */,
 				59D1E8E8200D4D9700CBD6CB /* DetailViewController.swift */,
+				3C1F2327200D662C00FA029E /* FilteringCellViewController.swift */,
 			);
 			path = PattyApp;
 			sourceTree = "<group>";
@@ -592,6 +595,7 @@
 				3C2BF6A11FEFCF64001EE084 /* Profile.swift in Sources */,
 				59C29D831FFD99DC005245E9 /* ChatMessageCell.swift in Sources */,
 				3CBAC7472009870C002E56D7 /* VeterineryViewController.swift in Sources */,
+				3C1F2328200D662C00FA029E /* FilteringCellViewController.swift in Sources */,
 				FC41A1431FEBE62000CE2E6C /* PPointAnnotation.swift in Sources */,
 				3C832F461F94C96400EC8390 /* AppDelegate.swift in Sources */,
 				59D1E8E9200D4D9700CBD6CB /* DetailViewController.swift in Sources */,
