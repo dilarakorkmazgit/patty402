@@ -34,7 +34,7 @@ class ChatInfo: UITableViewController {
                 
                 let user = User()
                 
-                user.userId = dictionary["userId"] as! String
+                user.userId = dictionary["userId"] as? String
                 user.firstname = dictionary["firstname"] as! String
                 user.lastname = dictionary["lastname"] as! String
                 user.email = dictionary["email"] as! String
