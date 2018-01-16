@@ -98,6 +98,7 @@ class Profile: RootViewController{
             let pattyHealth = value?["health"] as? String ?? ""
 
             
+            
             self.ProfileImage.sd_setImage(with: URL(string: profileImageURL ), placeholderImage: UIImage(named: "placeholder.png"))
            
             self.petNameLabel.text = pattyName.description
