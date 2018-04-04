@@ -36,6 +36,16 @@ class WelcomeViewController: UIViewController {
         }
         
     }
+    @IBAction func goToRecomendation(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier :"RecoView") as! RootViewController
+        
+        self.dismiss(animated: true) {
+            self.prVC.navigationController?.pushViewController(viewController, animated: true)
+        }
+
+    }
     
     @IBAction func goToFilteringTableView(_ sender: Any) {
         

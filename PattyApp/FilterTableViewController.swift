@@ -31,7 +31,6 @@ class FilterTableViewController: RootViewController, UITableViewDataSource, UITa
             if let dictionary = snapshot.value as? [String: AnyObject] {
                 //print(dictionary["pet"])
                 let petInfo = Pet()
-                print("ggggjh")
 
                 // get pet info
                
@@ -46,8 +45,7 @@ class FilterTableViewController: RootViewController, UITableViewDataSource, UITa
 
                 self.pets.append(petInfo)
                 
-                print("ggh")
-               
+              
                 
                 
                  DispatchQueue.main.async(execute: {

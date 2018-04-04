@@ -80,12 +80,7 @@ class VeterineryViewController: RootViewController, UITableViewDataSource, UITab
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        
-       // let DvC = storyboard.instantiateViewController(withIdentifier: <#T##String#>)
-        
-       // storyboard.getImage =  self.vet[indexPath.row]
-      
-     //   self.navigationController?.pushViewController(DvC, animated: true)
+     
         
     }
     
