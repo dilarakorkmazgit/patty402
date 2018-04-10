@@ -18,7 +18,7 @@ import SDWebImage
 class Home: RootViewController, CLLocationManagerDelegate, MKMapViewDelegate ,UIViewControllerTransitioningDelegate{
     
     let customPresentationController = CustomViewPresentationController(direction: .top)
-    
+
     @IBAction func TappedswitchButton(_ sender: Any) {
     }
     
