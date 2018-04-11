@@ -35,6 +35,8 @@
 		596D47ED1FFC61370061AE5C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 596D47EC1FFC61370061AE5C /* UserCell.swift */; };
 		5979CE211FFC289C00FB7BC2 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979CE201FFC289C00FB7BC2 /* ChatLogController.swift */; };
 		5979CE231FFC4AD800FB7BC2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5979CE221FFC4AD800FB7BC2 /* Message.swift */; };
+		59901D28207E5BCC00257D72 /* filterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59901D27207E5BCC00257D72 /* filterVC.swift */; };
+		59901D2A207E5DC100257D72 /* filterTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59901D29207E5DC100257D72 /* filterTableView.swift */; };
 		59972FCE1FBE1EA400CD6C57 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59972FCD1FBE1EA400CD6C57 /* Home.swift */; };
 		59A34E80207CFA5200AA6869 /* BakiciVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A34E7F207CFA5200AA6869 /* BakiciVC.swift */; };
 		59A7133B1FF95C95005FE0B5 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A7133A1FF95C95005FE0B5 /* Chat.swift */; };
@@ -104,6 +106,8 @@
 		596D47EC1FFC61370061AE5C /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		5979CE201FFC289C00FB7BC2 /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		5979CE221FFC4AD800FB7BC2 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		59901D27207E5BCC00257D72 /* filterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterVC.swift; sourceTree = "<group>"; };
+		59901D29207E5DC100257D72 /* filterTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterTableView.swift; sourceTree = "<group>"; };
 		59972FCD1FBE1EA400CD6C57 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		59A34E7F207CFA5200AA6869 /* BakiciVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BakiciVC.swift; sourceTree = "<group>"; };
 		59A7133A1FF95C95005FE0B5 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 				3C1F2327200D662C00FA029E /* FilteringCellViewController.swift */,
 				594B4D852074FB8D00C5CCA9 /* RecomendationVC.swift */,
 				59A34E7F207CFA5200AA6869 /* BakiciVC.swift */,
+				59901D27207E5BCC00257D72 /* filterVC.swift */,
+				59901D29207E5DC100257D72 /* filterTableView.swift */,
 			);
 			path = PattyApp;
 			sourceTree = "<group>";
@@ -584,6 +590,7 @@
 				594B4D862074FB8D00C5CCA9 /* RecomendationVC.swift in Sources */,
 				59A7133B1FF95C95005FE0B5 /* Chat.swift in Sources */,
 				3C832F4E1F94C96400EC8390 /* PattyApp.xcdatamodeld in Sources */,
+				59901D28207E5BCC00257D72 /* filterVC.swift in Sources */,
 				5979CE231FFC4AD800FB7BC2 /* Message.swift in Sources */,
 				3C832F481F94C96400EC8390 /* ViewController.swift in Sources */,
 				59A7133D1FF95DC3005FE0B5 /* ChatInfo.swift in Sources */,
@@ -602,6 +609,7 @@
 				3C2BF6A11FEFCF64001EE084 /* Profile.swift in Sources */,
 				59C29D831FFD99DC005245E9 /* ChatMessageCell.swift in Sources */,
 				3CBAC7472009870C002E56D7 /* VeterineryViewController.swift in Sources */,
+				59901D2A207E5DC100257D72 /* filterTableView.swift in Sources */,
 				3C1F2328200D662C00FA029E /* FilteringCellViewController.swift in Sources */,
 				FC41A1431FEBE62000CE2E6C /* PPointAnnotation.swift in Sources */,
 				3C832F461F94C96400EC8390 /* AppDelegate.swift in Sources */,

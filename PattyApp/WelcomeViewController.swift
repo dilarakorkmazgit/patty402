@@ -50,7 +50,7 @@ class WelcomeViewController: UIViewController {
     @IBAction func goToFilteringTableView(_ sender: Any) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(withIdentifier :"filterView") as! RootViewController
+        let viewController = storyboard.instantiateViewController(withIdentifier :"filterView") as! UIViewController
         
         self.dismiss(animated: true) {
             self.prVC.navigationController?.pushViewController(viewController, animated: true)
