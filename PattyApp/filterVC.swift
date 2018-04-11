@@ -19,10 +19,10 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var count2 = 3
     var count3 = 4
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.tableView_1.delegate = self
         self.tableView_1.dataSource = self
         
@@ -31,10 +31,10 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         self.tableView_2.delegate = self
         self.tableView_2.dataSource = self
-    
-    
+        
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,7 +44,7 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         if (tableView == self.tableView_1) {
             var cell: cinsiyetTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView1") as! cinsiyetTableView
             cell.labelText1.text = "a \(indexPath.row) "
-                return cell
+            return cell
         }
         else if(tableView == self.tableView_2) {
             var cell: turTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView2") as! turTableView
@@ -56,7 +56,7 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             cell.labelText3.text = "c \(indexPath.row) "
             return cell
         }
-    
+        
     }
     
     
@@ -65,23 +65,23 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return count
         }else if(tableView == self.tableView_2) {
             return count2
-
+            
         }else if(tableView == self.tableView_3){
             return count3
         }
         return count
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         if  (tableView == self.tableView_1) {
-            
-                if(tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark) {
-                        tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
-                }
-                else {
-                    tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark
-            }
-            }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if  (tableView == self.tableView_1 && tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark ) {
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+        }
+        else {
+            tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark
+            
+            
+        }
+        
     }
 }
 
