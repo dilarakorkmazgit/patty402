@@ -29,8 +29,8 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.tableView_2.delegate = self
         self.tableView_2.dataSource = self
         
-        self.tableView_2.delegate = self
-        self.tableView_2.dataSource = self
+        self.tableView_3.delegate = self
+        self.tableView_3.dataSource = self
         
         
     }
@@ -41,9 +41,9 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         if (tableView == self.tableView_1) {
             var cell: cinsiyetTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView1") as! cinsiyetTableView
-            cell.labelText1.text = "a \(indexPath.row) "
             return cell
         }
         else if(tableView == self.tableView_2) {
@@ -51,10 +51,11 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             cell.labelText2.text = "b \(indexPath.row) "
             return cell
         }
-        else{
+        else {
             var cell: yasTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView3") as! yasTableView
             cell.labelText3.text = "c \(indexPath.row) "
             return cell
+            
         }
         
     }
@@ -73,14 +74,42 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if  (tableView == self.tableView_1 && tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark ) {
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+        
+        if(tableView == self.tableView_1) {
+            if(tableView_1.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.none) {
+                tableView_1.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+
+            }
+            else{
+                tableView_1.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+
+            }
+        
         }
-        else {
-            tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark
-            
+       else if(tableView == self.tableView_2) {
+            if(tableView_2.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.none) {
+                tableView_2.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+                
+            }
+            else{
+                tableView_2.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+                
+            }
             
         }
+        else if(tableView == self.tableView_3) {
+            if(tableView_3.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.none) {
+                tableView_3.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+                
+            }
+            else{
+                tableView_3.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+                
+            }
+            
+        }
+       
+        
         
     }
 }
