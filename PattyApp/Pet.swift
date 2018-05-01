@@ -19,6 +19,5 @@ class Pet: NSObject {
     var tur : String?
     var gendery : String?
     var petname : String?
-
     
 }

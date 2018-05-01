@@ -19,9 +19,13 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let tur = ["Pug","Terrier","Dogo","Doberman","Rottwailer","Beagle","Buldog","Danua","Kaniş","Chihuahua","Boxor","Cow-cow","Pitbull","Akita","Pomeranian","Bulmastif"]
     let age = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"]
     
-    
     var pet = [Pet]()
-
+    
+    var checkedItemsForGender = [String]()
+    var checkedItemsForAge = [String]()
+    var checkedItemsForTur = [String]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +37,8 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         self.tableView_3.delegate = self
         self.tableView_3.dataSource = self
+      
+        
         observeGender()
         
     }
@@ -42,23 +48,30 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-     
+        
+        
         if (tableView == self.tableView_1) {
             var cell: cinsiyetTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView1") as! cinsiyetTableView
-
+            
             cell.labelText1.text = cinsiyet[indexPath.row]
+           // cell.accessoryType = .none
+
             return cell
         }
         else if(tableView == self.tableView_2) {
             var cell: turTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView2") as! turTableView
             cell.labelText2.text =  tur[indexPath.row]
+           // cell.accessoryType = .none
+
             return cell
         }
         else {
             var cell: yasTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView3") as! yasTableView
             cell.labelText3.text =  age[indexPath.row]
+          //  cell.accessoryType = .none
+
             return cell
             
         }
@@ -73,7 +86,7 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 let pet = Pet()
                 
                 pet.gender = dictionary["gender"] as? String
-              
+                
                 
                 self.pet.append(pet)
                 
@@ -98,44 +111,74 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return 0
     }
     
+    @IBAction func filteringButton(_ sender: Any) {
+        
+        print(checkedItemsForAge)
+        print(checkedItemsForGender)
+        print(checkedItemsForTur)
+        
+        
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+     
+
         if(tableView == self.tableView_1) {
+
+            
             if(tableView_1.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.none) {
                 tableView_1.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
-
+                
+                checkedItemsForGender.append(cinsiyet[indexPath.row])
             }
             else{
                 tableView_1.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
 
+                if let index = checkedItemsForGender.index(of: cinsiyet[indexPath.row]) {
+                    checkedItemsForGender.remove(at: index);
+
+                }
+                
             }
-        
         }
-       else if(tableView == self.tableView_2) {
+        else if(tableView == self.tableView_2) {
             if(tableView_2.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.none) {
                 tableView_2.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+                checkedItemsForTur.append(tur[indexPath.row])
+
                 
             }
             else{
                 tableView_2.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
-                
+                if let index = checkedItemsForTur.index(of: tur[indexPath.row]) {
+                    checkedItemsForTur.remove(at: index);
+
+                }
+
             }
             
         }
         else if(tableView == self.tableView_3) {
             if(tableView_3.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.none) {
                 tableView_3.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+                checkedItemsForAge.append(age[indexPath.row])
                 
+
             }
             else{
                 tableView_3.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
-                
+                if let index = checkedItemsForAge.index(of: age[indexPath.row]) {
+                    checkedItemsForAge.remove(at: index);
+
+                }
+
             }
             
         }
-       
-        
         
     }
+    
+    
 }
 
