@@ -25,7 +25,9 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var checkedItemsForAge = [String]()
     var checkedItemsForTur = [String]()
     
-    var arr_selectedIndexPath = NSMutableArray()
+    var arr_selectedIndexPath1 = NSMutableArray()
+    var arr_selectedIndexPath2 = NSMutableArray()
+    var arr_selectedIndexPath3 = NSMutableArray()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +41,7 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.tableView_3.delegate = self
         self.tableView_3.dataSource = self
       
-        
-        observeGender()
-        
+                
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,70 +54,63 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         
         if (tableView == self.tableView_1) {
-            var cell: cinsiyetTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView1") as! cinsiyetTableView
-            cell.labelText1.text = cinsiyet[indexPath.row]
+            var cell1: cinsiyetTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView1") as! cinsiyetTableView
+            cell1.labelText1.text = cinsiyet[indexPath.row]
 
-            if (arr_selectedIndexPath.contains(indexPath)) {
-                cell.accessoryType = .checkmark
+            if (arr_selectedIndexPath1.contains(indexPath)) {
+                cell1.accessoryType = .checkmark
             }
             else {
-                cell.accessoryType = .none
+                cell1.accessoryType = .none
+               
+
+
+                
             }
 
-            return cell
+            return cell1
         }
         else if(tableView == self.tableView_2) {
-            var cell: turTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView2") as! turTableView
-            cell.labelText2.text =  tur[indexPath.row]
+            var cell2: turTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView2") as! turTableView
+            cell2.labelText2.text =  tur[indexPath.row]
  
             
-            if (arr_selectedIndexPath.contains(indexPath)) {
-                cell.accessoryType = .checkmark
+            if (arr_selectedIndexPath2.contains(indexPath)) {
+                cell2.accessoryType = .checkmark
+
             }
-            else {
-                cell.accessoryType = .none
+            else{
+                cell2.accessoryType = .none
+                
             }
             
 
-            return cell
+            return cell2
+        }
+        else if(tableView == self.tableView_3) {
+            var cell3: yasTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView3") as! yasTableView
+            cell3.labelText3.text =  age[indexPath.row]
+
+            if (arr_selectedIndexPath3.contains(indexPath)) {
+                cell3.accessoryType = .checkmark
+
+            }
+            else {
+                cell3.accessoryType = .none
+               
+                
+            }
+            
+            return cell3
+            
         }
         else {
-            var cell: yasTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView3") as! yasTableView
-            cell.labelText3.text =  age[indexPath.row]
-
-            if (arr_selectedIndexPath.contains(indexPath)) {
-                cell.accessoryType = .checkmark
-            }
-            else {
-                cell.accessoryType = .none
-            }
-            
-
-            return cell
-            
+            var cell4: cinsiyetTableView = tableView.dequeueReusableCell(withIdentifier: "cellTableView1") as! cinsiyetTableView
+            return cell4
         }
         
     }
-    func observeGender(){
-        
-        Database.database().reference().child("user").child("pet").observe(.childAdded, with: {(snapshot) in
-            
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                
-                let pet = Pet()
-                
-                pet.gender = dictionary["gender"] as? String
-                
-                
-                self.pet.append(pet)
-                
-                DispatchQueue.main.async(execute: {
-                    self.tableView_1.reloadData()
-                })
-            }
-            
-        } , withCancel: nil)
-    }
+    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -142,16 +135,60 @@ class filterVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if arr_selectedIndexPath.contains(indexPath) {
-            arr_selectedIndexPath.remove(indexPath)
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+        if(tableView == self.tableView_1) {
+            if arr_selectedIndexPath1.contains(indexPath) {
+                arr_selectedIndexPath1.remove(indexPath)
+                if let index = checkedItemsForGender.index(of: cinsiyet[indexPath.row]) {
+                    checkedItemsForGender.remove(at: index);
+                    
+                }
+
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            }
+            else {
+                arr_selectedIndexPath1.add(indexPath)
+                checkedItemsForGender.append(cinsiyet[indexPath.row])
+
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+            }
+
+            
         }
-        else {
-            arr_selectedIndexPath.add(indexPath)
-            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+        else if(tableView == self.tableView_2) {
+            if arr_selectedIndexPath2.contains(indexPath) {
+                arr_selectedIndexPath2.remove(indexPath)
+                if let index = checkedItemsForTur.index(of: tur[indexPath.row]) {
+                    checkedItemsForTur.remove(at: index);
+                    
+                }
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            }
+            else {
+                arr_selectedIndexPath2.add(indexPath)
+                checkedItemsForTur.append(tur[indexPath.row])
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+            }
+            
+            
         }
-        
+        else if(tableView == self.tableView_3) {
+            if arr_selectedIndexPath3.contains(indexPath) {
+                arr_selectedIndexPath3.remove(indexPath)
+                if let index = checkedItemsForAge.index(of: age[indexPath.row]) {
+                    checkedItemsForAge.remove(at: index);
+                    
+                }
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            }
+            else {
+                arr_selectedIndexPath3.add(indexPath)
+                checkedItemsForAge.append(age[indexPath.row])
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+            }
+            
+            
+        }
+
     }
     
 }

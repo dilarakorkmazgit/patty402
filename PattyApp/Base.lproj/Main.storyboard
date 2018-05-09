@@ -1417,6 +1417,9 @@
                                 <rect key="frame" x="143" y="358" width="88" height="146"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sahiplen"/>
+                                <connections>
+                                    <segue destination="FGy-Q6-Vqx" kind="show" id="nxz-sf-q2T"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1580,6 +1583,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkY-Ly-fMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8053.6000000000004" y="3329.6851574212897"/>
+        </scene>
+        <!--SahipsizVC-->
+        <scene sceneID="nX9-ls-H2S">
+            <objects>
+                <tableViewController id="FGy-Q6-Vqx" customClass="SahipsizVC" customModule="PattyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mDZ-YA-dPv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uQQ-x7-Iyq">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uQQ-x7-Iyq" id="Lzh-fi-4q8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FGy-Q6-Vqx" id="awB-uD-uqy"/>
+                            <outlet property="delegate" destination="FGy-Q6-Vqx" id="liX-8Z-Ibd"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="sahipsizTableView" destination="mDZ-YA-dPv" id="2EQ-WS-W4m"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hhm-rZ-4aZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7999" y="4039"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sj9-Oy-6B6">

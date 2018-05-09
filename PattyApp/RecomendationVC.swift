@@ -86,8 +86,6 @@ class RecomendationVC: RootViewController, UITableViewDataSource, UITableViewDel
                     
                 }
                 
-                
-                
                 DispatchQueue.main.async(execute: {
                     self.TableViewForVet.reloadData()
                 })
@@ -114,7 +112,6 @@ class RecomendationVC: RootViewController, UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
         
         
     }
