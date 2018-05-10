@@ -40,7 +40,7 @@
 		59901D28207E5BCC00257D72 /* filterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59901D27207E5BCC00257D72 /* filterVC.swift */; };
 		59901D2A207E5DC100257D72 /* filterTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59901D29207E5DC100257D72 /* filterTableView.swift */; };
 		59972FCE1FBE1EA400CD6C57 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59972FCD1FBE1EA400CD6C57 /* Home.swift */; };
-		59A34E80207CFA5200AA6869 /* BakiciVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A34E7F207CFA5200AA6869 /* BakiciVC.swift */; };
+		59A21FF920A43EE10067FFC6 /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A21FF820A43EE10067FFC6 /* DLRadioButton.m */; };
 		59A7133B1FF95C95005FE0B5 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A7133A1FF95C95005FE0B5 /* Chat.swift */; };
 		59A7133D1FF95DC3005FE0B5 /* ChatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A7133C1FF95DC3005FE0B5 /* ChatInfo.swift */; };
 		59A7133F1FF96EB2005FE0B5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A7133E1FF96EB2005FE0B5 /* User.swift */; };
@@ -51,6 +51,11 @@
 		59E383891FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
 		59E3838A1FDB0FDC005F72F8 /* pinnedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */; };
 		59E531D31FFAEE4500CE4DAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E531D21FFAEE4500CE4DAD /* Extensions.swift */; };
+		59EB19A620A443F0005E2E2A /* BakiciViewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59EB19A520A443F0005E2E2A /* BakiciViewCon.swift */; };
+		59EB19B020A45306005E2E2A /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EB19A920A45306005E2E2A /* BEMAnimationManager.m */; };
+		59EB19B120A45306005E2E2A /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EB19AB20A45306005E2E2A /* BEMCheckBox.m */; };
+		59EB19B220A45306005E2E2A /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EB19AD20A45306005E2E2A /* BEMCheckBoxGroup.m */; };
+		59EB19B320A45306005E2E2A /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59EB19AF20A45306005E2E2A /* BEMPathManager.m */; };
 		59FB4132200D037C00CF233D /* Veterinery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FB4131200D037C00CF233D /* Veterinery.swift */; };
 		FC41A1431FEBE62000CE2E6C /* PPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC41A1421FEBE62000CE2E6C /* PPointAnnotation.swift */; };
 /* End PBXBuildFile section */
@@ -113,7 +118,9 @@
 		59901D27207E5BCC00257D72 /* filterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterVC.swift; sourceTree = "<group>"; };
 		59901D29207E5DC100257D72 /* filterTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterTableView.swift; sourceTree = "<group>"; };
 		59972FCD1FBE1EA400CD6C57 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		59A34E7F207CFA5200AA6869 /* BakiciVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BakiciVC.swift; sourceTree = "<group>"; };
+		59A21FF620A43EE00067FFC6 /* PattyApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PattyApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		59A21FF720A43EE10067FFC6 /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		59A21FF820A43EE10067FFC6 /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		59A7133A1FF95C95005FE0B5 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		59A7133C1FF95DC3005FE0B5 /* ChatInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatInfo.swift; sourceTree = "<group>"; };
 		59A7133E1FF96EB2005FE0B5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -125,6 +132,16 @@
 		59D1E8E8200D4D9700CBD6CB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		59E383871FDB0FDC005F72F8 /* pinnedLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pinnedLocation.swift; sourceTree = "<group>"; };
 		59E531D21FFAEE4500CE4DAD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		59EB19A520A443F0005E2E2A /* BakiciViewCon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BakiciViewCon.swift; sourceTree = "<group>"; };
+		59EB19A820A45306005E2E2A /* BEMAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAnimationManager.h; sourceTree = "<group>"; };
+		59EB19A920A45306005E2E2A /* BEMAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAnimationManager.m; sourceTree = "<group>"; };
+		59EB19AA20A45306005E2E2A /* BEMCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBox.h; sourceTree = "<group>"; };
+		59EB19AB20A45306005E2E2A /* BEMCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBox.m; sourceTree = "<group>"; };
+		59EB19AC20A45306005E2E2A /* BEMCheckBoxGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCheckBoxGroup.h; sourceTree = "<group>"; };
+		59EB19AD20A45306005E2E2A /* BEMCheckBoxGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBoxGroup.m; sourceTree = "<group>"; };
+		59EB19AE20A45306005E2E2A /* BEMPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMPathManager.h; sourceTree = "<group>"; };
+		59EB19AF20A45306005E2E2A /* BEMPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPathManager.m; sourceTree = "<group>"; };
+		59EB19B420A45360005E2E2A /* CheckMarkHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CheckMarkHeader.h; path = ../CheckMarkHeader.h; sourceTree = "<group>"; };
 		59FB4131200D037C00CF233D /* Veterinery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Veterinery.swift; sourceTree = "<group>"; };
 		82AF6362E7D5EA0EFD43663C /* Pods-PattyAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppUITests/Pods-PattyAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A8B3B6A59C428E0ED63437E3 /* Pods-PattyAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PattyAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PattyAppTests/Pods-PattyAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,8 +207,8 @@
 				59BE0E0C1F96A32C008DD52B /* PattyApp.entitlements */,
 				3C832F761F94D49A00EC8390 /* GoogleService-Info.plist */,
 				3C832F541F94C96400EC8390 /* Info.plist */,
+				59EB19B420A45360005E2E2A /* CheckMarkHeader.h */,
 				3C832F451F94C96400EC8390 /* AppDelegate.swift */,
-				59A34E7F207CFA5200AA6869 /* BakiciVC.swift */,
 				59A7133A1FF95C95005FE0B5 /* Chat.swift */,
 				59A7133C1FF95DC3005FE0B5 /* ChatInfo.swift */,
 				5979CE201FFC289C00FB7BC2 /* ChatLogController.swift */,
@@ -219,15 +236,20 @@
 				59A7133E1FF96EB2005FE0B5 /* User.swift */,
 				596D47EC1FFC61370061AE5C /* UserCell.swift */,
 				59FB4131200D037C00CF233D /* Veterinery.swift */,
+				59A21FF720A43EE10067FFC6 /* DLRadioButton.h */,
+				59A21FF820A43EE10067FFC6 /* DLRadioButton.m */,
 				3CBAC7462009870C002E56D7 /* VeterineryViewController.swift */,
 				3C832F471F94C96400EC8390 /* ViewController.swift */,
 				3C1365D42007B4350036721C /* WelcomeViewController.swift */,
 				3C832F4F1F94C96400EC8390 /* Assets.xcassets */,
 				3C832F511F94C96400EC8390 /* LaunchScreen.storyboard */,
+				59EB19A720A45306005E2E2A /* Classes */,
 				3C832F491F94C96400EC8390 /* Main.storyboard */,
 				3C832F4C1F94C96400EC8390 /* PattyApp.xcdatamodeld */,
 				590C0455209B16D900109895 /* SahipsizVC.swift */,
 				590C0457209B1A2F00109895 /* SahipsizPet.swift */,
+				59A21FF620A43EE00067FFC6 /* PattyApp-Bridging-Header.h */,
+				59EB19A520A443F0005E2E2A /* BakiciViewCon.swift */,
 			);
 			path = PattyApp;
 			sourceTree = "<group>";
@@ -248,6 +270,21 @@
 				3C832F6A1F94C96500EC8390 /* Info.plist */,
 			);
 			path = PattyAppUITests;
+			sourceTree = "<group>";
+		};
+		59EB19A720A45306005E2E2A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				59EB19A820A45306005E2E2A /* BEMAnimationManager.h */,
+				59EB19A920A45306005E2E2A /* BEMAnimationManager.m */,
+				59EB19AA20A45306005E2E2A /* BEMCheckBox.h */,
+				59EB19AB20A45306005E2E2A /* BEMCheckBox.m */,
+				59EB19AC20A45306005E2E2A /* BEMCheckBoxGroup.h */,
+				59EB19AD20A45306005E2E2A /* BEMCheckBoxGroup.m */,
+				59EB19AE20A45306005E2E2A /* BEMPathManager.h */,
+				59EB19AF20A45306005E2E2A /* BEMPathManager.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		9A45B902B73FF98D8D52313B /* Frameworks */ = {
@@ -353,6 +390,7 @@
 					3C832F411F94C96400EC8390 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = DCUNJ956CG;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -588,22 +626,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59EB19A620A443F0005E2E2A /* BakiciViewCon.swift in Sources */,
 				59FB4132200D037C00CF233D /* Veterinery.swift in Sources */,
 				3C5217071F979FF200F52725 /* CreateAccountVC.swift in Sources */,
 				3C1365D52007B4350036721C /* WelcomeViewController.swift in Sources */,
 				3C76A6392007D97B00D790CD /* CustomViewPresentationController.swift in Sources */,
+				59EB19B120A45306005E2E2A /* BEMCheckBox.m in Sources */,
 				3C89C8C62008BD680044F4CC /* Pet.swift in Sources */,
 				594B4D862074FB8D00C5CCA9 /* RecomendationVC.swift in Sources */,
 				59A7133B1FF95C95005FE0B5 /* Chat.swift in Sources */,
 				3C832F4E1F94C96400EC8390 /* PattyApp.xcdatamodeld in Sources */,
 				59901D28207E5BCC00257D72 /* filterVC.swift in Sources */,
+				59EB19B020A45306005E2E2A /* BEMAnimationManager.m in Sources */,
 				5979CE231FFC4AD800FB7BC2 /* Message.swift in Sources */,
 				3C832F481F94C96400EC8390 /* ViewController.swift in Sources */,
 				59A7133D1FF95DC3005FE0B5 /* ChatInfo.swift in Sources */,
+				59EB19B320A45306005E2E2A /* BEMPathManager.m in Sources */,
 				590845F71F97ED9D009A2D6A /* LoggedInVC.swift in Sources */,
 				59A7133F1FF96EB2005FE0B5 /* User.swift in Sources */,
 				59BE0E101F96A971008DD52B /* LoginVC.swift in Sources */,
 				3C675446200927E3001C7010 /* RootTableViewController.swift in Sources */,
+				59A21FF920A43EE10067FFC6 /* DLRadioButton.m in Sources */,
 				3C89C8C42008B8F90044F4CC /* FilterTableViewController.swift in Sources */,
 				5979CE211FFC289C00FB7BC2 /* ChatLogController.swift in Sources */,
 				3C67544420091807001C7010 /* RootViewController.swift in Sources */,
@@ -617,12 +660,12 @@
 				59C29D831FFD99DC005245E9 /* ChatMessageCell.swift in Sources */,
 				3CBAC7472009870C002E56D7 /* VeterineryViewController.swift in Sources */,
 				59901D2A207E5DC100257D72 /* filterTableView.swift in Sources */,
+				59EB19B220A45306005E2E2A /* BEMCheckBoxGroup.m in Sources */,
 				3C1F2328200D662C00FA029E /* FilteringCellViewController.swift in Sources */,
 				FC41A1431FEBE62000CE2E6C /* PPointAnnotation.swift in Sources */,
 				590C0458209B1A2F00109895 /* SahipsizPet.swift in Sources */,
 				3C832F461F94C96400EC8390 /* AppDelegate.swift in Sources */,
 				59D1E8E9200D4D9700CBD6CB /* DetailViewController.swift in Sources */,
-				59A34E80207CFA5200AA6869 /* BakiciVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,6 +823,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = PattyApp/PattyApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DCUNJ956CG;
@@ -796,6 +840,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = buraknurcicek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = CheckMarkHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -806,6 +852,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = PattyApp/PattyApp.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = DCUNJ956CG;
@@ -822,6 +869,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = buraknurcicek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = CheckMarkHeader.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
